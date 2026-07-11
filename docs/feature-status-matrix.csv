@@ -1,0 +1,15 @@
+feature,route,component,data source,integration,desktop tested,mobile tested,accessibility tested,multilingual tested,production status,remaining blocker
+Homepage hero,/en,src/app/[locale]/page.tsx,static page content,None,No,No,No,Partial,Missing,Needs homepage redesign and responsive QA
+Courses list,/en/courses,src/app/[locale]/courses/page.tsx,static course data,None,No,No,No,Partial,Partially working,Need filter/comparison and translation review
+Course detail,/en/courses/[slug],src/app/[locale]/courses/[slug]/page.tsx,static course data,None,No,No,No,Partial,Partially working,Needs full course page features and interactions
+Header navigation,global,src/components/Header.tsx,static nav items,None,No,No,No,Partial,Partially working,Needs accessible mega-menu and full route coverage
+Footer,global,src/components/Footer.tsx,static links,None,No,No,No,Partial,Partially working,Needs full sitemap and translations
+Student Hub,/en/student-hub,src/app/[locale]/student-hub/page.tsx,local demo state,None,No,No,No,No,Partially working,Needs secure auth and noindex
+Enquiry form,/en/enquiry,src/components/EnquiryForm.tsx,client-side form,None,No,No,No,No,Partially working,Needs server integration and data persistence
+Mega-menu,/en,src/components/Header.tsx,static menu items,None,No,No,No,Partial,Partially working,Needs accessibility and detailed items
+Language switching,global,src/components/LanguageSwitcher.tsx,locale routing,None,No,No,No,Partial,Partially working,Needs page-equivalent switching and translation coverage
+Knowledge Centre,/en/learn,src/app/[locale]/learn/page.tsx,static content,None,No,No,No,Partial,Partially working,Needs full knowledge centre and article structure
+Locations,/en/locations,src/app/[locale]/locations/page.tsx,static page,None,No,No,No,Partial,Partially working,Needs maps and experience cards
+Gallery,/en/gallery,src/app/[locale]/gallery/page.tsx,static gallery,None,No,No,No,Partial,Partially working,Needs improved gallery categories and media
+FAQ,/en/faq,src/app/[locale]/faq/page.tsx,static Q&A,None,No,No,No,Partial,Partially working,Needs full FAQ centre and schema
+Policies,/en/privacy & /en/terms,src/app/[locale]/privacy/page.tsx + terms/page.tsx,static content,None,No,No,No,Partial,Partially working,Needs full legal pages and resources

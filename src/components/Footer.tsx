@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { InstagramLogo, FacebookLogo, YoutubeLogo, LinkedinLogo } from "@phosphor-icons/react/dist/ssr";
+import CookieSettingsButton from "@/components/consent/CookieSettingsButton";
 
 export default async function Footer() {
   const t = await getTranslations("Navigation");
@@ -147,12 +148,13 @@ export default async function Footer() {
             © {currentYear} Kairali Guru. All rights reserved. Lineage established 1908.
           </span>
         </div>
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 items-center">
           <Link href="/privacy" className="hover:text-turmeric transition-colors">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-turmeric transition-colors">Terms & Conditions</Link>
           <Link href="/terms" className="hover:text-turmeric transition-colors">Refund & Cancellation</Link>
           <Link href="/privacy" className="hover:text-turmeric transition-colors">Cookie Policy</Link>
           <Link href="/terms" className="hover:text-turmeric transition-colors">Accessibility Statement</Link>
+          <CookieSettingsButton />
         </div>
       </div>
     </footer>

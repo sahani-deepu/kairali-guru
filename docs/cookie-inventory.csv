@@ -1,0 +1,2 @@
+cookie_name,category,purpose,storage,type,third_party,source,notes
+kairali_consent,functional,Stores consent acceptance or decline,localStorage,local,false,ConsentBanner.tsx,Only stores accepted/declined state; no categories

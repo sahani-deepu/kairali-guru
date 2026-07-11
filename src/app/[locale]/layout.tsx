@@ -10,7 +10,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import StickyCTA from "@/components/StickyCTA";
-import ConsentBanner from "@/components/ConsentBanner";
+import ConsentProvider from "@/components/consent/ConsentProvider";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
 
 const cormorant = Cormorant_Garamond({
@@ -119,13 +119,14 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-full flex flex-col bg-sand text-bark font-sans">
         <NextIntlClientProvider messages={messages}>
-          <AnalyticsTracker />
-          <Header />
-          <div className="flex-grow">{children}</div>
-          <Footer />
-          <WhatsAppButton />
-          <StickyCTA />
-          <ConsentBanner />
+          <ConsentProvider>
+            <AnalyticsTracker />
+            <Header />
+            <div className="flex-grow">{children}</div>
+            <Footer />
+            <WhatsAppButton />
+            <StickyCTA />
+          </ConsentProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,0 +1,2 @@
+tracker_name,category,purpose,source,page,consent_required,status,notes
+Mock Analytics,analytics,Logs mock pageviews for demo purposes,AnalyticsTracker.tsx,global,analytics,Partially Implemented,Only logs to console when kairali_consent is accepted

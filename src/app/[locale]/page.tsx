@@ -99,22 +99,11 @@ export default async function Home({ params }: PageProps) {
       {/* SECTION 1: HERO */}
       <section className="relative w-full h-[85vh] md:h-[90vh] overflow-hidden flex items-end justify-center bg-palm">
         <div className="absolute inset-0 w-full h-full">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="hidden md:block w-full h-full object-cover"
-            src="/preview/kerala-nature-hero.mp4"
-            poster="/preview/kairali-kerala-healing-village-hero.webp"
+          <img
+            alt="Kairali Guru Ayurvedic Sanctuary"
+            className="w-full h-full object-cover"
+            src="/images/kerala-campus-1.jpg"
           />
-          <div className="block md:hidden absolute inset-0">
-            <img
-              alt="Ayurveda Training Campus"
-              className="w-full h-full object-cover"
-              src="/preview/kairali-kerala-healing-village-hero.webp"
-            />
-          </div>
           {/* Natural organic overlay */}
           <div className="absolute inset-0 bg-palm/40 mix-blend-multiply" />
           <div className="absolute inset-0 bg-gradient-to-t from-palm via-transparent to-black/30" />
