@@ -32,20 +32,31 @@ export function useConsent() {
 }
 
 export default function ConsentProvider({ children }: { children: ReactNode }) {
-  const [consent, setConsent] = useState<ConsentPreferencesType | null>(() => {
-    const stored = getStoredConsent();
-    return stored ?? null;
-  });
-  const [isBannerVisible, setBannerVisible] = useState(() => {
-    const stored = getStoredConsent();
-    return !stored || (stored !== null && isConsentVersionOutdated(stored));
-  });
-  const [isPreferencesOpen, setPreferencesOpen] = useState(false);
-  const [preferences, setPreferences] = useState<Omit<ConsentPreferencesType, "version" | "timestamp" | "necessary">>(() => ({
+  const defaultPreferences: Omit<ConsentPreferencesType, "version" | "timestamp" | "necessary"> = {
     functional: false,
     analytics: false,
     marketing: false,
-  }));
+  };
+
+  const [consent, setConsent] = useState<ConsentPreferencesType | null>(null);
+  const [isBannerVisible, setBannerVisible] = useState(false);
+  const [isPreferencesOpen, setPreferencesOpen] = useState(false);
+  const [preferences, setPreferences] = useState(defaultPreferences);
+
+  useEffect(() => {
+    const stored = getStoredConsent();
+    if (stored) {
+      setConsent(stored);
+      setPreferences({
+        functional: stored.functional,
+        analytics: stored.analytics,
+        marketing: stored.marketing,
+      });
+      setBannerVisible(isConsentVersionOutdated(stored));
+    } else {
+      setBannerVisible(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (isPreferencesOpen) {

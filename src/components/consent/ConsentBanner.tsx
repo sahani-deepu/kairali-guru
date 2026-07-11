@@ -10,7 +10,7 @@ export default function ConsentBanner() {
 
   return (
     <div
-      className="fixed bottom-6 end-6 z-50 w-[calc(100vw-2rem)] max-w-lg rounded-3xl border border-copper/20 bg-warm-ivory p-6 shadow-[0_30px_80px_rgba(14,28,18,0.16)] text-charcoal"
+      className="fixed bottom-6 right-6 z-50 w-[calc(100vw-2rem)] max-w-lg rounded-3xl border border-copper/20 bg-warm-ivory p-6 shadow-[0_30px_80px_rgba(14,28,18,0.16)] text-charcoal"
       role="dialog"
       aria-label="Cookie consent banner"
     >
