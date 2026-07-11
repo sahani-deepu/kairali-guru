@@ -1,18 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { ShieldCheck, Gear, X } from "@phosphor-icons/react";
 import { useConsent } from "./ConsentProvider";
+import { ShieldCheck, Gear } from "@phosphor-icons/react";
 
 export default function ConsentBanner() {
   const { isBannerVisible, acceptAll, rejectNonEssential, openPreferences } = useConsent();
-  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsVisible(isBannerVisible);
-  }, [isBannerVisible]);
-
-  if (!isVisible) return null;
+  if (!isBannerVisible) return null;
 
   return (
     <div

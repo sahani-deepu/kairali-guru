@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -44,7 +45,10 @@ export default async function Header() {
       <header className="sticky top-0 z-30 w-full bg-sand/90 backdrop-blur-md border-b border-sand-2">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex justify-between items-center">
           {/* Brand Logo */}
-          <Link href="/" className="flex items-baseline gap-2 group text-start">
+          <Link href="/" className="flex items-center gap-3 group text-start">
+            <div className="relative h-14 w-14 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-sand-300/70">
+              <Image src="/images/kairali-ayurveda-logo.jpg" alt="Kairali Ayurveda logo" fill sizes="56px" className="object-contain" priority />
+            </div>
             <div className="flex flex-col">
               <span className="font-display text-2xl font-bold tracking-tight text-palm group-hover:text-laterite transition-colors">
                 Kairali Guru

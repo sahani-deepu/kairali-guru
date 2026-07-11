@@ -10,6 +10,8 @@ import type { ConsentPreferences as ConsentPreferencesType } from "@/lib/consent
 
 interface ConsentContextValue {
   consent: ConsentPreferencesType | null;
+  preferences: Omit<ConsentPreferencesType, "version" | "timestamp" | "necessary">;
+  setPreferences: React.Dispatch<React.SetStateAction<Omit<ConsentPreferencesType, "version" | "timestamp" | "necessary">>>;
   isBannerVisible: boolean;
   isPreferencesOpen: boolean;
   openPreferences: () => void;
@@ -30,25 +32,20 @@ export function useConsent() {
 }
 
 export default function ConsentProvider({ children }: { children: ReactNode }) {
-  const [consent, setConsent] = useState<ConsentPreferencesType | null>(null);
-  const [isBannerVisible, setBannerVisible] = useState(false);
-  const [isPreferencesOpen, setPreferencesOpen] = useState(false);
-
-  useEffect(() => {
+  const [consent, setConsent] = useState<ConsentPreferencesType | null>(() => {
     const stored = getStoredConsent();
-    if (!stored) {
-      setBannerVisible(true);
-      return;
-    }
-
-    if (isConsentVersionOutdated(stored)) {
-      setConsent(stored);
-      setBannerVisible(true);
-      return;
-    }
-
-    setConsent(stored);
-  }, []);
+    return stored ?? null;
+  });
+  const [isBannerVisible, setBannerVisible] = useState(() => {
+    const stored = getStoredConsent();
+    return !stored || (stored !== null && isConsentVersionOutdated(stored));
+  });
+  const [isPreferencesOpen, setPreferencesOpen] = useState(false);
+  const [preferences, setPreferences] = useState<Omit<ConsentPreferencesType, "version" | "timestamp" | "necessary">>(() => ({
+    functional: false,
+    analytics: false,
+    marketing: false,
+  }));
 
   useEffect(() => {
     if (isPreferencesOpen) {
@@ -89,6 +86,13 @@ export default function ConsentProvider({ children }: { children: ReactNode }) {
   };
 
   const openPreferences = () => {
+    if (consent) {
+      setPreferences({
+        functional: consent.functional,
+        analytics: consent.analytics,
+        marketing: consent.marketing,
+      });
+    }
     setBannerVisible(false);
     setPreferencesOpen(true);
   };
@@ -104,6 +108,8 @@ export default function ConsentProvider({ children }: { children: ReactNode }) {
     <ConsentContext.Provider
       value={{
         consent,
+        preferences,
+        setPreferences,
         isBannerVisible,
         isPreferencesOpen,
         openPreferences,

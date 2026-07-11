@@ -1,26 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { X } from "@phosphor-icons/react";
 import { useConsent } from "./ConsentProvider";
 
 export default function ConsentPreferences() {
-  const { consent, isPreferencesOpen, closePreferences, savePreferences } = useConsent();
-  const [preferences, setPreferences] = useState({
-    functional: consent?.functional ?? false,
-    analytics: consent?.analytics ?? false,
-    marketing: consent?.marketing ?? false,
-  });
-
-  useEffect(() => {
-    if (consent) {
-      setPreferences({
-        functional: consent.functional,
-        analytics: consent.analytics,
-        marketing: consent.marketing,
-      });
-    }
-  }, [consent]);
+  const { isPreferencesOpen, closePreferences, savePreferences, preferences, setPreferences } = useConsent();
 
   if (!isPreferencesOpen) return null;
 
