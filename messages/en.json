@@ -1,0 +1,143 @@
+{
+  "Navigation": {
+    "courses": "Courses",
+    "panchakarma": "Panchakarma",
+    "kerala": "Kerala",
+    "forYou": "For you",
+    "locations": "Locations",
+    "learn": "Learn",
+    "about": "About",
+    "enquire": "Enquire"
+  },
+  "CTAs": {
+    "explore": "Explore the programmes",
+    "speak": "Speak to a physician",
+    "request": "Request the prospectus",
+    "apply": "Apply Now",
+    "book": "Book Consultation",
+    "send": "Send enquiry",
+    "whatsapp": "Message us on WhatsApp"
+  },
+  "Tagline": "Learn authentic Ayurveda — where it was born.",
+  "Footer": {
+    "about": "Kairali — a family practice of Ayurveda since 1908.",
+    "copyright": "© Kairali Ayurvedic Group Since 1908. All rights reserved."
+  },
+  "Home": {
+    "eyebrow": "Ayurveda training & certification · Since 1908",
+    "h1": "Learn authentic Ayurveda, where it was born.",
+    "subhead": "118 years of Kairali lineage. Train with practising physicians in a living Kerala healing village — online, or in person in Kerala and Delhi.",
+    "lineageTitle": "A family practice of Ayurveda for 118 years.",
+    "lineageDesc": "You learn inside a living tradition — not a franchise — carried by one family across four generations.",
+    "clinicalTitle": "Authentic Kerala, taught by physicians:",
+    "clinicalDesc": "Kerala is where Ayurveda has been practised, unbroken, for centuries. You learn from practising BAMS/MD physicians at a NABH-accredited healing village — on real cases, not slides.",
+    "formatTitle": "Online, or in person:",
+    "formatDesc": "Begin from anywhere with our online foundation, or train hands-on in Kerala and Delhi. Start where you are; master where Ayurveda was born.",
+    "audienceTitle": "Who it's for:",
+    "audienceDesc": "For curious beginners, yoga teachers, wellness professionals, doctors, and international learners who want the real thing.",
+    "trustStrip": "Established 1908 · NABH-accredited teaching hospital · Physician-led · Learners from around the world",
+    "closingCTA": "Ready to begin? Tell us what you're looking for and a physician-advisor will guide you."
+  },
+  "About": {
+    "eyebrow": "Our story",
+    "h1": "A family practice of Ayurveda since 1908.",
+    "desc1": "For 118 years, across four generations, our family has practised and taught Ayurveda in Kerala. What began as a family practice in 1908 is today a living healing village — a NABH-accredited Ayurvedic hospital set among medicinal gardens in Palakkad, where physicians care for patients from more than a hundred countries and, alongside them, teach the next generation of practitioners.",
+    "desc2": "We are not a franchise or an online-only academy. When you learn with Kairali, you learn inside a tradition that has never been interrupted — from physicians who practise every day, in the place where Ayurveda has always lived.",
+    "desc3": "That is the difference: authentic Kerala Ayurveda, taught by the people who live it, made accessible to the world."
+  },
+  "Kerala": {
+    "eyebrow": "Where Ayurveda was born",
+    "h1": "Learn where Ayurveda has lived for centuries.",
+    "desc1": "Kerala is the home of Ayurveda — the one place where the tradition has been practised, unbroken, for generations. Our healing village sits on a green campus in Palakkad: consulting rooms, therapy halls, a medicinal garden, and a NABH-accredited hospital where real patients are treated every day.",
+    "desc2": "To train here is to learn Ayurveda in its natural habitat — the herbs growing in the garden, the therapies performed in the clinic, the physicians who have spent their lives in practice. Residential learners live on campus and learn by doing, guided closely by practising doctors.",
+    "desc3": "(How to reach, stay, and what a residential programme involves: see the Kerala location page.)"
+  },
+  "Panchakarma": {
+    "eyebrow": "The heart of Ayurvedic therapy",
+    "h1": "Panchakarma — Ayurveda's system of purification and renewal.",
+    "desc1": "Panchakarma is Ayurveda's classical five-fold process of detoxification and rejuvenation — the therapeutic core that distinguishes a trained practitioner from a casual enthusiast. It is precise, clinical work: preparation of the body, the main therapies, and careful aftercare, each matched to the individual.",
+    "desc2": "At Kairali you learn Panchakarma the way it is meant to be learned — hands-on, on real cases, under physicians who perform these therapies daily in an accredited hospital. You learn not only the techniques, but the clinical judgement behind them: who a therapy is for, when, and why.",
+    "desc3": "(Specific therapist and technician programmes, durations, and certification: see the programmes.)"
+  },
+  "FAQ": {
+    "q1": "Can I learn Ayurveda with no background?",
+    "a1": "Yes. Our foundation programmes are built for complete beginners and move step by step. More advanced, clinical training is available as you progress.",
+    "q2": "Can I study online?",
+    "a2": "Yes. Begin from anywhere with our online foundation, then choose to train hands-on in Kerala or Delhi when you're ready.",
+    "q3": "What makes Kairali different?",
+    "a3": "A 118-year family lineage, a real NABH-accredited healing village in Kerala, and teaching by practising physicians on real patients — not a franchise, and not online-only.",
+    "q4": "Who are the courses for?",
+    "a4": "Curious beginners, yoga teachers, wellness and spa professionals, doctors and healthcare workers, and international learners who want authentic Kerala Ayurveda.",
+    "q5": "In which languages can I learn / get support?",
+    "a5": "In English, with guidance available in German, French, Arabic and Russian. (Confirm per programme.)",
+    "q6": "Will I be taught by real physicians?",
+    "a6": "Yes — by practising BAMS/MD Ayurvedic physicians who treat patients every day at our accredited hospital.",
+    "q7": "Is training available in person as well as online?",
+    "a7": "Yes — hands-on training takes place in two locations, Kerala and Delhi, alongside the online foundation."
+  },
+  "Enquiry": {
+    "heading": "Tell us what you're looking for.",
+    "subhead": "Two details are enough to begin — a physician-advisor will call you.",
+    "name": "Your name",
+    "contact": "Phone or email",
+    "location": "Preferred location",
+    "kerala": "Kerala",
+    "delhi": "Delhi",
+    "either": "Either",
+    "programme": "Programme of interest",
+    "consent": "I agree to be contacted about my enquiry and accept the Privacy Policy.",
+    "step1_title": "Enquiry received",
+    "step1_desc": "our team reviews it.",
+    "step2_title": "An advisor calls you",
+    "step2_desc": "to understand your goals and answer questions.",
+    "step3_title": "Enrolment & joining",
+    "step3_desc": "we guide you through the next steps.",
+    "thankYouTitle": "Thank you — your enquiry is with our team.",
+    "thankYouBody": "We'll be in touch shortly. In the meantime, you're welcome to message us on WhatsApp or explore our programmes and guides. Your details are handled confidentially in line with our Privacy Policy.",
+    "send": "Send enquiry"
+  },
+  "Travel": {
+    "heading": "Coming to study with us",
+    "getHere": "Getting here",
+    "keralaInfo": "Our Kerala healing village is in Palakkad — Kairali, P.O. Olassery, Kodumbu, Palakkad District 678551, Kerala. The nearest airport is Coimbatore (CJB), about 62 km / roughly an hour away; Kochi (COK) is about 115 km. By rail, Palakkad Junction (PGT) is about 18 km. We arrange airport and station transfers — just share your arrival details. Our Delhi centre offers the same programmes without on-campus accommodation; the nearest airport is Delhi (DEL).",
+    "stayInfo": "In Kerala, your stay on our green campus is included with residential programmes — you live where you learn, among the medicinal gardens, with daily meals prepared to Ayurvedic principles (vegetarian, and mindful of dietary needs). In Delhi, the programme is non-residential; we're happy to suggest places to stay nearby.",
+    "visaInfo": "Most international learners visit India on an e-Visa, applied for online before travel. Visa category and eligibility depend on your nationality and the length of your programme, and rules change from time to time — please confirm the current requirement on the official Indian e-Visa portal or with your nearest Indian embassy or consulate. We provide an enrolment letter and guidance to support your application.",
+    "bring": "What to bring",
+    "bringInfo": "A valid photo ID (passport for international learners) and two passport-size photographs. We'll send joining details once your place is confirmed.",
+    "welcomeMsg": "Learners join us from around the world — our team will help you plan every step."
+  },
+  "Locations": {
+    "kerala": {
+      "eyebrow": "Our campus · Kerala",
+      "h1": "The Kerala healing village — where you'll train.",
+      "intro": "Set on a green 65-acre campus in Palakkad, our NABH-accredited Ayurvedic healing village is where residential learners live, study, and practise. You train among medicinal gardens, in real therapy halls, alongside physicians who treat patients here every day.",
+      "campus": "consulting rooms, therapy halls, a medicinal garden, an Ayurvedic kitchen, and quiet places to rest — a living clinic, not a classroom.",
+      "byAir": "By air",
+      "byAirInfo": "Coimbatore (CJB) is the nearest airport, about 62 km / roughly an hour by road. Kochi (COK) is about 115 km. We arrange airport transfers — just share your flight details.",
+      "byRail": "By rail",
+      "byRailInfo": "Palakkad Junction (PGT) is about 18 km away.",
+      "byRoad": "By road",
+      "byRoadInfo": "the campus sits near the NH544 corridor; self-drive and taxi both work, and we'll guide you in.",
+      "stay": "Staying with us",
+      "stayInfo": "Residential programmes include your stay on campus, with daily Ayurvedic meals (vegetarian, prepared to your dietary needs). You live where you learn.",
+      "address": "Address",
+      "addressInfo": "Kairali, P.O. Olassery, Kodumbu, Palakkad District 678551, Kerala, India.",
+      "cta": "Speak to an advisor about training in Kerala."
+    },
+    "delhi": {
+      "eyebrow": "Our centre · Delhi",
+      "h1": "Train with us in Delhi.",
+      "intro": "For learners who prefer to study closer to home, our Delhi centre offers the same physician-led Ayurveda programmes — on a non-residential basis.",
+      "centre": "classroom and practical training space, led by qualified Ayurvedic teachers and doctors.",
+      "byAir": "By air",
+      "byAirInfo": "Indira Gandhi International Airport (DEL) serves Delhi.",
+      "byRoad": "By road / metro",
+      "byRoadInfo": "the centre is in Mehrauli, South Delhi; reachable by taxi and metro.",
+      "stay": "Staying",
+      "stayInfo": "The Delhi programme is non-residential — we'll gladly suggest comfortable places to stay nearby.",
+      "address": "Address",
+      "addressInfo": "Kairali Ayurvedic Group, D-130, Block D, Ambedkar Colony, Mehrauli, New Delhi 110030, India.",
+      "cta": "Speak to an advisor about training in Delhi."
+    }
+  }
+}
