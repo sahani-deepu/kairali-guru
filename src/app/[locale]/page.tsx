@@ -378,14 +378,14 @@ export default async function Home({ params }: PageProps) {
 
       {/* SECTION 8: INTERNATIONAL STUDENTS */}
       <section className="max-w-7xl mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-        <div className="lg:col-span-5 rounded-lg overflow-hidden border border-copper/15 aspect-[4/3] shadow-sm">
+        <div className="lg:col-span-4 rounded-lg overflow-hidden border border-copper/15 aspect-[2/3] shadow-sm">
           <img
-            src="/images/kerala-yoga-1.jpg"
+            src="/images/yoga-1.jpg"
             alt="Sunrise yoga training on campus"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="lg:col-span-7 space-y-6 text-start">
+        <div className="lg:col-span-8 space-y-6 text-start">
           <span className="text-[10px] uppercase tracking-[0.25em] text-laterite font-bold block">
             GLOBAL COMMUNITY
           </span>
@@ -500,7 +500,7 @@ export default async function Home({ params }: PageProps) {
           <div className="border border-copper/10 rounded-2xl overflow-hidden bg-sand/35 text-start group">
             <div className="aspect-[16/9] relative overflow-hidden">
               <img
-                src="/preview/kairali-kerala-healing-village-hero.webp"
+                src="/images/Kairali-The-Ayurvedic-Healing-Village.jpg"
                 alt="Kerala campus"
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
               />
@@ -520,7 +520,7 @@ export default async function Home({ params }: PageProps) {
           <div className="border border-copper/10 rounded-2xl overflow-hidden bg-sand/35 text-start group">
             <div className="aspect-[16/9] relative overflow-hidden">
               <img
-                src="/preview/kairali-ayurveda-training-centre-delhi.webp"
+                src="/images/kairali_delhi_01.jpg"
                 alt="Delhi campus"
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
               />
