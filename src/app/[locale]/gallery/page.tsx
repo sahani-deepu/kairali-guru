@@ -96,14 +96,13 @@ export default async function GalleryPage({ params }: PageProps) {
         "Therapy,Droni Table.jpg",
         "Shirodhata.jpg",
         "Thalapothichil.jpg",
-
         "Udwarthanam Dry Powder.jpg",
         "Udwarthanam Dry Powder (2).jpg",
         "Udwarthanam.jpg",
         "Traditional Therapy (1).jpg",
         "Traditional Therapy (2).jpg",
         "Traditional Therapy (3).jpg",
-        "Traditional Therapy (4).jpg"
+        "Traditional Therapy (4).jpg",
       ]
     }
   ];
