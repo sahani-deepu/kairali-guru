@@ -20,25 +20,32 @@ export default async function AboutPage({ params }: PageProps) {
 
   const faculty = [
     {
-      name: "Dr. Radhakrishnan, BAMS",
-      role: "Chief Ayurvedic Physician & Director of Clinical Studies",
-      spec: "30+ Years Experience · Panchakarma Therapeutics",
-      image: "kairali-ayurveda-training-centre-delhi.webp",
-      desc: "Over 30 years of clinical experience specializing in Panchakarma therapies and metabolic disorders at our Palakkad village."
+      name: "Dr. Deepu John, BAMS",
+      role: "Chief Physician & HOD",
+      spec: "12+ Years Experience · Tridosha & Prakriti Diagnosis",
+      image: "/images/Dr.-Deepu-John.webp",
+      desc: "Expertise in diagnosis of Tridosha balance (Vata, Pitta, Kapha) and Prakriti (Unique body constitution)."
     },
     {
-      name: "Dr. Latha Radhakrishnan, BAMS",
-      role: "Senior Ayurvedic Physician",
-      spec: "25+ Years Experience · traditional Nutrition & Herbs",
-      image: "kairali-nabh-teaching-hospital-kerala.webp",
-      desc: "25+ years in practice, coordinating women's health regimens, traditional nutrition, and herbal pharmacology classes."
+      name: "Dr. Ashikha Raj, BAMS",
+      role: "Physician / RMO",
+      spec: "8+ Years Experience · Traditional & Modern Therapeutics",
+      image: "/images/Dr.-Ashikha-Raj.webp",
+      desc: "Dr. Ashikha Raj exemplifies the integration of traditional Ayurvedic principles with modern therapeutic techniques."
     },
     {
-      name: "Dr. Sreejit, BAMS",
-      role: "Resident Ayurvedic Doctor & Anatomy Lecturer",
-      spec: "10+ Years Experience · Physiology Audits",
-      image: "kairali-learn-medicine-factory-preparation.webp",
-      desc: "Supervises residential training, student therapy practice audits, and teaches the clinical fundamentals of Tridosha physiology."
+      name: "Dr. Rahul R",
+      role: "Ayurvedic Physician",
+      spec: "7+ Years Experience · Tridosha & Prakriti Diagnosis",
+      image: "/images/Dr.-Rahul-R.webp",
+      desc: "Expertise in diagnosis of Tridosha balance (Vata, Pitta, Kapha) and Prakriti (Unique body constitution)."
+    },
+    {
+      name: "Dr. Akhila Oommen, BAMS",
+      role: "Ayurvedic Physician",
+      spec: "9+ Years Experience · Arthritis & Women's Health",
+      image: "/images/Dr.-Akhila-Oommen.webp",
+      desc: "Expertise in treating various arthritis conditions, gynecological issues, stress, and sleep disorders."
     }
   ];
 
@@ -94,7 +101,7 @@ export default async function AboutPage({ params }: PageProps) {
             <h3 className="font-display font-bold text-lg text-palm border-b border-sand-2 pb-4">
               Institutional Heritage
             </h3>
-            
+
             <div className="flex gap-4 items-start">
               <Medal size={24} className="text-laterite shrink-0 mt-0.5" />
               <div>
@@ -122,10 +129,10 @@ export default async function AboutPage({ params }: PageProps) {
         </div>
 
         {/* Immersive Photo section */}
-        <div className="rounded-[2.5rem] overflow-hidden border border-copper/10 aspect-[21/9] mb-24 relative shadow-sm">
+        <div className="relative rounded-3xl overflow-hidden aspect-[1746/451] mb-20 shadow-lg border border-copper/10">
           <img
-            src="/images/kerala-campus-1.jpg"
-            alt="Scenic Palakkad Ayurveda training village"
+            src="/images/palakkad-campus-yoga.png"
+            alt="Traditional Kerala campus setting"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent flex items-end p-8 text-sand">
@@ -165,17 +172,40 @@ export default async function AboutPage({ params }: PageProps) {
             <Users size={26} className="text-laterite" />
             <span>Taught By Practicing Physicians</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {faculty.map((doc, index) => (
-              <div key={index} className="bg-sand border border-sand-2 rounded-3xl overflow-hidden hover:shadow-md transition-all text-start">
-                <div className="aspect-[4/3] bg-sand-2/40 relative overflow-hidden">
-                  <img src={`/preview/${doc.image}`} alt={doc.name} className="w-full h-full object-cover" />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-display font-bold text-lg text-palm leading-snug">{doc.name}</h3>
-                  <span className="text-xs text-laterite font-semibold block mt-0.5">{doc.role}</span>
-                  <span className="text-[10px] text-taupe block font-mono uppercase tracking-wider mt-2 mb-4">{doc.spec}</span>
-                  <p className="text-xs text-taupe leading-relaxed font-serif">{doc.desc}</p>
+              <div key={index} className="group [perspective:1000px] h-[450px] w-full cursor-pointer">
+                <div className="relative w-full h-full rounded-3xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-sm hover:shadow-md">
+
+                  {/* Front Face (Seated Photo & Title) */}
+                  <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden bg-sand border border-sand-2 [backface-visibility:hidden] flex flex-col justify-between">
+                    <div className="aspect-[4/5] bg-sand-2/20 relative overflow-hidden">
+                      <img src={doc.image} alt={doc.name} className="w-full h-full object-cover object-top" />
+                    </div>
+                    <div className="p-5 text-start">
+                      <h3 className="font-display font-bold text-base text-palm leading-snug">{doc.name}</h3>
+                      <span className="text-[11px] text-laterite font-semibold block mt-0.5">{doc.role}</span>
+                      <span className="text-[9px] text-taupe block font-mono uppercase tracking-wider mt-1">{doc.spec}</span>
+                    </div>
+                  </div>
+
+                  {/* Back Face (Info & Description) */}
+                  <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden bg-palm text-sand p-6 [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-between text-start border border-palm/20">
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="font-display font-bold text-base text-white leading-snug">{doc.name}</h3>
+                        <span className="text-xs text-turmeric font-semibold block mt-0.5">{doc.role}</span>
+                        <span className="text-[9px] text-sand/60 block font-mono uppercase tracking-wider mt-1 border-b border-white/10 pb-3">{doc.spec}</span>
+                      </div>
+                      <p className="text-xs text-sand/85 leading-relaxed font-serif">
+                        {doc.desc}
+                      </p>
+                    </div>
+                    <span className="text-[9px] font-mono text-turmeric/80 uppercase tracking-widest border-t border-white/10 pt-3">
+                      Kairali Academic Faculty
+                    </span>
+                  </div>
+
                 </div>
               </div>
             ))}

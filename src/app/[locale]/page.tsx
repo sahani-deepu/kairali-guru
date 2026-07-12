@@ -154,14 +154,14 @@ export default async function Home({ params }: PageProps) {
         <div className="lg:col-span-7 grid grid-cols-12 gap-6 items-end">
           <div className="col-span-8 rounded-lg overflow-hidden border border-copper/15 aspect-[4/5] shadow-sm">
             <img
-              src="/preview/kairali-nabh-teaching-hospital-kerala.webp"
+              src="/images/kairali-palakkad-depictions-77.jpg"
               alt="NABH accredited clinical teaching hospital campus"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="col-span-4 rounded-lg overflow-hidden border border-copper/15 aspect-square shadow-sm translate-y-8 hidden md:block">
             <img
-              src="/images/kerala-cottage-detail.jpg"
+              src="/images/kairali-palakkad-depictions-245.jpg"
               alt="Ayurveda sanctuary details"
               className="w-full h-full object-cover"
             />
@@ -416,18 +416,19 @@ export default async function Home({ params }: PageProps) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { name: "Dr. Radhakrishnan", role: "Chief Physician & Academic Director", spec: "BAMS · 30+ Years Experience", img: "kairali-ayurveda-training-centre-delhi.webp" },
-            { name: "Dr. Latha Radhakrishnan", role: "Senior Consultant", spec: "BAMS, MD · Panchakarma Expert", img: "kairali-nabh-teaching-hospital-kerala.webp" },
-            { name: "Dr. Sreejit", role: "Resident Faculty Physician", spec: "BAMS · Pharmacy & Herbs Pharmacology", img: "kairali-learn-medicine-factory-preparation.webp" }
+            { name: "Dr. Deepu John", role: "Chief Physician & HOD", spec: "12+ Years Experience · Tridosha & Prakriti Expert", img: "/images/Dr.-Deepu-John.webp" },
+            { name: "Dr. Ashikha Raj, BAMS", role: "Physician / RMO", spec: "8+ Years Experience · Clinical Therapeutics", img: "/images/Dr.-Ashikha-Raj.webp" },
+            { name: "Dr. Rahul R", role: "Ayurvedic Physician", spec: "7+ Years Experience · Tridosha & Prakriti Expert", img: "/images/Dr.-Rahul-R.webp" },
+            { name: "Dr. Akhila Oommen, BAMS", role: "Ayurvedic Physician", spec: "9+ Years Experience · Arthritis & Stress Expert", img: "/images/Dr.-Akhila-Oommen.webp" }
           ].map((phys, idx) => (
-            <div key={idx} className="bg-sand/35 border border-copper/10 rounded-2xl overflow-hidden text-start group">
-              <div className="aspect-[4/3] bg-sand-2/40 relative overflow-hidden">
+            <div key={idx} className="bg-sand/35 border border-copper/10 rounded-2xl overflow-hidden text-start group flex flex-col justify-between">
+              <div className="aspect-[3/4] bg-sand-2/20 relative overflow-hidden">
                 <img
-                  src={`/preview/${phys.img}`}
+                  src={phys.img}
                   alt={phys.name}
-                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                  className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
@@ -562,7 +563,7 @@ export default async function Home({ params }: PageProps) {
           <div className="lg:col-span-8 space-y-6 group">
             <div className="aspect-[21/10] relative rounded-lg overflow-hidden border border-copper/15 shadow-sm">
               <img
-                src="/preview/kairali-learn-medicine-factory-preparation.webp"
+                src="/images/panchkarma-image.webp"
                 alt="How to study Ayurveda"
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
               />

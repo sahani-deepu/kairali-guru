@@ -26,7 +26,7 @@ export default async function LearnHubPage({ params }: PageProps) {
       date: "July 10, 2026",
       author: "Dr. Radhakrishnan, BAMS",
       category: "Guides",
-      image: "kerala-class-1.jpg"
+      image: "panchkarma-image.webp",
     },
     {
       slug: "understanding-panchakarma-detox",
@@ -51,7 +51,7 @@ export default async function LearnHubPage({ params }: PageProps) {
   return (
     <main className="min-h-screen bg-sand/30 py-12 px-6 sm:px-8 font-sans">
       <div className="max-w-7xl mx-auto text-start">
-        
+
         <div className="border-b border-copper/10 pb-4 mb-8">
           <Breadcrumbs items={breadcrumbItems} locale={locale} />
         </div>
@@ -72,7 +72,7 @@ export default async function LearnHubPage({ params }: PageProps) {
 
         {/* Magazine Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 max-w-6xl mx-auto mb-20">
-          
+
           {/* Main Large Featured Article */}
           <div className="lg:col-span-8 bg-sand border border-sand-2 rounded-3xl overflow-hidden flex flex-col justify-between hover:shadow-md transition-all duration-300 group">
             <div className="aspect-[21/10] relative overflow-hidden">
