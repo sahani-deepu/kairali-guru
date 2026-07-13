@@ -6,7 +6,7 @@
 }
 
 @theme {
-  /* Kairali Guru Font Stacks */
+  /* Kairali Guru Font Stacks - Brand Aligned Configuration */
   --font-display: var(--font-kurale), serif;
   --font-sans: var(--font-asap), sans-serif;
   --font-serif: var(--font-asap), sans-serif;
@@ -30,10 +30,26 @@
 
   /* Custom Transitions & Bezier Easings */
   --ease-editorial: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* Precise Font Size Configuration */
+  --font-size-xs: 16px;
+  --font-size-sm: 18px;
+  --font-size-base: 20px;
+  --font-size-lg: 22px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 26px;
+  --font-size-3xl: 28px;
+  --font-size-4xl: 32px;
+  --font-size-5xl: 36px;
+  --font-size-6xl: 40px;
+}
+
+html, body {
+  min-height: 100dvh;
 }
 
 html {
-  font-size: 125%; /* Set base font size to 20px (125% of 16px) to meet brand manual accessibility standards (headlines >= 24px, overlines >= 14px) and ensure legibility for senior citizens */
+  font-size: 100%; /* Reset base font size to 100% to align with absolute pixel mapping */
 }
 
 body {
@@ -46,5 +62,69 @@ body {
 .font-display {
   font-weight: 400 !important;
 }
+
+/* Accessibility & Brand Manual Font Size Overrides */
+/* 1. Captions (Lato): 16px - 18px */
+.text-xs,
+[class*="text-[9px]"],
+[class*="text-[10px]"],
+[class*="text-[11px]"],
+[class*="text-[12px]"] {
+  font-size: 16px !important;
+}
+
+.text-sm,
+[class*="text-[13px]"],
+[class*="text-[14px]"],
+[class*="text-[15px]"] {
+  font-size: 18px !important;
+}
+
+/* 2. Body Text (20px - 22px) & UI Labels / Numerals (18px - 20px) */
+.text-base {
+  font-size: 20px !important;
+}
+
+.text-lg {
+  font-size: 22px !important;
+}
+
+/* 3. Headings H3 (Kurale): 24px - 26px */
+.text-xl {
+  font-size: 24px !important;
+}
+
+.text-2xl {
+  font-size: 26px !important;
+}
+
+/* 4. Headings H2 (Kurale): 28px - 32px */
+.text-3xl {
+  font-size: 28px !important;
+}
+
+.text-4xl {
+  font-size: 32px !important;
+}
+
+/* 5. Headings H1 (Kurale Display): >= 36px */
+.text-5xl {
+  font-size: 36px !important;
+}
+
+.text-6xl {
+  font-size: 40px !important;
+}
+
+/* Typography Weight & Style Specifications */
+label, .label, [class*="label"] {
+  font-weight: 600 !important; /* Semibold for labels */
+}
+
+.botanical, .botanical-name, em, i {
+  font-style: italic !important; /* Italic for botanical/Latin names */
+}
+
+
 
 

@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useTranslations } from "next-intl";
 import { CheckCircle, ArrowRight, ArrowLeft } from "@phosphor-icons/react";
+import { supabase } from "@/lib/supabaseClient";
 
 const enquirySchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -60,11 +61,34 @@ export default function EnquiryForm() {
 
   const onSubmit = async (data: EnquiryFormValues) => {
     setIsSubmitting(true);
-    // Simulate CRM transmission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    reset();
+    try {
+      const { error } = await supabase
+        .from("enquiries")
+        .insert([
+          {
+            name: data.name,
+            email: data.email,
+            country: data.country,
+            programme: data.programme,
+            phone: data.phone,
+            language: data.language,
+            location: data.location,
+            message: data.message || ""
+          }
+        ]);
+
+      if (error) {
+        throw error;
+      }
+
+      setIsSuccess(true);
+      reset();
+    } catch (err: any) {
+      console.error("Error submitting to Supabase:", err.message || err);
+      alert("Submission failed. Please verify your connection or try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const programs = [

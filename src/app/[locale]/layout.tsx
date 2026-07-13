@@ -117,7 +117,7 @@ export default async function LocaleLayout({
         <SchemaRenderer schema={orgSchema} />
         <SchemaRenderer schema={localBusinessSchema} />
       </head>
-      <body className="min-h-full flex flex-col bg-sand text-bark font-sans">
+      <body className="min-h-[100dvh] flex flex-col bg-sand text-bark font-sans">
         <NextIntlClientProvider messages={messages}>
           <ConsentProvider>
             <AnalyticsTracker />
