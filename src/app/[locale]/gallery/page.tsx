@@ -25,7 +25,21 @@ export default async function GalleryPage({ params }: PageProps) {
       img: "kerala-campus-1.jpg",
       images: [
         "kerala-campus-1.jpg",
-        "kerala-cottage-detail.jpg"
+        "kerala-cottage-detail.jpg",
+        "HEALING VILLAGE FRONT IMAGE.jpg",
+        "Drone View.jpg",
+        "Kairali Fountain.jpg",
+        "Kairali Dispensary.jpg",
+        "Activites at KTAHV.jpg",
+        "Activites at KTAHV (2) (1).jpg",
+        "Ayurvedic Food (1).jpg",
+        "Ayurvedic Food (2).jpg",
+        "Ayurvedic Food (3).jpg",
+        "Cultural  (1).jpg",
+        "Cultural  (2).jpg",
+        "Happy Client.jpg",
+        "yoga-1.jpg",
+        "palakkad-campus-yoga.png"
       ]
     },
     {
@@ -38,16 +52,7 @@ export default async function GalleryPage({ params }: PageProps) {
         "ayurveda-treatment-table.jpg"
       ]
     },
-    {
-      title: "Panchakarma Practical Session",
-      desc: "Senior BAMS physicians demonstrating Shirodhara oil-pouring techniques to international trainees.",
-      category: "Classes",
-      img: "kerala-class-1.jpg",
-      images: [
-        "kerala-class-1.jpg",
-        "kerala-pharmacy-1.jpg"
-      ]
-    },
+
     {
       title: "Morning Yoga & Meditation",
       desc: "Integrated yoga training at sunrise on the outdoor wooden deck overlooking the forest.",
@@ -78,7 +83,7 @@ export default async function GalleryPage({ params }: PageProps) {
       ]
     },
     {
-      title: "Ayurvedic Panchakarma Therapies",
+      title: "Ayurvedic Therapies",
       desc: "Clinical observation and hands-on practice of traditional detoxification and rejuvenation treatments like Abhyanga and Shirodhara.",
       category: "Therapies",
       img: "ayurveda-treatment-table.jpg",
