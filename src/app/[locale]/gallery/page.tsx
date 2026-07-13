@@ -43,13 +43,16 @@ export default async function GalleryPage({ params }: PageProps) {
       ]
     },
     {
-      title: "Medicinal Herb Gardens",
-      desc: "Students identifying organic medicinal flora among 1,200+ native herb species in Palakkad.",
-      category: "Campus",
-      img: "kerala-garden-1.jpg",
+      title: "Our Students",
+      desc: "International and domestic students learning, practicing, and experiencing authentic Ayurveda training at our campus.",
+      category: "Students",
+      img: "1.jpg",
       images: [
-        "kerala-garden-1.jpg",
-        "ayurveda-treatment-table.jpg"
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
       ]
     },
 
