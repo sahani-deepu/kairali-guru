@@ -240,13 +240,7 @@ export default async function CoursesPage({ params }: PageProps) {
                       </div>
                     </div>
 
-                    <div className="flex items-baseline justify-between mb-6 text-start">
-                      <span className="text-[10px] text-taupe font-bold uppercase tracking-wider">Course Fee:</span>
-                      <div className="text-end">
-                        <span className="text-lg font-bold text-palm block leading-none">{course.priceINR}</span>
-                        <span className="text-[10px] text-taupe block mt-1">{course.priceUSD} Approx. *</span>
-                      </div>
-                    </div>
+
 
                     <Link
                       href={`/courses/${course.slug}`}

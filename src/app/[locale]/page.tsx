@@ -74,7 +74,7 @@ export default async function Home({ params }: PageProps) {
       image: "kerala-class-1.jpg"
     },
     {
-      slug: "ayurveda-therapy-training-level-1",
+      slug: "level-one-advanced-ayurveda-training",
       name: "Level-One Advanced for Wellness Professionals (AATP1)",
       desc: "Hybrid model combining robust online foundation with intensive practicals in Delhi.",
       duration: "80 Hours",
@@ -83,7 +83,7 @@ export default async function Home({ params }: PageProps) {
       image: "delhi-centre-1.jpg"
     },
     {
-      slug: "advanced-ayurveda-therapist-training-kerala",
+      slug: "advanced-lifestyle-consultant-therapist",
       name: "Advanced Lifestyle Consultant & Therapist (AALCT)",
       desc: "Our flagship clinical immersion programme guided by senior physicians.",
       duration: "12 Weeks",
@@ -97,7 +97,7 @@ export default async function Home({ params }: PageProps) {
     <div className="flex flex-col w-full text-start bg-sand/20 gap-32 md:gap-48 pb-32">
       
       {/* SECTION 1: HERO */}
-      <section className="relative w-full h-[85vh] md:h-[90vh] overflow-hidden flex items-end justify-center bg-palm">
+      <section className="relative w-full min-h-[calc(100dvh-144px)] md:min-h-[calc(100dvh-116px)] overflow-hidden flex items-end justify-center bg-palm">
         <div className="absolute inset-0 w-full h-full">
           <img
             alt="Kairali Guru Ayurvedic Sanctuary"
@@ -109,7 +109,7 @@ export default async function Home({ params }: PageProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-palm via-transparent to-black/30" />
         </div>
 
-        <div className="absolute inset-0 z-10 pt-32 pb-20 px-6 flex flex-col items-center justify-end text-center text-sand">
+        <div className="relative z-10 pt-20 md:pt-32 pb-12 md:pb-20 px-6 flex flex-col items-center justify-end text-center text-sand w-full">
           <div className="max-w-4xl flex flex-col items-center gap-6">
             <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-turmeric font-bold flex items-center gap-2">
               <FlowerLotus size={14} className="text-turmeric" />

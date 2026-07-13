@@ -43,19 +43,19 @@ export default async function Header() {
 
       {/* 2. Main Navigation Bar */}
       <header className="sticky top-0 z-30 w-full bg-sand/90 backdrop-blur-md border-b border-sand-2">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 h-16 flex justify-between items-center">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group text-start">
             <Image
-              src="/images/kairali-ayurveda-logo.jpg"
+              src="/images/kairali-ayurveda-logo.png"
               alt="Kairali Ayurveda logo"
-              width={56}
-              height={56}
+              width={36}
+              height={36}
               className="object-contain"
               priority
             />
             <div className="flex flex-col">
-              <span className="font-display text-2xl font-bold tracking-tight text-palm group-hover:text-laterite transition-colors">
+              <span className="font-display text-xl font-bold tracking-tight text-palm group-hover:text-laterite transition-colors">
                 Kairali Guru
               </span>
               <span className="text-[9px] font-mono tracking-[0.2em] text-laterite uppercase -mt-1 font-bold">
@@ -87,7 +87,7 @@ export default async function Header() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/courses/three-day-ayurveda-foundation-course" className="block group/link">
+                        <Link href="/courses/three-day-ayurveda-certificate" className="block group/link">
                           <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">Three-Day Certificate</span>
                           <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">Syllabus overview and basic detox.</span>
                         </Link>
@@ -105,7 +105,7 @@ export default async function Header() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/courses/advanced-ayurveda-therapist-training-kerala" className="block group/link">
+                        <Link href="/courses/advanced-lifestyle-consultant-therapist" className="block group/link">
                           <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">Advanced Consultant (AALCT)</span>
                           <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">Clinical practice, 12 weeks.</span>
                         </Link>

@@ -72,6 +72,29 @@ export default async function AboutPage({ params }: PageProps) {
     }
   ];
 
+  const boardOfDirectors = [
+    {
+      name: "K.V Ramesh",
+      role: "Chairman and Managing Director",
+      image: "/images/d1-2.png"
+    },
+    {
+      name: "Gita Ramesh",
+      role: "Joint Managing Director",
+      image: "/images/gita-mam-500x368.webp"
+    },
+    {
+      name: "Abhilash K.R",
+      role: "Director",
+      image: "/images/director-kairali-500x368.webp"
+    },
+    {
+      name: "Abishek",
+      role: "Director",
+      image: "/images/K.R.-ABISHEK-min.png"
+    }
+  ];
+
   return (
     <main className="min-h-screen bg-sand/30 py-12 px-6 sm:px-8 font-sans">
       <div className="max-w-7xl mx-auto text-start">
@@ -128,18 +151,32 @@ export default async function AboutPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Immersive Photo section */}
-        <div className="relative rounded-3xl overflow-hidden aspect-[1746/451] mb-20 shadow-lg border border-copper/10">
-          <img
-            src="/images/palakkad-campus-yoga.png"
-            alt="Traditional Kerala campus setting"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent flex items-end p-8 text-sand">
-            <div className="max-w-xl text-start">
-              <span className="text-[10px] uppercase tracking-widest text-turmeric font-bold">Kairali Healing Sanctuary</span>
-              <h3 className="font-display text-2xl font-bold mt-1 text-white">Palakkad Campus Gardens</h3>
-            </div>
+        {/* Board of Directors section */}
+        <div className="mb-24">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-[10px] uppercase tracking-[0.25em] text-laterite font-bold block">
+              Board of Directors
+            </span>
+            <h2 className="text-3xl md:text-4xl font-display font-light text-palm mt-2">
+              Our <span className="font-serif italic text-laterite font-normal">Founding Leadership</span>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {boardOfDirectors.map((director, index) => (
+              <div key={index} className="bg-sand border border-copper/10 rounded-2xl overflow-hidden text-start group flex flex-col justify-between hover:shadow-md transition-all duration-300">
+                <div className="aspect-[4/5] bg-sand-2/20 relative overflow-hidden">
+                  <img
+                    src={director.image}
+                    alt={director.name}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h4 className="font-display font-bold text-palm text-lg">{director.name}</h4>
+                  <span className="text-xs text-laterite font-semibold block mt-1">{director.role}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

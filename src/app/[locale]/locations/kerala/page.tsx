@@ -26,7 +26,7 @@ export default async function KeralaLocationPage({ params }: PageProps) {
   const schema: WithContext<LocalBusiness> = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Kairali Ayurvedic Healing Village",
+    "name": "Kairali- The Ayurvedic Healing Village",
     "image": "https://kairali.guru/images/kerala-campus.jpg",
     "telephone": "+91-9289838797",
     "address": {
@@ -128,18 +128,36 @@ export default async function KeralaLocationPage({ params }: PageProps) {
               </div>
             </div>
 
-            {/* CTA Box */}
-            <div className="lg:col-span-4 bg-sand border border-sand-2 rounded-3xl p-6 shadow-md">
-              <h3 className="font-display font-bold text-xl text-palm mb-4">Admissions Guidance</h3>
-              <p className="text-xs text-taupe leading-relaxed mb-6">
-                Our support team will coordinate airport transfers from Coimbatore (CJB) or Kochi (COK), issue enrollment letters to support your visa application, and manage diet requirements.
-              </p>
-              <Link
-                href="/enquiry"
-                className="w-full bg-palm hover:bg-palm-2 text-paper-on-dark text-center font-semibold py-3.5 rounded-full text-xs transition-all shadow-md block"
-              >
-                {l("kerala.cta")}
-              </Link>
+            {/* Right Column: CTA & Map */}
+            <div className="lg:col-span-4 space-y-8">
+              {/* CTA Box */}
+              <div className="bg-sand border border-sand-2 rounded-3xl p-6 shadow-md">
+                <h3 className="font-display font-bold text-xl text-palm mb-4">Admissions Guidance</h3>
+                <p className="text-xs text-taupe leading-relaxed mb-6">
+                  Our support team will coordinate airport transfers from Coimbatore (CJB) or Kochi (COK), issue enrollment letters to support your visa application, and manage diet requirements.
+                </p>
+                <Link
+                  href="/enquiry"
+                  className="w-full bg-palm hover:bg-palm-2 text-paper-on-dark text-center font-semibold py-3.5 rounded-full text-xs transition-all shadow-md block"
+                >
+                  {l("kerala.cta")}
+                </Link>
+              </div>
+
+              {/* Map Box */}
+              <div className="bg-sand border border-sand-2 rounded-3xl p-2.5 shadow-md overflow-hidden h-[320px] relative">
+                <iframe
+                  title="Kairali- The Ayurvedic Healing Village Map"
+                  src="https://maps.google.com/maps?q=10.727275,76.710507&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>

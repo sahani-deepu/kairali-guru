@@ -142,19 +142,50 @@ export default async function Footer() {
 
       <div className="h-[1px] w-full bg-copper/20 mb-8" />
 
+      {/* Brand Sitemap Display Section */}
+      <div className="max-w-7xl mx-auto flex flex-col items-center gap-4 mb-8 text-xs text-paper-on-dark/70 font-sans border-b border-copper/10 pb-8">
+        <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2.5">
+          <Link href="/about" className="hover:text-turmeric transition-colors">CSR</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/about" className="hover:text-turmeric transition-colors">Careers</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/faq" className="hover:text-turmeric transition-colors">FAQ's & Downloads</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/terms" className="hover:text-turmeric transition-colors">Terms and Conditions</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/privacy" className="hover:text-turmeric transition-colors">Privacy Policy</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/privacy" className="hover:text-turmeric transition-colors">Disclaimer</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/refund" className="hover:text-turmeric transition-colors">Cancellation & Refund Policy</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/learn" className="hover:text-turmeric transition-colors">Archive</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/learn" className="hover:text-turmeric transition-colors">Blog</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/sitemap" className="hover:text-turmeric transition-colors">Sitemap</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <a href="/sitemap.xml" className="hover:text-turmeric transition-colors">Sitemap XML</a>
+        </div>
+        <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2.5">
+          <Link href="/privacy" className="hover:text-turmeric transition-colors">Cookie Policy</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/privacy" className="hover:text-turmeric transition-colors">Privacy Statement</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <Link href="/privacy" className="hover:text-turmeric transition-colors">Legal Notice</Link>
+          <span className="text-paper-on-dark/30">|</span>
+          <CookieSettingsButton />
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-paper-on-dark/50">
         <div className="flex flex-wrap gap-x-6 gap-y-2">
           <span>
             © {currentYear} Kairali Guru. All rights reserved. Lineage established 1908.
           </span>
         </div>
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 items-center">
-          <Link href="/privacy" className="hover:text-turmeric transition-colors">Privacy Policy</Link>
-          <Link href="/terms" className="hover:text-turmeric transition-colors">Terms & Conditions</Link>
-          <Link href="/terms" className="hover:text-turmeric transition-colors">Refund & Cancellation</Link>
-          <Link href="/privacy" className="hover:text-turmeric transition-colors">Cookie Policy</Link>
+        <div className="flex flex-wrap gap-x-6 gap-y-2 items-center">
           <Link href="/terms" className="hover:text-turmeric transition-colors">Accessibility Statement</Link>
-          <CookieSettingsButton />
         </div>
       </div>
     </footer>

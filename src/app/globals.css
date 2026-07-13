@@ -7,24 +7,33 @@
 
 @theme {
   /* Kairali Guru Font Stacks */
-  --font-display: var(--font-cormorant), serif;
-  --font-sans: var(--font-hanken-grotesk), sans-serif;
-  --font-serif: var(--font-source-serif-4), serif;
+  --font-display: var(--font-kurale), serif;
+  --font-sans: var(--font-asap), sans-serif;
+  --font-serif: var(--font-asap), sans-serif;
+  --font-mono: var(--font-lato), sans-serif;
+  --font-lato: var(--font-lato), sans-serif;
 
   /* Kairali Guru Premium Design System Colors */
-  --color-sand: #F8F4EA;        /* Warm Ivory */
-  --color-sand-2: #EFE7D6;      /* Natural Cream */
-  --color-palm: #163F32;        /* Primary Forest Green */
-  --color-palm-2: #426B52;      /* Secondary Green */
-  --color-sage: #A7B8A3;        /* Soft Sage */
-  --color-laterite: #A96545;    /* Muted Terracotta */
-  --color-turmeric: #B8924A;    /* Restrained Gold */
-  --color-bark: #202622;        /* Charcoal Text */
-  --color-taupe: #66726A;       /* Soft Grey-Green Text */
-  --color-paper-on-dark: #F8F4EA;
+  --color-sand: #F7F4EA;        /* Warm Ivory (Beige background) */
+  --color-sand-2: #EFE7D6;      /* Natural Cream (Alternate Beige) */
+  --color-palm: #006038;        /* Forest (Primary action/links/headers) */
+  --color-palm-2: #164f3a;      /* Secondary Dark Green */
+  --color-leaf: #8E9D35;        /* Leaf (Identity, focus, secondary) */
+  --color-sage: #8E9D35;        /* Map soft sage to Leaf green for continuity */
+  --color-laterite: #C1882C;    /* Bronze (Taglines, overlines) */
+  --color-turmeric: #EEB41E;    /* Marigold (Accent gold, high emphasis) */
+  --color-bark: #202622;        /* Ink (Charcoal body text) */
+  --color-taupe: #66726A;       /* Muted Grey-Green Text */
+  --color-paper-on-dark: #F7F4EA; /* Warm Ivory text on dark green */
+  --color-error: #BE202E;       /* Heritage Red (Error only) */
+  --color-info: #26265F;        /* Heritage Indigo (Information only) */
 
   /* Custom Transitions & Bezier Easings */
   --ease-editorial: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+html {
+  font-size: 125%; /* Set base font size to 20px (125% of 16px) to meet brand manual accessibility standards (headlines >= 24px, overlines >= 14px) and ensure legibility for senior citizens */
 }
 
 body {
@@ -32,6 +41,10 @@ body {
   color: var(--color-bark);
   font-family: var(--font-sans);
   line-height: 1.6;
+}
+
+.font-display {
+  font-weight: 400 !important;
 }
 
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Hanken_Grotesk, Source_Serif_4 } from "next/font/google";
+import { Kurale, Asap, Lato } from "next/font/google";
 import "../globals.css";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
@@ -13,23 +13,23 @@ import StickyCTA from "@/components/StickyCTA";
 import ConsentProvider from "@/components/consent/ConsentProvider";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const kurale = Kurale({
+  variable: "--font-kurale",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: "400",
   display: "swap",
 });
 
-
-const hankenGrotesk = Hanken_Grotesk({
-  variable: "--font-hanken-grotesk",
+const asap = Asap({
+  variable: "--font-asap",
   subsets: ["latin"],
   display: "swap",
 });
 
-const sourceSerif4 = Source_Serif_4({
-  variable: "--font-source-serif-4",
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
+  weight: ["300", "400", "700"],
   display: "swap",
 });
 
@@ -110,7 +110,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isRtl ? "rtl" : "ltr"}
-      className={`${cormorant.variable} ${hankenGrotesk.variable} ${sourceSerif4.variable} h-full antialiased`}
+      className={`${kurale.variable} ${asap.variable} ${lato.variable} h-full antialiased`}
     >
 
       <head>
