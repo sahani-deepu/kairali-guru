@@ -9,11 +9,17 @@ import { CheckCircle, ArrowRight, ArrowLeft } from "@phosphor-icons/react";
 import { supabase } from "@/lib/supabaseClient";
 
 const enquirySchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  name: z
+    .string()
+    .min(2, { message: "Name must be at least 2 characters." })
+    .regex(/^[a-zA-Z\s\.]+$/, { message: "Name must contain only letters and spaces." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
   country: z.string().min(2, { message: "Please specify your country." }),
   programme: z.string().min(1, { message: "Please select a programme." }),
-  phone: z.string().min(5, { message: "Please enter a valid phone/WhatsApp number." }),
+  phone: z
+    .string()
+    .min(5, { message: "Please enter a valid phone/WhatsApp number." })
+    .regex(/^\+?[0-9\s\-]+$/, { message: "Phone number must contain only digits, spaces, or dashes." }),
   language: z.string().min(1, { message: "Please select your preferred language." }),
   message: z.string().optional(),
   location: z.enum(["kerala", "delhi", "either"]),
