@@ -10,12 +10,12 @@ export default function ConsentPreferences() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4 py-8"
+      className="consent-preferences fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4 py-8"
       role="dialog"
       aria-modal="true"
       aria-labelledby="cookie-preferences-title"
     >
-      <div className="w-full max-w-2xl overflow-hidden rounded-[32px] bg-warm-ivory p-8 shadow-[0_40px_120px_rgba(14,28,18,0.18)] ring-1 ring-copper/15">
+      <div className="w-full max-w-2xl overflow-hidden rounded-[32px] bg-white p-8 shadow-[0_40px_120px_rgba(14,28,18,0.18)] ring-1 ring-copper/15">
         <div className="flex items-start justify-between gap-4">
           <div>
             <p className="text-[10px] uppercase tracking-[0.3em] text-terracotta font-semibold">Cookie Preferences</p>

@@ -125,6 +125,57 @@ label, .label, [class*="label"] {
   font-style: italic !important; /* Italic for botanical/Latin names */
 }
 
+/* Reset font-sizes specifically inside cookie consent elements to fit their frames */
+.consent-banner *,
+.consent-preferences * {
+  font-size: revert;
+}
+
+.consent-banner .text-xs,
+.consent-preferences .text-xs,
+.consent-banner [class*="text-[9px]"],
+.consent-preferences [class*="text-[9px]"],
+.consent-banner [class*="text-[10px]"],
+.consent-preferences [class*="text-[10px]"],
+.consent-banner [class*="text-[11px]"],
+.consent-preferences [class*="text-[11px]"],
+.consent-banner [class*="text-[12px]"],
+.consent-preferences [class*="text-[12px]"] {
+  font-size: 10px !important;
+}
+
+.consent-banner .text-sm,
+.consent-preferences .text-sm,
+.consent-banner [class*="text-[13px]"],
+.consent-preferences [class*="text-[13px]"],
+.consent-banner [class*="text-[14px]"],
+.consent-preferences [class*="text-[14px]"],
+.consent-banner [class*="text-[15px]"],
+.consent-preferences [class*="text-[15px]"] {
+  font-size: 11px !important;
+}
+
+.consent-banner .text-base,
+.consent-preferences .text-base {
+  font-size: 12px !important;
+}
+
+.consent-banner .text-lg,
+.consent-preferences .text-lg {
+  font-size: 13px !important;
+}
+
+.consent-banner .text-xl,
+.consent-preferences .text-xl {
+  font-size: 14px !important;
+}
+
+.consent-banner .text-3xl,
+.consent-preferences .text-3xl {
+  font-size: 16px !important;
+}
+
+
 
 
 

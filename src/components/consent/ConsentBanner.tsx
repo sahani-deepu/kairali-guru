@@ -10,41 +10,41 @@ export default function ConsentBanner() {
 
   return (
     <div
-      className="fixed bottom-6 right-6 z-50 w-[calc(100vw-2rem)] max-w-lg rounded-3xl border border-copper/20 bg-warm-ivory p-6 shadow-[0_30px_80px_rgba(14,28,18,0.16)] text-charcoal"
+      className="consent-banner fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100vw-2rem)] max-w-[360px] rounded-xl border border-copper/15 bg-white p-3.5 shadow-[0_12px_40px_rgba(14,28,18,0.1)] text-charcoal opacity-100"
       role="dialog"
       aria-label="Cookie consent banner"
     >
-      <div className="flex items-start gap-4">
-        <ShieldCheck size={28} className="text-terracotta mt-1" />
-        <div className="space-y-4">
+      <div className="flex items-start gap-2.5">
+        <ShieldCheck size={20} className="text-terracotta mt-0.5 flex-shrink-0" />
+        <div className="space-y-2.5 w-full">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-deep-forest">Privacy & Cookies</p>
-            <p className="mt-3 text-xs leading-6 text-soft-text">
-              We use cookies for essential site functions, analytics, and marketing only with your choice. Select “Manage Preferences” to set each category.
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-deep-forest">Privacy & Cookies</p>
+            <p className="mt-1 text-[10px] leading-4 text-soft-text">
+              We use cookies for essential site functions, analytics, and marketing. Customize your choices via “Settings”.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-3 gap-1.5">
             <button
               onClick={rejectNonEssential}
-              className="rounded-full border border-charcoal/15 bg-white px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-charcoal transition hover:border-charcoal/30 focus:outline-none focus:ring-2 focus:ring-terracotta"
+              className="w-full rounded-full border border-charcoal/20 bg-white py-1.5 text-[9px] font-bold uppercase tracking-[0.05em] text-charcoal transition hover:bg-charcoal/5 focus:outline-none focus:ring-1 focus:ring-charcoal"
             >
-              Reject Non-Essential
+              Reject
             </button>
             <button
               onClick={openPreferences}
-              className="rounded-full border border-terracotta text-terracotta bg-transparent px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-terracotta/10 focus:outline-none focus:ring-2 focus:ring-terracotta"
+              className="w-full rounded-full border border-charcoal/20 bg-white py-1.5 text-[9px] font-bold uppercase tracking-[0.05em] text-charcoal transition hover:bg-charcoal/5 focus:outline-none focus:ring-1 focus:ring-charcoal"
             >
-              Manage Preferences
+              Settings
             </button>
             <button
               onClick={acceptAll}
-              className="rounded-full bg-deep-forest px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-sm transition hover:bg-forest-green focus:outline-none focus:ring-2 focus:ring-terracotta"
+              className="w-full rounded-full border border-charcoal/20 bg-white py-1.5 text-[9px] font-bold uppercase tracking-[0.05em] text-charcoal transition hover:bg-charcoal/5 focus:outline-none focus:ring-1 focus:ring-charcoal"
             >
               Accept All
             </button>
           </div>
-          <div className="flex items-center gap-2 text-[11px] text-soft-text">
-            <Gear size={14} />
+          <div className="flex items-center gap-1.5 text-[9px] text-soft-text">
+            <Gear size={11} />
             <span>Strictly necessary cookies are always active.</span>
           </div>
         </div>
