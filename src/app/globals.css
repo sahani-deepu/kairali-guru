@@ -28,6 +28,13 @@
   --color-error: #BE202E;       /* Heritage Red (Error only) */
   --color-info: #26265F;        /* Heritage Indigo (Information only) */
 
+  /* Alias/Fallback Colors for Consent Components */
+  --color-deep-forest: var(--color-palm);
+  --color-forest-green: var(--color-palm-2);
+  --color-charcoal: var(--color-bark);
+  --color-terracotta: #C85A32;
+  --color-copper: #C1882C;
+
   /* Custom Transitions & Bezier Easings */
   --ease-editorial: cubic-bezier(0.32, 0.72, 0, 1);
 
@@ -131,48 +138,82 @@ label, .label, [class*="label"] {
   font-size: revert;
 }
 
-.consent-banner .text-xs,
-.consent-preferences .text-xs,
-.consent-banner [class*="text-[9px]"],
-.consent-preferences [class*="text-[9px]"],
-.consent-banner [class*="text-[10px]"],
-.consent-preferences [class*="text-[10px]"],
-.consent-banner [class*="text-[11px]"],
-.consent-preferences [class*="text-[11px]"],
-.consent-banner [class*="text-[12px]"],
-.consent-preferences [class*="text-[12px]"] {
+/* Consent Banner Specific Overrides to bypass global font-size overrides */
+.consent-banner-container {
+  max-width: 340px !important;
+  padding: 12px !important;
+}
+
+.consent-banner-title {
   font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
 }
 
-.consent-banner .text-sm,
-.consent-preferences .text-sm,
-.consent-banner [class*="text-[13px]"],
-.consent-preferences [class*="text-[13px]"],
-.consent-banner [class*="text-[14px]"],
-.consent-preferences [class*="text-[14px]"],
-.consent-banner [class*="text-[15px]"],
-.consent-preferences [class*="text-[15px]"] {
+.consent-banner-text {
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+}
+
+.consent-banner-button {
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+
+.consent-banner-footer {
+  font-size: 9px !important;
+}
+
+/* Consent Preferences Specific Overrides to bypass global font-size overrides */
+.consent-pref-backdrop {
+  padding: 12px !important;
+}
+
+.consent-pref-container {
+  max-width: 580px !important;
+  padding: 20px !important;
+  border-radius: 20px !important;
+}
+
+.consent-pref-title-pre {
+  font-size: 9px !important;
+  letter-spacing: 0.25em !important;
+}
+
+.consent-pref-title {
+  font-size: 18px !important;
+  line-height: 1.3 !important;
+  margin-top: 6px !important;
+}
+
+.consent-pref-desc {
   font-size: 11px !important;
+  line-height: 1.5 !important;
+  margin-top: 10px !important;
 }
 
-.consent-banner .text-base,
-.consent-preferences .text-base {
+.consent-pref-section-title {
   font-size: 12px !important;
 }
 
-.consent-banner .text-lg,
-.consent-preferences .text-lg {
-  font-size: 13px !important;
+.consent-pref-section-desc {
+  font-size: 10px !important;
+  line-height: 1.4 !important;
 }
 
-.consent-banner .text-xl,
-.consent-preferences .text-xl {
-  font-size: 14px !important;
+.consent-pref-button-secondary {
+  font-size: 11px !important;
+  padding: 8px 16px !important;
 }
 
-.consent-banner .text-3xl,
-.consent-preferences .text-3xl {
-  font-size: 16px !important;
+.consent-pref-button-primary {
+  font-size: 11px !important;
+  padding: 8px 16px !important;
 }
 
 
