@@ -2,6 +2,12 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GalleryGrid, { GalleryItem } from "@/components/GalleryGrid";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Photo & Video Gallery - Kerala Campus & Practical Classes",
+  description: "Take a visual tour of our 65-acre Palakkad clinical Healing Village campus in Kerala, student practice lectures, and traditional pharmacy setups.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -10,8 +16,6 @@ interface PageProps {
 export default async function GalleryPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
-
-  const t = await getTranslations("Navigation");
 
   const breadcrumbItems = [
     { label: "Gallery" }

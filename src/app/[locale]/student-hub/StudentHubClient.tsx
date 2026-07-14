@@ -1,18 +1,43 @@
 "use client";
 
-import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useState, useEffect } from "react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Lock, FilePdf, BookOpen, GraduationCap, CheckCircle, Clock } from "@phosphor-icons/react";
-import { supabase } from "@/lib/supabaseClient";
+import { CONTACT_INFO } from "@/lib/config";
+interface StudentHubClientProps {
+  initialIsLoggedIn?: boolean;
+  initialUser?: { id: string; email: string } | null;
+}
 
-export default function StudentHubClient() {
-  const t = useTranslations("Navigation");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+export default function StudentHubClient({ initialIsLoggedIn = false, initialUser = null }: StudentHubClientProps) {
+  const [isLoggedIn, setIsLoggedIn] = useState(initialIsLoggedIn);
+  const [user, setUser] = useState(initialUser);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [error, setError] = useState("");
+
+  const [isResetMode, setIsResetMode] = useState(false);
+  const [resetEmail, setResetEmail] = useState("");
+  const [isResetting, setIsResetting] = useState(false);
+  const [resetSuccess, setResetSuccess] = useState(false);
+  const [isOnline, setIsOnline] = useState(() => {
+    if (typeof window !== "undefined") {
+      return navigator.onLine;
+    }
+    return true;
+  });
+
+  useEffect(() => {
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, []);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,22 +45,65 @@ export default function StudentHubClient() {
     setError("");
 
     try {
-      const { data, error: authError } = await supabase.auth.signInWithPassword({
-        email,
-        password,
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
       });
 
-      if (authError) {
-        setError(authError.message);
-      } else if (data?.user) {
+      const result = await response.json();
+
+      if (!response.ok) {
+        setError(result.error || "Unable to authenticate. Please check your credentials.");
+      } else if (result.success) {
+        setUser(result.user);
         setIsLoggedIn(true);
       } else {
         setError("Unable to authenticate. Please check your credentials.");
       }
-    } catch (err: any) {
-      setError(err.message || "An unexpected error occurred during sign in.");
+    } catch (err) {
+      const errMsg = err instanceof Error ? err.message : "An unexpected error occurred during sign in.";
+      setError(errMsg);
     } finally {
       setIsLoggingIn(false);
+    }
+  };
+
+  const handleResetPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsResetting(true);
+    setError("");
+    setResetSuccess(false);
+
+    try {
+      const response = await fetch("/api/auth/reset-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: resetEmail }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        setError(result.error || "Unable to process password reset request.");
+      } else {
+        setResetSuccess(true);
+      }
+    } catch (err) {
+      const errMsg = err instanceof Error ? err.message : "An unexpected error occurred.";
+      setError(errMsg);
+    } finally {
+      setIsResetting(false);
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await fetch("/api/auth/logout", { method: "POST" });
+      setUser(null);
+      setIsLoggedIn(false);
+    } catch {
+      // Fail silently
     }
   };
 
@@ -54,50 +122,141 @@ export default function StudentHubClient() {
               <Lock size={24} className="text-laterite" />
             </div>
 
-            <h1 className="font-display text-2xl font-bold text-palm text-center mb-2">Student Hub Portal</h1>
-            <p className="text-xs text-taupe text-center mb-6 leading-relaxed">
-              Enter your student credentials to access your study materials, syllabus sheets, and practical schedules.
-            </p>
+            {isResetMode ? (
+              <>
+                <h1 className="font-display text-2xl font-bold text-palm text-center mb-2">Reset Password</h1>
+                <p className="text-xs text-taupe text-center mb-6 leading-relaxed">
+                  Enter your student email and we will send you password reset instructions.
+                </p>
 
-            <form onSubmit={handleLogin} className="flex flex-col gap-4">
-              <div>
-                <label className="block text-xs font-semibold text-palm uppercase tracking-wider mb-2">Student Email</label>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="student@kairali.guru"
-                  className="w-full bg-sand-2/20 border border-sand-2 rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-palm focus:ring-1 focus:ring-palm"
-                  required
-                />
-              </div>
+                {resetSuccess ? (
+                  <div className="space-y-4">
+                    <p className="text-xs text-tulsi font-semibold text-center bg-tulsi/5 border border-tulsi/10 rounded-xl p-4 leading-relaxed">
+                      Reset instructions have been sent to your email. Please check your inbox.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setIsResetMode(false);
+                        setResetSuccess(false);
+                        setResetEmail("");
+                        setError("");
+                      }}
+                      className="w-full bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all shadow-md text-center block cursor-pointer"
+                    >
+                      Back to Sign In
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleResetPassword} className="flex flex-col gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-palm uppercase tracking-wider mb-2">Student Email</label>
+                      <input
+                        type="email"
+                        value={resetEmail}
+                        onChange={(e) => setResetEmail(e.target.value)}
+                        placeholder="student@kairali.guru"
+                        className="w-full bg-sand-2/20 border border-sand-2 rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-palm focus:ring-1 focus:ring-palm"
+                        required
+                      />
+                    </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-palm uppercase tracking-wider mb-2">Access Password</label>
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="••••••••"
-                  className="w-full bg-sand-2/20 border border-sand-2 rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-palm focus:ring-1 focus:ring-palm"
-                  required
-                />
-              </div>
+                    {error && <p className="text-xs text-laterite font-semibold mt-1">{error}</p>}
 
-              {error && <p className="text-xs text-laterite font-semibold mt-1">{error}</p>}
+                    {!isOnline && (
+                      <div className="bg-laterite/10 border border-laterite/20 text-laterite text-xs font-semibold rounded-xl p-3 text-center animate-pulse mt-2">
+                        You are currently offline. Please check your connection.
+                      </div>
+                    )}
 
-              <button
-                type="submit"
-                disabled={isLoggingIn}
-                className="bg-palm hover:bg-palm-2 disabled:bg-palm/70 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all shadow-md mt-2 flex items-center justify-center gap-2"
-              >
-                {isLoggingIn && <span className="w-3.5 h-3.5 border-2 border-paper-on-dark border-t-transparent rounded-full animate-spin" />}
-                <span>Sign In to Portal</span>
-              </button>
-            </form>
+                    <button
+                      type="submit"
+                      disabled={isResetting || !isOnline}
+                      className="bg-palm hover:bg-palm-2 disabled:bg-palm/70 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all shadow-md mt-2 flex items-center justify-center gap-2 cursor-pointer"
+                    >
+                      {isResetting && <span className="w-3.5 h-3.5 border-2 border-paper-on-dark border-t-transparent rounded-full animate-spin" />}
+                      <span>Send Reset Link</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setIsResetMode(false);
+                        setError("");
+                      }}
+                      className="text-xs text-palm hover:text-laterite font-semibold text-center mt-2 cursor-pointer"
+                    >
+                      Cancel and Sign In
+                    </button>
+                  </form>
+                )}
+              </>
+            ) : (
+              <>
+                <h1 className="font-display text-2xl font-bold text-palm text-center mb-2">Student Hub Portal</h1>
+                <p className="text-xs text-taupe text-center mb-6 leading-relaxed">
+                  Enter your student credentials to access your study materials, syllabus sheets, and practical schedules.
+                </p>
+
+                <form onSubmit={handleLogin} className="flex flex-col gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-palm uppercase tracking-wider mb-2">Student Email</label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="student@kairali.guru"
+                      className="w-full bg-sand-2/20 border border-sand-2 rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-palm focus:ring-1 focus:ring-palm"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold text-palm uppercase tracking-wider mb-2">Access Password</label>
+                    <input
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="••••••••"
+                      className="w-full bg-sand-2/20 border border-sand-2 rounded-xl px-4 py-3 text-sm text-bark focus:outline-none focus:border-palm focus:ring-1 focus:ring-palm"
+                      required
+                    />
+                  </div>
+
+                  <div className="flex justify-between items-center mt-1">
+                    {error && <p className="text-xs text-laterite font-semibold">{error}</p>}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setIsResetMode(true);
+                        setError("");
+                      }}
+                      className="text-xs text-palm hover:text-laterite font-semibold ms-auto cursor-pointer"
+                    >
+                      Forgot Password?
+                    </button>
+                  </div>
+
+                  {!isOnline && (
+                    <div className="bg-laterite/10 border border-laterite/20 text-laterite text-xs font-semibold rounded-xl p-3 text-center animate-pulse mt-2">
+                      You are currently offline. Please check your connection.
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={isLoggingIn || !isOnline}
+                    className="bg-palm hover:bg-palm-2 disabled:bg-palm/70 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all shadow-md mt-2 flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    {isLoggingIn && <span className="w-3.5 h-3.5 border-2 border-paper-on-dark border-t-transparent rounded-full animate-spin" />}
+                    <span>Sign In to Portal</span>
+                  </button>
+                </form>
+              </>
+            )}
 
             <p className="text-[10px] text-taupe text-center mt-6">
-              Forgot credentials? Contact admissions team at info@kairali.com.
+              Forgot credentials? Contact admissions team at {CONTACT_INFO.admissions.email}.
             </p>
           </div>
         </div>
@@ -116,12 +275,12 @@ export default function StudentHubClient() {
               Active Student Portal
             </span>
             <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-palm leading-tight tracking-tight">
-              Welcome, Ayurvedic Learner
+              Welcome, {user?.email || "Ayurvedic Learner"}
             </h1>
           </div>
           <button
-            onClick={() => setIsLoggedIn(false)}
-            className="border border-copper text-bark hover:bg-sand-2 px-5 py-2 rounded-full text-xs font-semibold transition-all"
+            onClick={handleLogout}
+            className="border border-copper text-bark hover:bg-sand-2 px-5 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer"
           >
             Log Out
           </button>

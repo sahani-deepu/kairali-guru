@@ -4,7 +4,6 @@ import { InstagramLogo, FacebookLogo, YoutubeLogo, LinkedinLogo } from "@phospho
 import CookieSettingsButton from "@/components/consent/CookieSettingsButton";
 
 export default async function Footer() {
-  const t = await getTranslations("Navigation");
   const f = await getTranslations("Footer");
   
   const currentYear = new Date().getFullYear();
@@ -142,20 +141,19 @@ export default async function Footer() {
 
       <div className="h-[1px] w-full bg-copper/20 mb-8" />
 
-      {/* Brand Sitemap Display Section */}
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-4 mb-8 text-xs text-paper-on-dark/70 font-sans border-b border-copper/10 pb-8">
         <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2.5">
           <Link href="/about" className="hover:text-turmeric transition-colors">CSR</Link>
           <span className="text-paper-on-dark/30">|</span>
           <Link href="/about" className="hover:text-turmeric transition-colors">Careers</Link>
           <span className="text-paper-on-dark/30">|</span>
-          <Link href="/faq" className="hover:text-turmeric transition-colors">FAQ's & Downloads</Link>
+          <Link href="/faq" className="hover:text-turmeric transition-colors">FAQ&apos;s &amp; Downloads</Link>
           <span className="text-paper-on-dark/30">|</span>
           <Link href="/terms" className="hover:text-turmeric transition-colors">Terms and Conditions</Link>
           <span className="text-paper-on-dark/30">|</span>
           <Link href="/privacy" className="hover:text-turmeric transition-colors">Privacy Policy</Link>
           <span className="text-paper-on-dark/30">|</span>
-          <Link href="/privacy" className="hover:text-turmeric transition-colors">Disclaimer</Link>
+          <Link href="/disclaimer" className="hover:text-turmeric transition-colors">Disclaimer</Link>
           <span className="text-paper-on-dark/30">|</span>
           <Link href="/refund" className="hover:text-turmeric transition-colors">Cancellation & Refund Policy</Link>
           <span className="text-paper-on-dark/30">|</span>
@@ -168,11 +166,11 @@ export default async function Footer() {
           <a href="/sitemap.xml" className="hover:text-turmeric transition-colors">Sitemap XML</a>
         </div>
         <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2.5">
-          <Link href="/privacy" className="hover:text-turmeric transition-colors">Cookie Policy</Link>
+          <Link href="/cookie-policy" className="hover:text-turmeric transition-colors">Cookie Policy</Link>
           <span className="text-paper-on-dark/30">|</span>
           <Link href="/privacy" className="hover:text-turmeric transition-colors">Privacy Statement</Link>
           <span className="text-paper-on-dark/30">|</span>
-          <Link href="/privacy" className="hover:text-turmeric transition-colors">Legal Notice</Link>
+          <Link href="/legal-notice" className="hover:text-turmeric transition-colors">Legal Notice</Link>
           <span className="text-paper-on-dark/30">|</span>
           <CookieSettingsButton />
         </div>
@@ -185,7 +183,7 @@ export default async function Footer() {
           </span>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2 items-center">
-          <Link href="/terms" className="hover:text-turmeric transition-colors">Accessibility Statement</Link>
+          <Link href="/accessibility" className="hover:text-turmeric transition-colors">Accessibility Statement</Link>
         </div>
       </div>
     </footer>

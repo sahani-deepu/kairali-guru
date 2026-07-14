@@ -4,6 +4,12 @@ import { Link } from "@/i18n/routing";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQAccordion from "@/components/FAQAccordion";
 import { Question } from "@phosphor-icons/react/dist/ssr";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Frequently Asked Questions (FAQs)",
+  description: "Find answers to commonly asked questions regarding our credentials, online foundations, campus accommodation in Kerala, and study prerequisites.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -13,7 +19,6 @@ export default async function FAQPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations("Navigation");
   const f = await getTranslations("FAQ");
 
   const breadcrumbItems = [

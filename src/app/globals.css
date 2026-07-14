@@ -55,6 +55,10 @@ html, body {
   min-height: 100dvh;
 }
 
+.min-h-screen {
+  min-height: 100dvh !important;
+}
+
 html {
   font-size: 100%; /* Reset base font size to 100% to align with absolute pixel mapping */
 }

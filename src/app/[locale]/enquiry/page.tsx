@@ -3,6 +3,13 @@ import { getTranslations } from "next-intl/server";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import EnquiryForm from "@/components/EnquiryForm";
 import { Phone, Envelope, Chats } from "@phosphor-icons/react/dist/ssr";
+import { CONTACT_INFO } from "@/lib/config";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Enrollment Enquiry - admissions & Course Application",
+  description: "Send an enquiry to our academic advising team. Get personalized course recommendations, schedules, and fee details from a physician advisor.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -45,7 +52,7 @@ export default async function EnquiryPage({ params }: PageProps) {
                 </div>
                 <div>
                   <h4 className="font-semibold text-palm text-sm">Call Admissions Support</h4>
-                  <p className="text-xs text-taupe mt-0.5">+91-9289838797</p>
+                  <p className="text-xs text-taupe mt-0.5">{CONTACT_INFO.admissions.phone}</p>
                 </div>
               </div>
 
@@ -55,7 +62,7 @@ export default async function EnquiryPage({ params }: PageProps) {
                 </div>
                 <div>
                   <h4 className="font-semibold text-palm text-sm">Email Admissions Office</h4>
-                  <p className="text-xs text-taupe mt-0.5">admissions@kairali.guru · info@kairali.com</p>
+                  <p className="text-xs text-taupe mt-0.5">{CONTACT_INFO.admissions.email} · {CONTACT_INFO.corporate.email}</p>
                 </div>
               </div>
 
@@ -65,7 +72,7 @@ export default async function EnquiryPage({ params }: PageProps) {
                 </div>
                 <div>
                   <h4 className="font-semibold text-palm text-sm">WhatsApp Consultation</h4>
-                  <p className="text-xs text-taupe mt-0.5">Message us at +91-9289838797 for instant support.</p>
+                  <p className="text-xs text-taupe mt-0.5">Message us at {CONTACT_INFO.admissions.whatsapp} for instant support.</p>
                 </div>
               </div>
             </div>

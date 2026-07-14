@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Image as ImageIcon, Camera } from "@phosphor-icons/react";
+import Image from "next/image";
 
 interface GalleryImageProps {
   img: string;
@@ -14,11 +15,13 @@ export default function GalleryImage({ img, title }: GalleryImageProps) {
   return (
     <div className="aspect-[4/3] bg-sand-2/40 border-b border-sand-2 relative overflow-hidden group">
       {!hasError ? (
-        <img
+        <Image
           src={`/images/${img}`}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 relative z-10"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500 z-10"
           onError={() => setHasError(true)}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       ) : null}
       

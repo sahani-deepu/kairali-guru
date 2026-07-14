@@ -3,6 +3,12 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { MapPin, ArrowRight, ShieldCheck, Calendar } from "@phosphor-icons/react/dist/ssr";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Campus Locations - Kerala & New Delhi Centres",
+  description: "Explore Kairali Guru's campuses. Study dynamically at our NABH-accredited residential Healing Village in Palakkad, Kerala, or our non-residential centre in South Delhi.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;

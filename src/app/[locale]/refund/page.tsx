@@ -1,5 +1,12 @@
 import { setRequestLocale } from "next-intl/server";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { CONTACT_INFO } from "@/lib/config";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cancellation & Refund Policy",
+  description: "Learn about Kairali Guru's payment procedures, cancellation policies, deferral guidelines, and refund schedules.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -24,84 +31,75 @@ export default async function RefundPage({ params }: PageProps) {
 
         <div className="font-serif text-sm sm:text-base text-taupe leading-relaxed space-y-6">
           <p>
-            At Kairali – The Ayurvedic Healing Village, we strive to offer a seamless booking experience while understanding that plans can change unexpectedly. To ensure transparency and ease for our valued guests, our booking, cancellation and refund policy is outlined below:
+            At Kairali Guru, we are committed to providing premium, authentic education and practical clinical training. Because course enrollment sizes are capped and resources are allocated in advance, our cancellation, deferral, and refund guidelines are outlined below:
           </p>
 
-          <h3 className="font-display text-xl font-bold text-palm pt-4">Booking Procedure</h3>
+          <h3 className="font-display text-xl font-bold text-palm pt-4">Enrolment & Payment Procedure</h3>
           <p>
-            To make a reservation at Kairali – The Ayurvedic Healing Village, guests must submit a booking request through our website, email, or phone. A 100% payment is required to confirm the booking. Guests must provide valid ID proof or a passport during check-in. Date modifications are subject to availability. Smoking, alcohol, and non-vegetarian food are strictly prohibited within the premises to maintain a pure Ayurvedic wellness environment. For assistance, guests can contact our reservations team.
-          </p>
-          <p>
-            <strong>Payment terms:</strong> Accepted payment methods include credit/debit cards, UPI, Wire Transfer, PayPal, and Razorpay.
+            To confirm registration in any Kairali Guru certification programme or workshop, a 100% advance payment of the course fee is required. This payment reserves your seat in both the theoretical portal modules and the practical clinical components. Acceptable payment methods include credit/debit cards, bank wire transfers, UPI, PayPal, and Razorpay.
           </p>
 
-          <h3 className="font-display text-xl font-bold text-palm pt-4">Payment Policy</h3>
-          <ul className="list-disc pl-5 space-y-2">
-            <li>Full payment must be made at the time of booking to confirm the reservation.</li>
-            <li>Payment methods include credit cards, debit cards, net banking, and digital wallets. Ensure that the transaction is successful to receive a confirmation.</li>
-          </ul>
-
-          <h3 className="font-display text-xl font-bold text-palm pt-4">Cancellation Terms</h3>
+          <h3 className="font-display text-xl font-bold text-palm pt-4">Cancellation and Deferral Guidelines</h3>
           <div className="space-y-4">
-            <div className="bg-sand-2/20 border border-sand-2 rounded-2xl p-6">
-              <h4 className="font-sans font-bold text-palm text-sm uppercase tracking-wider mb-2">30 Days or More Before Arrival</h4>
+            <div className="bg-sand-2/20 border border-sand-2 rounded-2xl p-6 font-sans">
+              <h4 className="font-bold text-palm text-sm uppercase tracking-wider mb-2">30 Days or More Prior to Course Start</h4>
               <p className="text-xs sm:text-sm text-taupe font-serif">
-                Cancellations made 30 days or more prior to the check-in date will receive a full refund of the amount paid. Any bank or transaction fees incurred during payment will also be refunded.
+                Cancellations requested 30 days or more prior to the scheduled course launch (or portal access start date) will receive a **100% refund**, minus a 5% administrative fee and bank transaction costs.
               </p>
             </div>
 
-            <div className="bg-sand-2/20 border border-sand-2 rounded-2xl p-6">
-              <h4 className="font-sans font-bold text-palm text-sm uppercase tracking-wider mb-2">15 Days Before Arrival</h4>
+            <div className="bg-sand-2/20 border border-sand-2 rounded-2xl p-6 font-sans">
+              <h4 className="font-bold text-palm text-sm uppercase tracking-wider mb-2">15 to 29 Days Prior to Course Start</h4>
               <p className="text-xs sm:text-sm text-taupe font-serif">
-                Cancellations made between 15 days and 30 days prior to the check-in date will be eligible for a 50% refund of the amount paid. This amount excludes any non-refundable charges, such as booking fees or taxes.
+                Cancellations requested between 15 and 29 days prior to the course launch date are eligible for a **50% refund** of the amount paid.
               </p>
             </div>
 
-            <div className="bg-sand-2/20 border border-sand-2 rounded-2xl p-6">
-              <h4 className="font-sans font-bold text-palm text-sm uppercase tracking-wider mb-2">Less Than 15 Days Before Arrival or Changes During Stay</h4>
+            <div className="bg-sand-2/20 border border-sand-2 rounded-2xl p-6 font-sans">
+              <h4 className="font-bold text-palm text-sm uppercase tracking-wider mb-2">Less Than 15 Days Prior or After Access is Granted</h4>
               <p className="text-xs sm:text-sm text-taupe font-serif">
-                Cancellations made less than 15 days before the check-in date will not be eligible for a refund. Any changes to booking dates made during the stay will also not be eligible for a refund.
-              </p>
-              <p className="text-xs text-copper font-sans mt-2 font-medium">
-                * Exceptions may be made in cases of medical emergencies or other unforeseen circumstances, subject to documentation and management approval.
+                No refunds will be granted for cancellations requested less than 15 days before the course start date, or after access credentials for the Student Hub portal have been generated and dispatched.
               </p>
             </div>
           </div>
 
-          <h3 className="font-display text-xl font-bold text-palm pt-4">No-Show Policy</h3>
+          <h3 className="font-display text-xl font-bold text-palm pt-4">Deferral & Schedule Modifications</h3>
           <p>
-            If a guest fails to check in on the scheduled day without providing prior notice, the booking will be considered a no-show. No refund or rescheduling will be provided in such cases.
+            If you are unable to attend the practical session on campus due to professional conflicts or health conditions, you may request a deferral to a subsequent batch. 
           </p>
-
-          <h3 className="font-display text-xl font-bold text-palm pt-4">Early Departure</h3>
-          <p>
-            In cases where guests choose to depart earlier than their planned stay, refunds will not be provided for the unused portion of their booking.
-          </p>
-
-          <h3 className="font-display text-xl font-bold text-palm pt-4">Refund Turnaround Time</h3>
-          <p>
-            For eligible cancellations, the refund process will be initiated within 5-7 working days from the date of cancellation confirmation. The refund will be credited to the customer’s bank account or the original payment method used during the booking.
-          </p>
-          <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm">
-            <li>Customers will receive a confirmation email once the refund has been processed.</li>
-            <li>Please ensure accurate bank or payment details are provided to avoid delays.</li>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Deferral requests must be submitted in writing at least 15 days before the practical start date.</li>
+            <li>One deferral is allowed free of charge. Additional deferrals will incur a scheduling fee of ₹5,000 / $70.</li>
           </ul>
+
+          <h3 className="font-display text-xl font-bold text-palm pt-4">Practical Component No-Show Policy</h3>
+          <p>
+            If a student fails to arrive at the Palakkad campus for the practical training schedule without at least 72 hours of written notification, the practical hours will be forfeited. No rescheduling, credit, or refund will be issued under such conditions.
+          </p>
+
+          <h3 className="font-display text-xl font-bold text-palm pt-4">Refund Processing Timeline</h3>
+          <p>
+            Once a refund request is officially approved by administration, the refund will be processed and returned to the original payment source (or bank account) within **7 to 10 working days**. You will receive an automated transaction receipt via email.
+          </p>
 
           <h3 className="font-display text-xl font-bold text-palm pt-4">Force Majeure Clause</h3>
           <p>
-            In the event of circumstances beyond our control, such as natural disasters, pandemics, government-imposed travel restrictions, or other force majeure events, Kairali – The Ayurvedic Healing Village reserves the right to:
+            In the event that the Academy must cancel or postpone a course due to circumstances beyond control (e.g. natural disasters, pandemic lockdowns, state travel restrictions), Kairali Guru will:
           </p>
           <ul className="list-disc pl-5 space-y-2">
-            <li>Reschedule the booking to a mutually agreeable date without additional charges.</li>
-            <li>Offer a credit note for the amount paid, valid for future use within a fixed timeline from the date of issuance.</li>
-            <li>Process a refund in exceptional cases, subject to management approval and applicable deductions for non-refundable costs incurred.</li>
+            <li>Offer a priority seat in the next scheduled block or batch.</li>
+            <li>Issue an educational credit note valid for any other certification programme within 12 months.</li>
+            <li>Process a full refund in exceptional scenarios, after deducting irrecoverable third-party material or licensing costs.</li>
           </ul>
-          <p className="pt-2">
-            Guests are encouraged to contact our reservations team to discuss available options in such situations.
+
+          <h3 className="font-display text-xl font-bold text-palm pt-4">Questions</h3>
+          <p>
+            For all cancellations and refund requests, write directly to the Registrar:
           </p>
-          <p className="italic font-sans text-xs text-taupe mt-4">
-            We appreciate your understanding and cooperation in adhering to these policies. For further assistance or queries, please contact our support team.
-          </p>
+          <div className="bg-sand-2/20 border border-sand-2 rounded-2xl p-6 text-xs sm:text-sm font-sans space-y-2.5">
+            <p><strong>Email:</strong> {CONTACT_INFO.admissions.email}</p>
+            <p><strong>Phone:</strong> {CONTACT_INFO.admissions.phone}</p>
+          </div>
         </div>
       </div>
     </main>

@@ -1,7 +1,13 @@
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { TreeStructure, ArrowRight, Monitor, GraduationCap, MapPin, BookOpen, UserGear, ShieldCheck } from "@phosphor-icons/react/dist/ssr";
+import { TreeStructure, ArrowRight, GraduationCap, MapPin, BookOpen, UserGear, ShieldCheck } from "@phosphor-icons/react/dist/ssr";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website Sitemap - Kairali Guru Navigation Guide",
+  description: "Navigate all pages, educational tracks, campus location profiles, resources, and policy documents of the Kairali Guru platform.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;

@@ -3,7 +3,8 @@ import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import LanguageSwitcher from "./LanguageSwitcher";
 import MobileNavigation from "./MobileNavigation";
-import { CaretDown, Phone, Envelope, User, BookOpen } from "@phosphor-icons/react/dist/ssr";
+import { CaretDown, Phone, Envelope, User } from "@phosphor-icons/react/dist/ssr";
+import { CONTACT_INFO } from "@/lib/config";
 
 export default async function Header() {
   const t = await getTranslations("Navigation");
@@ -16,13 +17,13 @@ export default async function Header() {
           {/* Support Brief */}
           <div className="flex items-center gap-6 text-paper-on-dark/80">
             <span className="hidden md:inline-block font-serif italic text-turmeric">International Ayurveda Training</span>
-            <a href="tel:+919289838797" className="flex items-center gap-1.5 hover:text-turmeric transition-colors">
+            <a href={`tel:${CONTACT_INFO.admissions.phone.replace(/[^\d+]/g, "")}`} className="flex items-center gap-1.5 hover:text-turmeric transition-colors">
               <Phone size={12} />
-              <span>+91-9289838797</span>
+              <span>{CONTACT_INFO.admissions.phone}</span>
             </a>
-            <a href="mailto:info@kairali.com" className="flex items-center gap-1.5 hover:text-turmeric transition-colors">
+            <a href={`mailto:${CONTACT_INFO.corporate.email}`} className="flex items-center gap-1.5 hover:text-turmeric transition-colors">
               <Envelope size={12} />
-              <span>info@kairali.com</span>
+              <span>{CONTACT_INFO.corporate.email}</span>
             </a>
           </div>
 
@@ -51,6 +52,7 @@ export default async function Header() {
               alt="Kairali Ayurveda logo"
               width={36}
               height={36}
+              style={{ height: "auto" }}
               className="object-contain"
               priority
             />
@@ -107,7 +109,7 @@ export default async function Header() {
                       <li>
                         <Link href="/courses/advanced-lifestyle-consultant-therapist" className="block group/link">
                           <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">Advanced Consultant (AALCT)</span>
-                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">Clinical practice, 12 weeks.</span>
+                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">Clinical practice, 20 Days.</span>
                         </Link>
                       </li>
                     </ul>

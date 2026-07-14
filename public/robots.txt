@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Exclude student portal and developer tools from search engines
+Disallow: /*/student-hub
+Disallow: /student-hub
+Disallow: /_next/
+Disallow: /api/
+Disallow: /_vercel/
+
+# Sitemaps
+Sitemap: https://kairali.guru/sitemap.xml

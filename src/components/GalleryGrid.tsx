@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { X, CaretLeft, CaretRight, Camera, Image as ImageIcon } from "@phosphor-icons/react";
+import { X, CaretLeft, CaretRight, Image as ImageIcon } from "@phosphor-icons/react";
 import GalleryImage from "./GalleryImage";
+import Image from "next/image";
 
 export interface GalleryItem {
   title: string;
@@ -57,6 +58,7 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeItem]);
 
   // Prevent scroll when lightbox is open
@@ -161,10 +163,12 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
             {/* Central Image Container */}
             <div className="w-full h-full flex flex-col items-center justify-center max-w-4xl mx-auto p-2">
               <div className="relative w-full h-[60vh] flex items-center justify-center">
-                <img
+                <Image
                   src={`/images/${activeItem.images[activeImgIndex]}`}
                   alt={`${activeItem.title} - View ${activeImgIndex + 1}`}
-                  className="max-w-full max-h-full object-contain rounded-lg shadow-2xl transition-all duration-300"
+                  fill
+                  className="object-contain rounded-lg shadow-2xl transition-all duration-300"
+                  sizes="(max-width: 768px) 100vw, 80vw"
                 />
               </div>
               <div className="mt-4 text-center text-white/70 max-w-2xl px-4">
@@ -199,10 +203,12 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
                       : "border-transparent opacity-50 hover:opacity-100 hover:scale-103"
                   }`}
                 >
-                  <img
+                  <Image
                     src={`/images/${imgName}`}
                     alt="Thumbnail"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="80px"
                   />
                 </button>
               ))}

@@ -3,6 +3,8 @@
 import { useLocale } from "next-intl";
 import { WhatsappLogo } from "@phosphor-icons/react";
 
+import { CONTACT_INFO } from "@/lib/config";
+
 export default function WhatsAppButton() {
   const locale = useLocale();
   
@@ -16,7 +18,8 @@ export default function WhatsAppButton() {
   };
 
   const currentMessage = messages[locale as keyof typeof messages] || messages.en;
-  const whatsappUrl = `https://wa.me/919289838797?text=${encodeURIComponent(currentMessage)}`;
+  const cleanWhatsappNumber = CONTACT_INFO.admissions.whatsapp.replace(/[^\d]/g, "");
+  const whatsappUrl = `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(currentMessage)}`;
 
   return (
     <a

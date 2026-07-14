@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useTranslations } from "next-intl";
 import { CheckCircle, ArrowRight, ArrowLeft } from "@phosphor-icons/react";
-import { supabase } from "@/lib/supabaseClient";
+
 
 const enquirySchema = z.object({
   name: z
@@ -35,6 +35,24 @@ export default function EnquiryForm() {
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+  const [isOnline, setIsOnline] = useState(() => {
+    if (typeof window !== "undefined") {
+      return navigator.onLine;
+    }
+    return true;
+  });
+
+  useEffect(() => {
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, []);
 
   const {
     register,
@@ -68,30 +86,35 @@ export default function EnquiryForm() {
   const onSubmit = async (data: EnquiryFormValues) => {
     setIsSubmitting(true);
     try {
-      const { error } = await supabase
-        .from("enquiries")
-        .insert([
-          {
-            name: data.name,
-            email: data.email,
-            country: data.country,
-            programme: data.programme,
-            phone: data.phone,
-            language: data.language,
-            location: data.location,
-            message: data.message || ""
-          }
-        ]);
+      const response = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          country: data.country,
+          programme: data.programme,
+          phone: data.phone,
+          language: data.language,
+          location: data.location,
+          message: data.message || "",
+          website_url: honeypot, // Honeypot field for spam bot protection
+        }),
+      });
 
-      if (error) {
-        throw error;
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Submission failed.");
       }
 
       setIsSuccess(true);
       reset();
-    } catch (err: any) {
-      console.error("Error submitting to Supabase:", err.message || err);
-      alert("Submission failed. Please verify your connection or try again.");
+      setHoneypot("");
+    } catch (err) {
+      const errMsg = err instanceof Error ? err.message : "Submission failed. Please verify your connection or try again.";
+      console.error("Error submitting inquiry:", errMsg);
+      alert(errMsg);
     } finally {
       setIsSubmitting(false);
     }
@@ -310,6 +333,18 @@ export default function EnquiryForm() {
               />
             </div>
 
+            {/* Honeypot field for spam bot protection */}
+            <div className="hidden" aria-hidden="true">
+              <input
+                type="text"
+                name="website_url"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+
             {/* GDPR Consent */}
             <div className="flex items-start gap-3 mt-2">
               <input
@@ -324,20 +359,26 @@ export default function EnquiryForm() {
             </div>
             {errors.consent && <p className="text-[10px] text-laterite mt-0.5 font-medium">{errors.consent.message}</p>}
 
+            {!isOnline && (
+              <div className="bg-laterite/10 border border-laterite/20 text-laterite text-xs font-semibold rounded-xl p-3 text-center animate-pulse mt-4">
+                You are currently offline. Please check your network connection to submit.
+              </div>
+            )}
+
             {/* Nav controls */}
             <div className="grid grid-cols-2 gap-4 mt-6">
               <button
                 type="button"
                 onClick={() => setStep(1)}
-                className="bg-transparent border border-copper/30 hover:bg-sand-2/20 text-palm font-semibold py-3 rounded-full text-xs transition-all flex items-center justify-center gap-2"
+                className="bg-transparent border border-copper/30 hover:bg-sand-2/20 text-palm font-semibold py-3 rounded-full text-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <ArrowLeft size={14} />
                 <span>Go Back</span>
               </button>
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="bg-palm hover:bg-palm-2 disabled:bg-palm/70 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all shadow-md flex items-center justify-center gap-2"
+                disabled={isSubmitting || !isOnline}
+                className="bg-palm hover:bg-palm-2 disabled:bg-palm/70 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
               >
                 {isSubmitting && <span className="inline-block w-3.5 h-3.5 border-2 border-paper-on-dark border-t-transparent rounded-full animate-spin" />}
                 <span>Submit Form</span>

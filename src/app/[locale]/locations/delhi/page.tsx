@@ -5,6 +5,13 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import SchemaRenderer from "@/components/SchemaRenderer";
 import { LocalBusiness, WithContext } from "schema-dts";
 import { MapPin, Airplane, House, Phone, Envelope, Compass } from "@phosphor-icons/react/dist/ssr";
+import { CONTACT_INFO } from "@/lib/config";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ayurveda Training Centre in New Delhi",
+  description: "Learn authentic Kerala Ayurveda in South Delhi. Our Mehrauli centre offers professional certification and practitioner programs on a non-residential basis.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -28,7 +35,7 @@ export default async function DelhiLocationPage({ params }: PageProps) {
     "@type": "LocalBusiness",
     "name": "Kairali Ayurveda Training Centre Delhi",
     "image": "https://kairali.guru/images/delhi-centre.jpg",
-    "telephone": "+91-9289838797",
+    "telephone": CONTACT_INFO.admissions.phone,
     "address": {
 
       "@type": "PostalAddress",
@@ -75,14 +82,14 @@ export default async function DelhiLocationPage({ params }: PageProps) {
                   {l("delhi.addressInfo")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-4 pt-4 border-t border-sand-2 text-xs text-taupe">
-                  <div className="flex items-center gap-2">
+                  <a href={`tel:${CONTACT_INFO.admissions.phone.replace(/[^\d+]/g, "")}`} className="flex items-center gap-2 hover:text-laterite transition-colors">
                     <Phone size={14} className="text-copper" />
-                    <span>+91-9289838797</span>
-                  </div>
-                  <div className="flex items-center gap-2">
+                    <span>{CONTACT_INFO.admissions.phone}</span>
+                  </a>
+                  <a href={`mailto:${CONTACT_INFO.admissions.email}`} className="flex items-center gap-2 hover:text-laterite transition-colors">
                     <Envelope size={14} className="text-copper" />
-                    <span>admissions@kairali.guru</span>
-                  </div>
+                    <span>{CONTACT_INFO.admissions.email}</span>
+                  </a>
                 </div>
               </div>
 

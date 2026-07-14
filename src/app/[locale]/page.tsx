@@ -6,15 +6,9 @@ import TrustBar from "@/components/TrustBar";
 import { 
   ArrowRight, 
   Star, 
-  Quotes, 
   FlowerLotus, 
-  SealCheck, 
   Calendar, 
-  BookOpen, 
-  GraduationCap, 
-  MapPin, 
-  Users,
-  Compass 
+  MapPin
 } from "@phosphor-icons/react/dist/ssr";
 
 interface PageProps {
@@ -26,12 +20,10 @@ export default async function Home({ params }: PageProps) {
   setRequestLocale(locale);
 
   // Load locale translation namespaces
-  const t = await getTranslations("Home");
   const cta = await getTranslations("CTAs");
   const f = await getTranslations("FAQ");
   const ab = await getTranslations("About");
   const tr = await getTranslations("Travel");
-  const nav = await getTranslations("Navigation");
 
   const faqItems = [
     { question: f("q1"), answer: f("a1") },
@@ -68,8 +60,8 @@ export default async function Home({ params }: PageProps) {
       slug: "intensive-ayurveda-training",
       name: "Intensive Ayurveda Training (WAP)",
       desc: "Comprehensive hands-on therapist practice inside our Palakkad teaching hospital.",
-      duration: "4 weeks",
-      mode: "Residential (Kerala)",
+      duration: "5 Days (15 Lectures)",
+      mode: "Residential (Kerala) / Non-Residential",
       category: "Professional Certificate",
       image: "kerala-class-1.jpg"
     },
@@ -77,7 +69,7 @@ export default async function Home({ params }: PageProps) {
       slug: "level-one-advanced-ayurveda-training",
       name: "Level-One Advanced for Wellness Professionals (AATP1)",
       desc: "Hybrid model combining robust online foundation with intensive practicals in Delhi.",
-      duration: "80 Hours",
+      duration: "10 Days (40 Hours)",
       mode: "Hybrid (Delhi / Online)",
       category: "Advanced Specialization",
       image: "delhi-centre-1.jpg"
@@ -86,8 +78,8 @@ export default async function Home({ params }: PageProps) {
       slug: "advanced-lifestyle-consultant-therapist",
       name: "Advanced Lifestyle Consultant & Therapist (AALCT)",
       desc: "Our flagship clinical immersion programme guided by senior physicians.",
-      duration: "12 Weeks",
-      mode: "Residential (Kerala)",
+      duration: "20 Days (80 Hours)",
+      mode: "Residential (Kerala) / Non-Residential",
       category: "Professional Diploma",
       image: "kerala-pharmacy-1.jpg"
     }
@@ -97,7 +89,7 @@ export default async function Home({ params }: PageProps) {
     <div className="flex flex-col w-full text-start bg-sand/20 gap-32 md:gap-48 pb-32">
       
       {/* SECTION 1: HERO */}
-      <section className="relative w-full min-h-[calc(100dvh-144px)] md:min-h-[calc(100dvh-116px)] overflow-hidden flex items-end justify-center bg-palm">
+      <section className="relative w-full min-h-[calc(100dvh-80px)] md:min-h-[calc(100dvh-116px)] overflow-hidden flex items-end justify-center bg-palm">
         <div className="absolute inset-0 w-full h-full">
           <img
             alt="Kairali Guru Ayurvedic Sanctuary"
@@ -180,7 +172,7 @@ export default async function Home({ params }: PageProps) {
             {ab("desc1")}
           </p>
           <div className="border-s-2 border-laterite ps-6 py-1 italic font-serif text-sm text-palm/90">
-            "स्वस्थस्य स्वास्थ्य रक्षणं, आतुरस्य विकार प्रशमनं च।" <br />
+            &ldquo;स्वस्थस्य स्वास्थ्य रक्षणं, आतुरस्य विकार प्रशमनं च।&rdquo; <br />
             <span className="text-[10px] uppercase font-mono tracking-wider text-taupe not-italic block mt-2">— Charaka Samhita</span>
           </div>
           <Link
@@ -465,7 +457,7 @@ export default async function Home({ params }: PageProps) {
                   ))}
                 </div>
                 <p className="text-xs sm:text-sm text-bark/90 leading-relaxed font-serif italic">
-                  "{rev.quote}"
+                  &ldquo;{rev.quote}&rdquo;
                 </p>
               </div>
 

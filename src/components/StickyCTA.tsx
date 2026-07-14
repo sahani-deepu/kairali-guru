@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { CalendarBlank, ChatTeardropText } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";

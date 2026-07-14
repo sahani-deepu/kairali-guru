@@ -3,6 +3,12 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Airplane, House, IdentificationCard, Suitcase, EnvelopeOpen } from "@phosphor-icons/react/dist/ssr";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Travel & Visa Guidelines for International Students",
+  description: "Find helpful travel and visa instructions for studying Ayurveda in India. Learn about airports near our Palakkad and Delhi campuses, transfers, and e-Visas.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -12,7 +18,6 @@ export default async function TravelVisaPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations("Navigation");
   const tr = await getTranslations("Travel");
 
   const breadcrumbItems = [

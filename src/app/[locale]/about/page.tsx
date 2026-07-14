@@ -2,6 +2,12 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { ShieldCheck, Medal, Users, Hourglass, FlowerLotus } from "@phosphor-icons/react/dist/ssr";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Our 118-Year Family Lineage",
+  description: "Discover Kairali's family practice of Ayurveda since 1908. Learn about our lineage, our practicing BAMS physicians, and our NABH-accredited healing village.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;

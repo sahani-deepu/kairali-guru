@@ -34,8 +34,44 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Kairali Guru | Authentic Kerala Ayurveda Training & Certification",
+  metadataBase: new URL("https://kairali.guru"),
+  title: {
+    default: "Kairali Guru | Authentic Kerala Ayurveda Training & Certification",
+    template: "%s | Kairali Guru"
+  },
   description: "Learn authentic Kerala Ayurveda at Kairali Guru. Taught by practicing doctors at our NABH-accredited healing village in Kerala, India. Start online now.",
+  alternates: {
+    canonical: "./",
+    languages: {
+      en: "/en",
+      de: "/de",
+      fr: "/fr",
+      ar: "/ar",
+      ru: "/ru",
+      "x-default": "/en"
+    }
+  },
+  openGraph: {
+    title: "Kairali Guru | Authentic Kerala Ayurveda Training & Certification",
+    description: "Learn authentic Kerala Ayurveda at Kairali Guru. Taught by practicing doctors at our NABH-accredited healing village in Kerala, India. Start online now.",
+    url: "./",
+    siteName: "Kairali Guru",
+    type: "website",
+    images: [
+      {
+        url: "/images/image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kairali Guru Ayurveda"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kairali Guru | Authentic Kerala Ayurveda Training & Certification",
+    description: "Learn authentic Kerala Ayurveda at Kairali Guru. Taught by practicing doctors at our NABH-accredited healing village in Kerala, India. Start online now.",
+    images: ["/images/image.png"]
+  }
 };
 
 export function generateStaticParams() {
@@ -53,7 +89,7 @@ export default async function LocaleLayout({
 }: LayoutProps) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as typeof routing.locales[number])) {
     notFound();
   }
 

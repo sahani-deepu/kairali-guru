@@ -1,10 +1,15 @@
 import { setRequestLocale } from "next-intl/server";
-import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SchemaRenderer from "@/components/SchemaRenderer";
-import { Review, AggregateRating, WithContext } from "schema-dts";
+import { AggregateRating, WithContext } from "schema-dts";
 import { Star, Quotes, GraduationCap } from "@phosphor-icons/react/dist/ssr";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Student Testimonials & Reviews",
+  description: "Read success stories and reviews from international students who completed our Ayurveda training and clinical internship programs.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -13,9 +18,6 @@ interface PageProps {
 export default async function TestimonialsPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
-
-  const t = await getTranslations("Navigation");
-  const c = await getTranslations("Enquiry");
 
   const breadcrumbItems = [
     { label: "Student Stories" }
@@ -94,7 +96,7 @@ export default async function TestimonialsPage({ params }: PageProps) {
                   </div>
 
                   <p className="text-sm sm:text-base text-bark/90 leading-relaxed font-serif mb-8 italic">
-                    "{rev.quote}"
+                    &ldquo;{rev.quote}&rdquo;
                   </p>
                 </div>
 

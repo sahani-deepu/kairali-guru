@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import StudentHubClient from "./StudentHubClient";
+import { getServerSession } from "@/lib/auth";
 
 // Set robots meta tag to prevent search engines from indexing the portal
 export const metadata: Metadata = {
@@ -18,5 +19,9 @@ export default async function StudentHubPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <StudentHubClient />;
+  const user = await getServerSession();
+  const initialUser = user ? { id: user.id, email: user.email || "" } : null;
+
+  return <StudentHubClient initialUser={initialUser} initialIsLoggedIn={!!user} />;
 }
+

@@ -2,7 +2,13 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { ShieldCheck, ArrowRight, Plant, Sparkle, Heart } from "@phosphor-icons/react/dist/ssr";
+import { ShieldCheck, ArrowRight, Sparkle, Heart } from "@phosphor-icons/react/dist/ssr";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Panchakarma Training - Traditional Kerala Detoxification",
+  description: "Learn Panchakarma, the heart of Ayurvedic therapy. Master the classical five-fold detoxification and rejuvenation treatments hands-on under expert physicians.",
+};
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -14,7 +20,6 @@ export default async function PanchakarmaPage({ params }: PageProps) {
 
   const t = await getTranslations("Navigation");
   const p = await getTranslations("Panchakarma");
-  const cta = await getTranslations("CTAs");
 
   const breadcrumbItems = [
     { label: t("panchakarma") }
