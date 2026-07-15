@@ -50,10 +50,9 @@ export default async function Header() {
             <Image
               src="/images/kairali-ayurveda-logo.png"
               alt="Kairali Ayurveda logo"
-              width={36}
-              height={36}
-              style={{ height: "auto" }}
-              className="object-contain"
+              width={60}
+              height={60}
+              className="object-contain h-[60px] w-auto"
               priority
             />
             <div className="flex flex-col">
