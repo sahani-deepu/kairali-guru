@@ -144,7 +144,7 @@ export default async function Home({ params }: PageProps) {
       {/* SECTION 3: EDITORIAL INTRODUCTION */}
       <section className="max-w-7xl mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-7 grid grid-cols-12 gap-6 items-end">
-          <div className="col-span-8 rounded-lg overflow-hidden border border-copper/15 aspect-[4/5] shadow-sm">
+          <div className="col-span-12 md:col-span-8 rounded-lg overflow-hidden border border-copper/15 aspect-[4/5] shadow-sm">
             <img
               src="/images/kairali-palakkad-depictions-77.jpg"
               alt="NABH accredited clinical teaching hospital campus"
@@ -314,7 +314,7 @@ export default async function Home({ params }: PageProps) {
             <p className="text-sm text-paper-on-dark/75 leading-relaxed font-serif">
               {ab("desc2")}
             </p>
-            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-paper-on-dark/10 text-start">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-paper-on-dark/10 text-start">
               <div>
                 <span className="text-2xl sm:text-3xl font-display font-bold text-turmeric block">1908</span>
                 <span className="text-[9px] text-paper-on-dark/60 uppercase tracking-widest font-mono">Est. Date</span>
@@ -553,7 +553,7 @@ export default async function Home({ params }: PageProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 text-start">
           <div className="lg:col-span-8 space-y-6 group">
-            <div className="aspect-[21/10] relative rounded-lg overflow-hidden border border-copper/15 shadow-sm">
+            <div className="aspect-[16/9] md:aspect-[21/10] relative rounded-lg overflow-hidden border border-copper/15 shadow-sm">
               <img
                 src="/images/panchkarma-image.webp"
                 alt="How to study Ayurveda"

@@ -27,7 +27,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contact us on WhatsApp"
-      className="fixed bottom-6 end-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#128350] hover:bg-[#0F7A47] text-white shadow-lg transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#128350] focus:ring-offset-2"
+      className="fixed bottom-24 md:bottom-6 end-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#128350] hover:bg-[#0F7A47] text-white shadow-lg transition-transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#128350] focus:ring-offset-2"
     >
       <WhatsappLogo size={32} weight="fill" />
     </a>

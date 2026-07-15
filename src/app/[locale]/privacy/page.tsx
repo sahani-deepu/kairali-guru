@@ -43,7 +43,7 @@ export default async function PrivacyPage({ params }: PageProps) {
             For any queries or rights requests under privacy laws, please contact our Data Protection Officer:
           </p>
           <div className="bg-sand-2/20 border border-sand-2 rounded-2xl p-6 text-xs sm:text-sm font-sans space-y-2.5">
-            <p><strong>Office:</strong> Kairali Guru Data Privacy Office<br />{CONTACT_INFO.address}</p>
+            <p><strong>Office:</strong> Kairali Ayurvedic Health Resort Pvt. Ltd.<br />{CONTACT_INFO.address}</p>
             <p><strong>Email:</strong> {CONTACT_INFO.corporate.email}</p>
             <p><strong>Admissions Inquiries:</strong> {CONTACT_INFO.admissions.email}</p>
           </div>

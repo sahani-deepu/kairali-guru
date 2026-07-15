@@ -66,7 +66,11 @@ export default async function FreeConsultationPage({ params }: PageProps) {
                 </div>
                 <div>
                   <h4 className="font-semibold text-palm text-sm">Email Admissions Office</h4>
-                  <p className="text-xs text-taupe mt-0.5">{CONTACT_INFO.admissions.email} · {CONTACT_INFO.corporate.email}</p>
+                  <p className="text-xs text-taupe mt-0.5">
+                    {CONTACT_INFO.admissions.email === CONTACT_INFO.corporate.email
+                      ? CONTACT_INFO.admissions.email
+                      : `${CONTACT_INFO.admissions.email} · ${CONTACT_INFO.corporate.email}`}
+                  </p>
                 </div>
               </div>
 
