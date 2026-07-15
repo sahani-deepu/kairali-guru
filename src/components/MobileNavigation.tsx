@@ -32,7 +32,7 @@ export default function MobileNavigation() {
 
       {/* Drawer Overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-palm/40 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 bg-palm/40 backdrop-blur-sm transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsOpen(false)}
@@ -40,9 +40,10 @@ export default function MobileNavigation() {
 
       {/* Drawer Body */}
       <div
-        className={`fixed top-0 bottom-0 z-50 w-72 max-w-[80vw] bg-sand border-s border-sand-2 p-6 shadow-2xl transition-transform duration-300 ease-editorial ${
+        className={`fixed top-0 bottom-0 z-50 w-72 max-w-[80vw] border-s p-6 shadow-2xl transition-transform duration-300 ease-editorial ${
           isOpen ? "translate-x-0" : "translate-x-full rtl:-translate-x-full"
         } end-0`}
+        style={{ backgroundColor: "#ffffff", borderColor: "#EFE7D6" }}
       >
         <div className="flex justify-between items-center mb-8">
           <span className="font-display font-bold text-lg text-palm">Menu</span>

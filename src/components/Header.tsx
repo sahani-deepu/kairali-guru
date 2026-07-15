@@ -43,7 +43,7 @@ export default async function Header() {
       </div>
 
       {/* 2. Main Navigation Bar */}
-      <header className="sticky top-0 z-30 w-full bg-sand/90 backdrop-blur-md border-b border-sand-2">
+      <header className="sticky top-0 z-30 w-full bg-white border-b border-sand-2">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 h-16 flex justify-between items-center">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group text-start">
@@ -57,10 +57,10 @@ export default async function Header() {
               priority
             />
             <div className="flex flex-col">
-              <span className="font-display text-xl font-bold tracking-tight text-palm group-hover:text-laterite transition-colors">
+              <span className="font-display text-lg sm:text-xl font-bold tracking-tight text-palm group-hover:text-laterite transition-colors whitespace-nowrap">
                 Kairali Guru
               </span>
-              <span className="text-[9px] font-mono tracking-[0.2em] text-laterite uppercase -mt-1 font-bold">
+              <span className="text-[9px] font-mono tracking-[0.2em] text-laterite uppercase -mt-1 font-bold hidden sm:block">
                 Lineage since 1908
               </span>
             </div>
@@ -76,7 +76,7 @@ export default async function Header() {
               </button>
 
               {/* Pure CSS Megamenu container */}
-              <div className="absolute top-full start-0 mt-1 w-[680px] bg-sand border border-sand-2 rounded-3xl p-6 shadow-xl opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 z-50 grid grid-cols-12 gap-6 text-start">
+              <div className="absolute top-full start-0 mt-1 w-[680px] bg-white border border-sand-2 rounded-3xl p-6 shadow-xl opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 z-50 grid grid-cols-12 gap-6 text-start">
                 {/* Course sections */}
                 <div className="col-span-8 grid grid-cols-2 gap-6 border-e border-sand-2 pe-6">
                   <div>
@@ -155,10 +155,10 @@ export default async function Header() {
           </nav>
 
           {/* Action Items */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <Link
               href="/enquiry"
-              className="bg-palm hover:bg-palm-2 text-paper-on-dark px-6 py-2.5 rounded-full text-xs font-semibold tracking-wide shadow-sm hover:shadow transition-all"
+              className="bg-palm hover:bg-palm-2 text-paper-on-dark px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide shadow-sm hover:shadow transition-all whitespace-nowrap"
             >
               {t("enquire")}
             </Link>
