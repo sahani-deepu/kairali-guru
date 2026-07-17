@@ -35,7 +35,7 @@ export default async function Footer() {
             <a href="https://www.youtube.com/@kairaliayurvedagroup" target="_blank" rel="noopener noreferrer" className="hover:text-turmeric transition-colors" aria-label="YouTube">
               <YoutubeLogo size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-turmeric transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/kairaliayurvedicgroup/" target="_blank" rel="noopener noreferrer" className="hover:text-turmeric transition-colors" aria-label="LinkedIn">
               <LinkedinLogo size={20} />
             </a>
           </div>

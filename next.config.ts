@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
           { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains; preload" },
-          { key: "Content-Security-Policy", value: `default-src 'self'; script-src 'self' 'unsafe-inline'${cspScriptSrc} https://*.supabase.co https://riivtioklmmlkkatvoqc.supabase.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.supabase.co https://riivtioklmmlkkatvoqc.supabase.co; connect-src 'self' https://*.supabase.co https://riivtioklmmlkkatvoqc.supabase.co;` },
+          { key: "Content-Security-Policy", value: `default-src 'self'; script-src 'self' 'unsafe-inline'${cspScriptSrc} https://*.supabase.co https://riivtioklmmlkkatvoqc.supabase.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.supabase.co https://riivtioklmmlkkatvoqc.supabase.co; connect-src 'self' https://*.supabase.co https://riivtioklmmlkkatvoqc.supabase.co; frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://*.google.co.in;` },
           { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
           { key: "Cross-Origin-Resource-Policy", value: "same-origin" }
         ]

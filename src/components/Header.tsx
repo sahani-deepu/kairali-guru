@@ -139,6 +139,9 @@ export default async function Header() {
               </div>
             </div>
 
+            <Link href="/locations" className="text-bark hover:text-laterite transition-colors">
+              {t("locations")}
+            </Link>
             <Link href="/student-hub" className="text-bark hover:text-laterite transition-colors">
               Student Hub
             </Link>

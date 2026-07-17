@@ -155,7 +155,7 @@ export default async function KeralaLocationPage({ params }: PageProps) {
               <div className="bg-sand border border-sand-2 rounded-3xl p-2.5 shadow-md overflow-hidden h-[320px] relative">
                 <iframe
                   title="Kairali- The Ayurvedic Healing Village Map"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.4735237895056!2d76.62125137577531!3d10.473432489679198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7e69f8c148e23%3A0x6a1005a5a1f269a8!2sKairali%20-%20The%20Ayurvedic%20Healing%20Village!5e0!3m2!1sen!2sin!4v1721200000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps?q=Kairali+-+The+Ayurvedic+Healing+Village,+Olassery,+Palakkad,+Kerala&amp;output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
