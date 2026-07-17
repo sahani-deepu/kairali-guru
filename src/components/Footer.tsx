@@ -26,13 +26,13 @@ export default async function Footer() {
             {f("about")}
           </p>
           <div className="flex gap-4 items-center mt-2 text-paper-on-dark/60">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-turmeric transition-colors" aria-label="Facebook">
+            <a href="https://www.facebook.com/KairaliTheAyurvedicHealingVillage" target="_blank" rel="noopener noreferrer" className="hover:text-turmeric transition-colors" aria-label="Facebook">
               <FacebookLogo size={20} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-turmeric transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/kairaliayurvedichealingvillage/" target="_blank" rel="noopener noreferrer" className="hover:text-turmeric transition-colors" aria-label="Instagram">
               <InstagramLogo size={20} />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-turmeric transition-colors" aria-label="YouTube">
+            <a href="https://www.youtube.com/@kairaliayurvedagroup" target="_blank" rel="noopener noreferrer" className="hover:text-turmeric transition-colors" aria-label="YouTube">
               <YoutubeLogo size={20} />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-turmeric transition-colors" aria-label="LinkedIn">
@@ -143,9 +143,9 @@ export default async function Footer() {
 
       <div className="max-w-7xl mx-auto flex flex-col items-center gap-4 mb-8 text-xs text-paper-on-dark/70 font-sans border-b border-copper/10 pb-8">
         <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2.5">
-          <Link href="/about" className="hover:text-turmeric transition-colors">CSR</Link>
+          <Link href="/about/csr" className="hover:text-turmeric transition-colors">CSR</Link>
           <span className="text-paper-on-dark/30">|</span>
-          <Link href="/about" className="hover:text-turmeric transition-colors">Careers</Link>
+          <Link href="/about/careers" className="hover:text-turmeric transition-colors">Careers</Link>
           <span className="text-paper-on-dark/30">|</span>
           <Link href="/faq" className="hover:text-turmeric transition-colors">FAQ&apos;s &amp; Downloads</Link>
           <span className="text-paper-on-dark/30">|</span>
@@ -157,8 +157,6 @@ export default async function Footer() {
           <span className="text-paper-on-dark/30">|</span>
           <Link href="/refund" className="hover:text-turmeric transition-colors">Cancellation & Refund Policy</Link>
           <span className="text-paper-on-dark/30">|</span>
-          <Link href="/learn" className="hover:text-turmeric transition-colors">Archive</Link>
-          <span className="text-paper-on-dark/30">|</span>
           <Link href="/learn" className="hover:text-turmeric transition-colors">Blog</Link>
           <span className="text-paper-on-dark/30">|</span>
           <Link href="/sitemap" className="hover:text-turmeric transition-colors">Sitemap</Link>
@@ -169,8 +167,6 @@ export default async function Footer() {
           <Link href="/cookie-policy" className="hover:text-turmeric transition-colors">Cookie Policy</Link>
           <span className="text-paper-on-dark/30">|</span>
           <Link href="/privacy" className="hover:text-turmeric transition-colors">Privacy Statement</Link>
-          <span className="text-paper-on-dark/30">|</span>
-          <Link href="/legal-notice" className="hover:text-turmeric transition-colors">Legal Notice</Link>
           <span className="text-paper-on-dark/30">|</span>
           <CookieSettingsButton />
         </div>

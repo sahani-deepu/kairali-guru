@@ -16,7 +16,7 @@ export default async function Header() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           {/* Support Brief */}
           <div className="flex items-center gap-6 text-paper-on-dark/80">
-            <span className="hidden md:inline-block font-serif italic text-turmeric">International Ayurveda Training</span>
+            <span className="hidden md:inline-block italic text-turmeric">International Ayurveda Training</span>
             <a href={`tel:${CONTACT_INFO.admissions.phone.replace(/[^\d+]/g, "")}`} className="flex items-center gap-1.5 hover:text-turmeric transition-colors">
               <Phone size={12} />
               <span>{CONTACT_INFO.admissions.phone}</span>
@@ -48,7 +48,7 @@ export default async function Header() {
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group text-start">
             <Image
-              src="/images/kairali-ayurveda-logo.png"
+              src="/images/ayurveda-guru-logo.svg"
               alt="Kairali Ayurveda logo"
               width={60}
               height={60}

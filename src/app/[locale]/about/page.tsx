@@ -26,14 +26,14 @@ export default async function AboutPage({ params }: PageProps) {
 
   const faculty = [
     {
-      name: "Dr. Deepu John, BAMS",
+      name: "Dr. Deepu John",
       role: "Chief Physician & HOD",
       spec: "12+ Years Experience · Tridosha & Prakriti Diagnosis",
       image: "/images/Dr.-Deepu-John.webp",
       desc: "Expertise in diagnosis of Tridosha balance (Vata, Pitta, Kapha) and Prakriti (Unique body constitution)."
     },
     {
-      name: "Dr. Ashikha Raj, BAMS",
+      name: "Dr. Ashikha Raj",
       role: "Physician / RMO",
       spec: "8+ Years Experience · Traditional & Modern Therapeutics",
       image: "/images/Dr.-Ashikha-Raj.webp",
@@ -47,7 +47,7 @@ export default async function AboutPage({ params }: PageProps) {
       desc: "Expertise in diagnosis of Tridosha balance (Vata, Pitta, Kapha) and Prakriti (Unique body constitution)."
     },
     {
-      name: "Dr. Akhila Oommen, BAMS",
+      name: "Dr. Akhila Oommen",
       role: "Ayurvedic Physician",
       spec: "9+ Years Experience · Arthritis & Women's Health",
       image: "/images/Dr.-Akhila-Oommen.webp",
@@ -135,7 +135,7 @@ export default async function AboutPage({ params }: PageProps) {
               <Medal size={24} className="text-laterite shrink-0 mt-0.5" />
               <div>
                 <h4 className="font-semibold text-palm text-sm">4 Generations</h4>
-                <p className="text-xs text-taupe mt-0.5 leading-relaxed font-serif">Direct family lineage carrying the clinical tradition since 1908.</p>
+                <p className="text-xs text-taupe mt-0.5 leading-relaxed font-serif">Family lineage carrying the clinical tradition since 1908.</p>
               </div>
             </div>
 
@@ -164,7 +164,7 @@ export default async function AboutPage({ params }: PageProps) {
               Board of Directors
             </span>
             <h2 className="text-3xl md:text-4xl font-display font-light text-palm mt-2">
-              Our <span className="font-serif italic text-laterite font-normal">Founding Leadership</span>
+              Our <span className="text-laterite">Founding Leadership</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -213,7 +213,7 @@ export default async function AboutPage({ params }: PageProps) {
         <div className="mb-24">
           <h2 className="font-display text-3xl font-bold text-palm mb-12 text-center flex items-center justify-center gap-2">
             <Users size={26} className="text-laterite" />
-            <span>Taught By Practicing Physicians</span>
+            <span>Taught by Respected Physicians & Experts</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {faculty.map((doc, index) => (

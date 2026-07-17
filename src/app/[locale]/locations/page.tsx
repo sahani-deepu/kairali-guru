@@ -68,6 +68,20 @@ export default async function LocationsPage({ params }: PageProps) {
                   <span>NABH-accredited Ayurvedic Teaching Hospital</span>
                 </div>
               </div>
+
+              {/* Google Map */}
+              <div className="w-full aspect-[16/9] rounded-2xl overflow-hidden border border-copper/10 mb-8 relative shadow-sm">
+                <iframe
+                  title="Palakkad Campus, Kerala Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.4735237895056!2d76.62125137577531!3d10.473432489679198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7e69f8c148e23%3A0x6a1005a5a1f269a8!2sKairali%20-%20The%20Ayurvedic%20Healing%20Village!5e0!3m2!1sen!2sin!4v1721200000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
             <Link
               href="/locations/kerala"
@@ -102,6 +116,20 @@ export default async function LocationsPage({ params }: PageProps) {
                   <Calendar size={18} className="text-copper shrink-0" />
                   <span>Weekly theoretical and practical training classes</span>
                 </div>
+              </div>
+
+              {/* Google Map */}
+              <div className="w-full aspect-[16/9] rounded-2xl overflow-hidden border border-copper/10 mb-8 relative shadow-sm">
+                <iframe
+                  title="Mehrauli Center, New Delhi Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.203362143431!2d77.1752837753634!3d28.528498875689133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d6a695e263d%3A0x6b44917a86f91605!2sKairali%20Ayurvedic%20Centre!5e0!3m2!1sen!2sin!4v1721200000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
             <Link

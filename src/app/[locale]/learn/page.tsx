@@ -24,7 +24,7 @@ export default async function LearnHubPage({ params }: PageProps) {
       title: "How to Learn Ayurveda: A Step-by-Step Guide",
       excerpt: "Our comprehensive roadmap for beginners, yoga teachers, and wellness professionals who want to master authentic Ayurveda.",
       date: "July 10, 2026",
-      author: "Dr. Radhakrishnan, BAMS",
+      author: "Dr. Radhakrishnan",
       category: "Guides",
       image: "panchkarma-image.webp",
     },
@@ -33,7 +33,7 @@ export default async function LearnHubPage({ params }: PageProps) {
       title: "Understanding Panchakarma Detoxification",
       excerpt: "An in-depth explanation of the classical five-fold purification process, its clinical benefits, and how it is applied to the Tridoshas.",
       date: "July 05, 2026",
-      author: "Dr. Latha Radhakrishnan, BAMS",
+      author: "Dr. Latha Radhakrishnan",
       category: "Therapies",
       image: "kerala-pharmacy-1.jpg"
     },
@@ -42,7 +42,7 @@ export default async function LearnHubPage({ params }: PageProps) {
       title: "Introduction to Tridosha Theory",
       excerpt: "Explore Vata, Pitta, and Kapha — the three vital energies that govern human physiology and mental wellbeing.",
       date: "June 28, 2026",
-      author: "Dr. Sreejit, BAMS",
+      author: "Dr. Sreejit",
       category: "Foundations",
       image: "kerala-garden-1.jpg"
     }

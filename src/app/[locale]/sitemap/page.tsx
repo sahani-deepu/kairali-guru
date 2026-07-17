@@ -231,6 +231,22 @@ export default async function SitemapPage({ params }: PageProps) {
                 <div className="relative pl-4">
                   <div className="absolute left-0 top-3 w-4 h-[2px] bg-copper/20" />
                   <div className="bg-sand border border-sand-2 rounded-xl p-3 shadow-xs hover:border-laterite transition-all">
+                    <Link href="/about/csr" className="text-xs font-semibold text-palm hover:text-laterite block">CSR Policy</Link>
+                    <span className="text-[9px] text-taupe block font-serif mt-0.5">Kairali&apos;s social responsibility, outreach, and ecological business practices.</span>
+                  </div>
+                </div>
+
+                <div className="relative pl-4">
+                  <div className="absolute left-0 top-3 w-4 h-[2px] bg-copper/20" />
+                  <div className="bg-sand border border-sand-2 rounded-xl p-3 shadow-xs hover:border-laterite transition-all">
+                    <Link href="/about/careers" className="text-xs font-semibold text-palm hover:text-laterite block">Careers</Link>
+                    <span className="text-[9px] text-taupe block font-serif mt-0.5">Explore wellness and hospitality career openings at Kairali.</span>
+                  </div>
+                </div>
+
+                <div className="relative pl-4">
+                  <div className="absolute left-0 top-3 w-4 h-[2px] bg-copper/20" />
+                  <div className="bg-sand border border-sand-2 rounded-xl p-3 shadow-xs hover:border-laterite transition-all">
                     <Link href="/testimonials" className="text-xs font-semibold text-palm hover:text-laterite block">Student Testimonials</Link>
                     <span className="text-[9px] text-taupe block font-serif mt-0.5">Reviews and graduates success records.</span>
                   </div>

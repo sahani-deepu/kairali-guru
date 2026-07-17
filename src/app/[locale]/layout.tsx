@@ -115,9 +115,9 @@ export default async function LocaleLayout({
       "url": "https://www.kairali.com"
     },
     "sameAs": [
-      "https://www.facebook.com/kairaliayurveda",
-      "https://www.instagram.com/kairaliayurvedicgroup",
-      "https://www.youtube.com/user/KairaliAyurveda"
+      "https://www.facebook.com/KairaliTheAyurvedicHealingVillage",
+      "https://www.instagram.com/kairaliayurvedichealingvillage/",
+      "https://www.youtube.com/@kairaliayurvedagroup"
     ]
   };
 

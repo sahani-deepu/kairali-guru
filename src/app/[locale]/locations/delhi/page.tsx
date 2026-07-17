@@ -155,7 +155,7 @@ export default async function DelhiLocationPage({ params }: PageProps) {
               <div className="bg-sand border border-sand-2 rounded-3xl p-2.5 shadow-md overflow-hidden h-[320px] relative">
                 <iframe
                   title="Kairali Delhi Ayurveda Training Centre Map"
-                  src="https://maps.google.com/maps?q=28.507966,77.181398&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.203362143431!2d77.1752837753634!3d28.528498875689133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1d6a695e263d%3A0x6b44917a86f91605!2sKairali%20Ayurvedic%20Centre!5e0!3m2!1sen!2sin!4v1721200000000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

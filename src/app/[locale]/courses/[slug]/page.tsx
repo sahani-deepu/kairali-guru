@@ -223,10 +223,10 @@ export default async function CourseDetailPage({ params }: PageProps) {
               <div className="bg-sand-2/20 border border-sand-2 rounded-3xl p-6 text-start">
                 <h3 className="font-display text-base font-bold text-palm mb-4 flex items-center gap-2">
                   <Hourglass size={18} className="text-laterite" />
-                  <span>A Day on Campus</span>
+                  <span>{course.schedule ? "Course Schedule" : "A Day on Campus"}</span>
                 </h3>
-                <div className="relative border-s border-copper/30 pl-4 ml-2 space-y-3.5">
-                  {schedule.slice(0, 5).map((sched, idx) => (
+                <div className={`relative border-s border-copper/30 pl-4 ml-2 space-y-3.5 ${schedule.length > 5 ? "max-h-96 overflow-y-auto pr-2" : ""}`}>
+                  {schedule.map((sched, idx) => (
                     <div key={idx} className="relative">
                       <div className="absolute -start-[21px] top-1.5 w-2 h-2 rounded-full bg-copper" />
                       <span className="font-mono text-[10px] text-laterite font-bold block">{sched.time}</span>
@@ -257,13 +257,13 @@ export default async function CourseDetailPage({ params }: PageProps) {
               <h3 className="font-display font-bold text-palm text-base mb-4">Terms & Conditions</h3>
               <ul className="list-disc pl-5 space-y-2.5 text-xs text-taupe font-serif leading-relaxed">
                 <li>Accommodation facility is only available at our Kairali- The Ayurvedic Healing Village, Kerala (included in the cost).</li>
-                <li>Other locations to avail training programs are Delhi and Mumbai (non-residential).</li>
+                <li>Other location to avail training programs is Delhi (non-residential).</li>
                 <li>Theory classes are conducted by expert Ayurvedic Doctors.</li>
                 <li>Practical sessions are conducted by Senior Ayurvedic Trainers and Ayurvedic Doctors.</li>
                 <li>Certificates are issued by Kairali Institute of Panchakarma Therapies / Kairali Ayurvedic Centre.</li>
                 <li>Photography and videography is not permitted during practical and training sessions.</li>
                 <li>Payment Policy: Full payment in advance to sign up for the program.</li>
-                <li>Classes will be from Monday to Friday only at Delhi and Mumbai locations.</li>
+                <li>Classes will be from Monday to Friday only at Delhi location.</li>
                 <li>Sundays are off; no classes take place on Public Holidays.</li>
               </ul>
             </div>
@@ -272,7 +272,6 @@ export default async function CourseDetailPage({ params }: PageProps) {
               <ul className="list-disc pl-5 space-y-2.5 text-xs text-taupe font-serif leading-relaxed">
                 <li>To sign up for the course, please bring a valid identity proof & 2 passport-size photographs.</li>
                 <li>There will be a 20% discount for groups with more than 5 students.</li>
-                <li>Above rates are applicable from 1st Jan, 2019 to 31st March, 2020.</li>
               </ul>
             </div>
           </div>

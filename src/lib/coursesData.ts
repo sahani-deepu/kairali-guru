@@ -71,8 +71,8 @@ export const courses: CourseData[] = [
       ar: "مبتدئ",
       ru: "Начальный"
     },
-    priceINR: "₹18,400",
-    priceUSD: "$307",
+    priceINR: "₹15,500",
+    priceUSD: "$258",
     image: "kerala-garden-1.jpg",
     desc: {
       en: "‘Ayur’ meaning ‘life’ and ‘Veda’ meaning ‘science’ thus unites together to form the ‘Science of Life’. This discipline is practiced from the past 5000 years and hence, Kairali Ayurvedic Group comes up with the Ayurveda Training Programs of varied levels.\n\nOut of the five Ayurvedic Training Programs, the One Day Ayurveda Workshop Program (OAP) is an attempt to create general awareness about the discipline of Ayurveda and to educate people for a healthy standard of life.",
@@ -90,7 +90,7 @@ export const courses: CourseData[] = [
       "One Complimentary Ayurveda therapy session"
     ],
     pricing: [
-      { location: "Palakkad, Kerala (Kairali- The Ayurvedic Healing Village)*", inr: "₹18,400", usd: "$307" },
+      { location: "Palakkad, Kerala (Kairali- The Ayurvedic Healing Village)*", inr: "₹15,500", usd: "$258" },
       { location: "Delhi / Mumbai (non-residential)", inr: "₹9,000", usd: "$150" }
     ],
     schedule: [
@@ -135,8 +135,8 @@ export const courses: CourseData[] = [
       ar: "مبتدئ",
       ru: "Начальный"
     },
-    priceINR: "₹55,200",
-    priceUSD: "$921",
+    priceINR: "₹42,500",
+    priceUSD: "$708",
     image: "kerala-yoga-1.jpg",
     desc: {
       en: "The discipline of Ayurveda in Kerala has been passed on from generations that has never for a moment lost its originality which is often the case, with the passage of time. Armed with an innate vision, knowledge and expertise of their forefathers, Kairali Ayurvedic Group took the initiative to infuse a training program whereby its authenticity and educational category can be maintained.\n\nOut of the five programs, the Three Days Short Term Ayurveda Certification Program (TAP) is an attempt to provide a wider spectrum to the knowledge of Ayurveda, where everything from basics to practical of specific therapies would be taught.",
@@ -155,7 +155,7 @@ export const courses: CourseData[] = [
       "Three Complimentary Ayurveda therapy sessions"
     ],
     pricing: [
-      { location: "Palakkad, Kerala (Kairali- The Ayurvedic Healing Village)*", inr: "₹55,200", usd: "$921" },
+      { location: "Palakkad, Kerala (Kairali- The Ayurvedic Healing Village)*", inr: "₹42,500", usd: "$708" },
       { location: "Delhi & Mumbai (non-residential)", inr: "₹25,000", usd: "$420" }
     ],
     schedule: [
@@ -201,9 +201,9 @@ export const courses: CourseData[] = [
       ar: "متوسط",
       ru: "Средний"
     },
-    priceINR: "₹92,000",
-    priceUSD: "$1,535",
-    image: "kerala-class-1.jpg",
+    priceINR: "₹69,000",
+    priceUSD: "$1,150",
+    image: "Traditional Therapy (1).jpg",
     desc: {
       en: "The learning of Ayurveda can never be complete in one’s lifetime. The more you learn the wiser and expert you become in that field. Ayurveda is an ancient practise that enriches the body, mind and soul. It is not just a discipline to study but a way of life.\n\nKeeping in mind this vision, Kairali Ayurvedic Group motivated the initiation of Ayurvedic Training Programs to cater to the specific requirements of the individual.\n\nThe Intensive Ayurveda Training Program (WAP) focuses on the learning of the basics of Ayurveda, its origin, the different therapies (both theory and practical) and the basic concepts on Ayurvedic Philosophy.",
       de: "Intensivtraining – die @import \"tailwindcss\"; fünf zentralen Therapien (Abhyangam, Shirodhara, Podikizhi, Udwarthanam, Kativasti) plus Philosophie.",
@@ -221,7 +221,7 @@ export const courses: CourseData[] = [
       "Five Complimentary Ayurveda therapy sessions"
     ],
     pricing: [
-      { location: "Palakkad, Kerala (Kairali- The Ayurvedic Healing Village)*", inr: "₹92,000", usd: "$1,535" },
+      { location: "Palakkad, Kerala (Kairali- The Ayurvedic Healing Village)*", inr: "₹69,000", usd: "$1,150" },
       { location: "Delhi, Mumbai (non-residential)", inr: "₹42,000", usd: "$700" }
     ],
     schedule: [
@@ -269,9 +269,9 @@ export const courses: CourseData[] = [
       ar: "متقدم",
       ru: "Продвинутый"
     },
-    priceINR: "₹184,000",
-    priceUSD: "$3,070",
-    image: "delhi-centre-1.jpg",
+    priceINR: "₹180,000",
+    priceUSD: "$3,000",
+    image: "Traditional Therapy (4).jpg",
     desc: {
       en: "Kairali, as the name defines itself, is derived from the Malayalam word for Kerala that truly reflects their roots and age-old conventions of Ayurveda. It uses the ancient form of Ayurveda as the only means to promote the well-being of an individual.\n\nWith Kairali’s Level One Advance Ayurveda Training Program for Wellness Professionals, Kerala (AATP 1), one can learn about Ayurveda in detail and apply its functions in their everyday life.\n\nSpecified Ayurveda therapies are taught daily at our Ayurvedic wellness destination along with theory and practical. 10 days stay at our retreat, Kairali-The Ayurvedic Healing Village, Palakkad, Kerala, is going to make your training more worthy and wonderful.",
       de: "Level-One Advanced – die grundlegenden ayurvedischen Therapien meistern und einfache Wellness-Beratungen führen.",
@@ -289,7 +289,7 @@ export const courses: CourseData[] = [
       "Ten Advanced Practical sessions"
     ],
     pricing: [
-      { location: "Palakkad, Kerala (Kairali- The Ayurvedic Healing Village)*", inr: "₹184,000", usd: "$3,070" },
+      { location: "Palakkad, Kerala (Kairali- The Ayurvedic Healing Village)*", inr: "₹180,000", usd: "$3,000" },
       { location: "Delhi, Mumbai (non-residential)", inr: "₹90,000", usd: "$1,500" }
     ],
     schedule: [
@@ -323,7 +323,7 @@ export const courses: CourseData[] = [
     code: "AALCT-HV",
     slug: "advanced-lifestyle-consultant-therapist",
     title: {
-      en: "Advanced Lifestyle Consultant & Therapist Training",
+      en: "Advanced Ayurveda Lifestyle Consultant and Therapist Training Program (AALCT)",
       de: "Advanced Lifestyle Consultant & Therapist",
       fr: "Advanced Lifestyle Consultant & Therapist",
       ar: "استشاري ومعالج أسلوب الحياة المتقدم",
@@ -338,36 +338,51 @@ export const courses: CourseData[] = [
       ar: "متقدم",
       ru: "Продвинутый"
     },
-    priceINR: "₹368,000",
-    priceUSD: "$6,140",
-    image: "kerala-pharmacy-1.jpg",
+    priceINR: "₹360,000",
+    priceUSD: "$6,000",
+    image: "Kati & Greeva Basti.jpg",
     desc: {
-      en: "The complete practitioner certification: full service list, supervised practice, and constitution (Prakriti) analysis.",
+      en: "Kairali, founded in the year 1989, have been a disciple of the practise of ancient Ayurveda and trying to spread its knowledge in Indian and overseas.\n\nSuccessful in implementing all the necessary keynotes to lead a healthy and positive life, Kairali has also initiated an Advanced Ayurveda Lifestyle and Consultant and Therapist Training Program (AALCT) that is an inclusive practitioner certification training program for all the Ayurveda enthusiasts.\n\nStarting from basics to detailed explanation and demonstration of the varied therapies, everything is taught by the Ayurveda and Yoga experts at our health retreat.",
       de: "Dreiwöchige Praktiker-Zertifizierung: alle Leistungen meistern, inklusive Prakriti-Analyse und 9 Haupttherapien.",
       fr: "La certification complète de praticien : maîtriser tous les services, dont l'analyse Prakriti et 9 thérapies majeures.",
       ar: "شهادة الممارس الكاملة: إتقان جميع الخدمات، بما فيها تحليل «براكريتي» وتسع علاجات رئيسية.",
       ru: "Полная сертификация практика: освоение всего списка услуг, разбор конституции тела (Пракрити) и терапия."
     },
-    overview: "Comprehensive study on Ayurveda and its practical aspects which are suitable for those who are from health care or wellness sector to become an Ayurveda expert.\n\nAdvanced Ayurveda Lifestyle and Consultant and Therapist Training Program (AALCT) will cover the complete science in a concise form including basic principles of Ayurveda, Philosophies & theories, Therapies, Panchakarma, Dravyaguna, Prakrith & Prakrith Analysis (Body Constitution Analysis), Ayurvedic Diet & Regimen, Ayurvedic way to manage life style disorders, Basic Ayurveda medicines & home remedies; Roga Pareeksha & Rogi Pareeksha.\n\nBenefits: AALCT students will have an opportunity to do projects & training at our international & domestic centres if they are interested. We also consider AALCT students for the position of Ayurvedic Wellness Consultants for our various international locations. A certificate will be provided to you after successful completion of the course or workshop.",
+    overview: "Comprehensive study on Ayurveda and its practical aspects which are suitable for those who are from health care or wellness sector to become an Ayurveda expert.\n\nAdvanced Ayurveda Lifestyle and Consultant and Therapist Training Program (AALCT) will cover the complete science in a concise form including basic principles of Ayurveda, Philosophies & theories, Therapies, Panchakarma, Dravyaguna, Prakrithi & Prakrithi Analysis (Body Constitution Analysis), Ayurvedic Diet & Regimen, Ayurvedic way to manage life style disorders, Basic Ayurveda medicines & home remedies; Roga Pareeksha & Rogi Pareeksha.",
     recommendedFor: "Recommended for those who are from health care and wellness sector to become an Ayurveda expert.",
     highlights: [
-      "Learn Science of Ayurveda",
-      "Be a certified Ayurveda Professional",
-      "Be a constitution Analyst",
-      "Ten Advanced Theory Sessions",
-      "Ten Advanced Practical Sessions"
+      "Inclusive practitioner certification training",
+      "Opportunity for projects & training at domestic & international centres",
+      "Consideration for Ayurvedic Wellness Consultant positions globally",
+      "Includes accommodation and vegetarian meals during stay (Kerala)",
+      "Daily group Yoga & Meditation sessions included",
+      "Complimentary Ayurveda cooking demo & weekly village walk"
     ],
     pricing: [
-      { location: "Palakkad, Kerala (Kairali- The Ayurvedic Healing Village)*", inr: "₹368,000", usd: "$6,140" },
+      { location: "Palakkad, Kerala (Kairali- The Ayurvedic Healing Village)*", inr: "₹360,000", usd: "$6,000" },
       { location: "Delhi & Mumbai (non-residential)", inr: "₹180,000", usd: "$3,000" }
     ],
     schedule: [
-      { time: "Day 1", activity: "Theory: Origin, history, treatises, and importance of Ayurveda. Practical: Abhyangam sitting (Head & Neck) & supine position." },
-      { time: "Day 2", activity: "Theory: Panchamahabhuta, Tridosha, Dhatu, Mala, Agni, Ama, Abhyangam theory. Practical: Abhyangam prone position." },
-      { time: "Day 3", activity: "Theory: Swastha, health & disease Trigunas, Ojas. Practical: Complete Abhyangam practice." },
-      { time: "Day 4", activity: "Theory: Treatment Modalities, Langhana/Brimhana, Shirodhara theory. Practical: Shirodhara session." },
-      { time: "Day 5", activity: "Theory: Dosha seats, relations, properties, Nasya theory. Practical: Nasya session." },
-      { time: "Day 6", activity: "Theory: Dhatu, Mala, Agni & Ama relation with Doshas, Podikizhi theory. Practical: Podikizhi Kizhi tying & prep." }
+      { time: "Day 1", activity: "Theory: Introduction, Origin & History, Branches, Divisions, Acharyas, Treatises, and Importance of Ayurveda. Practical: Abhyangam-1 (Head & Neck in sitting position, and body in supine position)." },
+      { time: "Day 2", activity: "Theory: Basic Principles of Ayurveda (Panchamahabhuta, Tridosha, Saptadhatu, Trimala, Agni, Ama) and Abhyangam Theory-1. Practical: Abhyangam-2 (Body in prone position)." },
+      { time: "Day 3", activity: "Theory: Swastha Lakshana, Health & Disease according to Ayurveda, Trigunas, Ojas, and Abhyangam Theory-2. Practical: Complete Abhyangam practice." },
+      { time: "Day 4", activity: "Theory: Treatment Modalities (Langhana & Brimhana, Samana & Shodhana) and Shirodhara Theory. Practical: Shirodhara session." },
+      { time: "Day 5", activity: "Theory: Qualities, seats, and relations of Doshas; Abhyangam & Shirodhara instructions wrap-up; Nasya treatment theory. Practical: Nasya treatment." },
+      { time: "Day 6", activity: "Theory: Detailed Dhatu, Mala, Agni & Ama relation with Doshas, classifications of diseases; Podikizhi theory. Practical: Podikizhi (Kizhi preparation, tying, and application in supine position)." },
+      { time: "Day 7", activity: "Theory: Dinacharya (Daily Regimen), Ritucharya (seasonal precautions), and Human Anatomy & Physiology. Practical: Podikizhi application in prone position." },
+      { time: "Day 8", activity: "Theory: Human Anatomy & Physiology (Part 2), and Udwarthanam theory. Practical: Udwarthanam session." },
+      { time: "Day 9", activity: "Theory: Roga Pareeksha & Rogi Pareeksha methods, and Introduction to Panchakarma & Udhgarshanam theory. Practical: Udhgarshanam session." },
+      { time: "Day 10", activity: "Theory: Prakriti definition & basics, Prakriti analysis questionnaire, body constitution analysis, and Kativasti theory. Practical: Kativasti session." },
+      { time: "Day 11", activity: "Theory: Ahara & Vihara (Diet & Regimen) and Dravyaguna (Ayurvedic Dietetics, Dravya Ganas, Dravya actions). Practical: Njavara Kizhi and Elakizhi preparation." },
+      { time: "Day 12", activity: "Theory: Introduction to Ayurvedic Medicines (preparations, classical & proprietary products, products demo). Practical: Elakizhi (supine position)." },
+      { time: "Day 13", activity: "Theory: Introduction to Panchakarma (Snehanam & Swedanam, video demo). Practical: Elakizhi (prone position)." },
+      { time: "Day 14", activity: "Theory: Poorva Karma & Paschatkarma, Vamanam, Virechanam, and Nasyam. Practical: Njavarakizhi (supine position)." },
+      { time: "Day 15", activity: "Theory: Vasti treatment (types, procedure), Raktamoksha, and Panchakarma precautions/contraindications. Practical: Njavarakizhi (prone position)." },
+      { time: "Day 16", activity: "Theory: Nadee Pareeksha & vital readings taking, and wellness consultation. Practical: Abhyangam repeat." },
+      { time: "Day 17", activity: "Theory: Ayurvedic wellness consultation, body constitution analysis, and client program development. Practical: Patient consultation, case file preparation, and program development." },
+      { time: "Day 18", activity: "Theory: Complete theory revision and Q&A session. Practical: Practical Q&A session." },
+      { time: "Day 19", activity: "Theory: Pada-chathushtayam, statutory requirements, talk lines, and regulatory bodies. Practical: Therapy etiquette, room/tray preparation, steam generator operations, and pharmacy operations." },
+      { time: "Day 20", activity: "Theory: Theory examination (objective type) and concluding session. Practical: Practical exam and practical concluding session." }
     ],
     syllabus: [
       {

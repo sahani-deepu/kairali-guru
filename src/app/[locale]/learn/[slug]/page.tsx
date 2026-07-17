@@ -13,7 +13,7 @@ const articleData = [
     title: "How to Learn Ayurveda: A Step-by-Step Guide",
     desc: "Our comprehensive roadmap for beginners, yoga teachers, and wellness professionals who want to master authentic Ayurveda.",
     date: "July 10, 2026",
-    author: "Dr. Radhakrishnan, BAMS",
+    author: "Dr. Radhakrishnan",
     category: "Guides",
     content: `
 Ayurveda, the 'Science of Life', is a comprehensive natural healthcare system that has been practiced in India for over five thousand years. For modern learners, understanding how to begin studying this vast subject can be overwhelming. This step-by-step guide maps out the traditional clinical route to learning Ayurveda.
@@ -36,7 +36,7 @@ To develop clinical judgement — knowing who a therapy is for, when it should b
     title: "Understanding Panchakarma Detoxification",
     desc: "An in-depth explanation of the classical five-fold purification process, its clinical benefits, and how it is applied to the Tridoshas.",
     date: "July 05, 2026",
-    author: "Dr. Latha Radhakrishnan, BAMS",
+    author: "Dr. Latha Radhakrishnan",
     category: "Therapies",
     content: `
 Panchakarma is Ayurveda's signature system of deep detoxification and cellular renewal. It translates literally to 'five actions', representing the five therapeutic paths designed to remove accumulated toxins (Ama) and restore metabolic balance.
@@ -57,7 +57,7 @@ Because Panchakarma involves clinical intervention and metabolic shifts, it must
     title: "Introduction to Tridosha Theory",
     desc: "Explore Vata, Pitta, and Kapha — the three vital energies that govern human physiology and mental wellbeing.",
     date: "June 28, 2026",
-    author: "Dr. Sreejit, BAMS",
+    author: "Dr. Sreejit",
     category: "Foundations",
     content: `
 In Ayurveda, every individual is governed by a unique combination of three vital energies or Doshas: Vata, Pitta, and Kapha. These Doshas control all physical and mental processes, and maintaining their equilibrium is the key to optimal health.

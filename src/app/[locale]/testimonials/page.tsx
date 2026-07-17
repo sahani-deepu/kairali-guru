@@ -28,19 +28,22 @@ export default async function TestimonialsPage({ params }: PageProps) {
       name: "Tessy Pacheco",
       country: "Spain",
       programme: "Intensive Ayurveda Training (WAP)",
-      quote: "Kairali Guru provided the most authentic platform to learn Ayurveda without losing its traditional values. Taught directly by practicing BAMS physicians at a real healing hospital campus in India, it stands in stark contrast to theoretical online academies."
+      quote: "Kairali Guru provided the most authentic platform to learn Ayurveda without losing its traditional values. Taught directly by practicing BAMS physicians at a real healing hospital campus in India, it stands in stark contrast to theoretical online academies.",
+      rating: 5
     },
     {
       name: "Ms. Arti Joshi",
       country: "Canada",
       programme: "Advanced Lifestyle Consultant & Therapist (AALCT)",
-      quote: "Studying on-site at the Palakkad Healing Village in Kerala was a life-changing clinical experience. The BAMS and MD physicians were exceptionally detailed and guided us through physical therapies on real patients. I highly recommend Kairali to any international wellness seeker."
+      quote: "Studying on-site at the Palakkad Healing Village in Kerala was a life-changing clinical experience. The BAMS and MD physicians were exceptionally detailed and guided us through physical therapies on real patients. I highly recommend Kairali to any international wellness seeker.",
+      rating: 4
     },
     {
       name: "Heena C. Sehgal",
       country: "Gurgaon, India",
       programme: "Level-One Advanced for Wellness Professionals (AATP1)",
-      quote: "The hybrid delivery model with a robust online foundation and intensive hands-on training at the Delhi Mehrauli centre fit perfectly into my practice. It has elevated my wellness consultancy business to a new level of clinical credibility."
+      quote: "The hybrid delivery model with a robust online foundation and intensive hands-on training at the Delhi Mehrauli centre fit perfectly into my practice. It has elevated my wellness consultancy business to a new level of clinical credibility.",
+      rating: 5
     }
   ];
 
@@ -91,7 +94,11 @@ export default async function TestimonialsPage({ params }: PageProps) {
                   {/* Rating Stars */}
                   <div className="flex gap-1 mb-6 text-turmeric">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={16} weight="fill" />
+                      <Star 
+                        key={i} 
+                        size={16} 
+                        weight={i < (rev.rating ?? 5) ? "fill" : "regular"} 
+                      />
                     ))}
                   </div>
 

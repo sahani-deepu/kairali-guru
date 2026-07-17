@@ -39,19 +39,22 @@ export default async function Home({ params }: PageProps) {
       name: "Tessy Pacheco",
       country: "Spain",
       programme: "Intensive Ayurveda Training (WAP)",
-      quote: "Kairali Guru provided the most authentic platform to learn Ayurveda without losing its traditional values. Taught directly by practicing BAMS physicians at a real healing hospital campus in India."
+      quote: "Kairali Guru provided the most authentic platform to learn Ayurveda without losing its traditional values. Taught directly by practicing BAMS physicians at a real healing hospital campus in India.",
+      rating: 5
     },
     {
       name: "Ms. Arti Joshi",
       country: "Canada",
       programme: "Advanced Lifestyle Consultant (AALCT)",
-      quote: "Studying on-site at the Palakkad Healing Village in Kerala was a life-changing clinical experience. The BAMS and MD physicians were exceptionally detailed and guided us through physical therapies on real patients."
+      quote: "Studying on-site at the Palakkad Healing Village in Kerala was a life-changing clinical experience. The BAMS and MD physicians were exceptionally detailed and guided us through physical therapies on real patients.",
+      rating: 4
     },
     {
       name: "Heena C. Sehgal",
       country: "Gurgaon, India",
       programme: "Level-One Advanced for Wellness Professionals (AATP1)",
-      quote: "The hybrid delivery model with a robust online foundation and intensive hands-on training at the Delhi Mehrauli centre fit perfectly into my practice. It elevated my wellness consultancy business to a new level of clinical credibility."
+      quote: "The hybrid delivery model with a robust online foundation and intensive hands-on training at the Delhi Mehrauli centre fit perfectly into my practice. It elevated my wellness consultancy business to a new level of clinical credibility.",
+      rating: 5
     }
   ];
 
@@ -63,7 +66,7 @@ export default async function Home({ params }: PageProps) {
       duration: "5 Days (15 Lectures)",
       mode: "Residential (Kerala) / Non-Residential",
       category: "Professional Certificate",
-      image: "kerala-class-1.jpg"
+      image: "Traditional Therapy (1).jpg"
     },
     {
       slug: "level-one-advanced-ayurveda-training",
@@ -72,7 +75,7 @@ export default async function Home({ params }: PageProps) {
       duration: "10 Days (40 Hours)",
       mode: "Hybrid (Delhi / Online)",
       category: "Advanced Specialization",
-      image: "delhi-centre-1.jpg"
+      image: "Traditional Therapy (4).jpg"
     },
     {
       slug: "advanced-lifestyle-consultant-therapist",
@@ -81,7 +84,7 @@ export default async function Home({ params }: PageProps) {
       duration: "20 Days (80 Hours)",
       mode: "Residential (Kerala) / Non-Residential",
       category: "Professional Diploma",
-      image: "kerala-pharmacy-1.jpg"
+      image: "Kati & Greeva Basti.jpg"
     }
   ];
 
@@ -94,7 +97,7 @@ export default async function Home({ params }: PageProps) {
           <img
             alt="Kairali Guru Ayurvedic Sanctuary"
             className="w-full h-full object-cover"
-            src="/images/kerala-campus-1.jpg"
+            src="/images/HEALING VILLAGE FRONT IMAGE.jpg"
           />
           {/* Natural organic overlay */}
           <div className="absolute inset-0 bg-palm/40 mix-blend-multiply" />
@@ -109,7 +112,7 @@ export default async function Home({ params }: PageProps) {
             </span>
             <h1 className="text-4xl md:text-7xl font-display text-white leading-tight font-light tracking-tight max-w-3xl">
               Learn Ayurveda <br className="hidden md:inline" />
-              <span className="font-serif italic font-normal text-turmeric">Where Its Living Tradition</span> Continues
+              <span className="text-turmeric">Where Its Living Tradition</span> Continues
             </h1>
             <p className="text-sm md:text-base text-sand/85 leading-relaxed max-w-xl font-serif">
               Study authentic Ayurveda through structured courses, experienced faculty, and practical learning within Kairali’s established wellness ecosystem.
@@ -192,7 +195,7 @@ export default async function Home({ params }: PageProps) {
             TAILORED EDUCATION
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-light text-palm leading-tight tracking-tight">
-            Which pathway is <span className="font-serif italic">right for you?</span>
+            Which pathway is right for you?
           </h2>
           <p className="text-xs text-taupe leading-relaxed font-serif">
             Whether you are starting from zero or seeking accredited qualifications, Kairali offers structured paths for your goals.
@@ -201,17 +204,22 @@ export default async function Home({ params }: PageProps) {
 
         <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
           {[
-            { title: "For Beginners", desc: "Gain personal wellness tools, constitution self-analysis, and kitchen herb setups.", path: "/courses", img: "kerala-garden-1.jpg" },
-            { title: "For Yoga Teachers", desc: "Integrate Ayurvedic diagnostics and daily regimens into your hatha classes.", path: "/courses", img: "kerala-yoga-1.jpg" },
-            { title: "For Spa Therapists", desc: "Master physical strokes, clinical steps, and post-therapy care routines.", path: "/panchakarma", img: "ayurveda-treatment-table.jpg" },
-            { title: "For Global Students", desc: "Complete travel support, on-site lodging, and structured English modules.", path: "/travel-visa", img: "kerala-campus-1.jpg" }
+            { title: "For Beginners", desc: "Gain personal wellness tools, constitution self-analysis, and kitchen herb setups.", path: "/courses", img: "yoga62.jpg" },
+            { title: "For Yoga Teachers", desc: "Integrate Ayurvedic diagnostics and daily regimens into your hatha classes.", path: "/courses", img: "Yoga Pose 4.jpg", position: "center 75%" },
+            { title: "For Spa Therapists", desc: "Master physical strokes, clinical steps, and post-therapy care routines.", path: "/panchakarma", img: "IMG_8887.jpg", position: "center 40%" },
+            { title: "For Global Students", desc: "Complete travel support, on-site lodging, and structured English modules.", path: "/travel-visa", img: "_MG_1573f.jpg" }
           ].map((path, idx) => (
             <div
               key={idx}
               className="border border-copper/10 rounded-2xl overflow-hidden bg-sand/35 flex flex-col justify-between hover:shadow-sm transition-all text-start"
             >
               <div className="aspect-[16/9] overflow-hidden border-b border-copper/10">
-                <img src={`/images/${path.img}`} alt={path.title} className="w-full h-full object-cover" />
+                <img 
+                  src={`/images/${path.img}`} 
+                  alt={path.title} 
+                  className="w-full h-full object-cover" 
+                  style={{ objectPosition: path.position || 'center' }}
+                />
               </div>
               <div className="p-6 space-y-4">
                 <h4 className="font-display text-lg text-palm font-bold">{path.title}</h4>
@@ -237,7 +245,7 @@ export default async function Home({ params }: PageProps) {
               ACADEMIC PROGRAMMES
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-light text-palm tracking-tight">
-              Featured Ayurveda <span className="font-serif italic">Courses</span>
+              Featured Ayurveda Courses
             </h2>
           </div>
           <Link
@@ -308,7 +316,7 @@ export default async function Home({ params }: PageProps) {
                 OUR LINEAGE HERITAGE
               </span>
               <h2 className="font-display text-4xl sm:text-5xl font-light text-paper-on-dark tracking-tight leading-tight">
-                118 Years of unbroken <span className="font-serif italic text-turmeric font-normal">family practice</span>
+                118 Years of unbroken <span className="text-turmeric">family practice</span>
               </h2>
             </div>
             <p className="text-sm text-paper-on-dark/75 leading-relaxed font-serif">
@@ -331,7 +339,7 @@ export default async function Home({ params }: PageProps) {
           </div>
           <div className="lg:col-span-6 rounded-lg overflow-hidden border border-paper-on-dark/10 aspect-[16/10] shadow-md">
             <img
-              src="/images/kerala-campus-1.jpg"
+              src="/images/kAIRALI PALAK KAD_DEPICTIONS BY PRACHI KHASGIWALA-96.jpg"
               alt="Palakkad Kerala teaching campus"
               className="w-full h-full object-cover"
             />
@@ -346,7 +354,7 @@ export default async function Home({ params }: PageProps) {
             PEDAGOGICAL STRUCTURE
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-light text-palm mt-2">
-            The Pathway to <span className="font-serif italic text-laterite">Ayurvedic Mastery</span>
+            The Pathway to <span className="text-laterite">Ayurvedic Mastery</span>
           </h2>
         </div>
 
@@ -372,9 +380,10 @@ export default async function Home({ params }: PageProps) {
       <section className="max-w-7xl mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-4 rounded-lg overflow-hidden border border-copper/15 aspect-[2/3] shadow-sm">
           <img
-            src="/images/yoga-1.jpg"
+            src="/images/_MG_1549.jpg"
             alt="Sunrise yoga training on campus"
             className="w-full h-full object-cover"
+            style={{ objectPosition: "68% center" }}
           />
         </div>
         <div className="lg:col-span-8 space-y-6 text-start">
@@ -404,29 +413,73 @@ export default async function Home({ params }: PageProps) {
             ACADEMIC LEADERSHIP
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-light text-palm mt-2">
-            Taught by Respected <span className="font-serif italic">Physicians & Experts</span>
+            Taught by Respected Physicians & Experts
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { name: "Dr. Deepu John", role: "Chief Physician & HOD", spec: "12+ Years Experience · Tridosha & Prakriti Expert", img: "/images/Dr.-Deepu-John.webp" },
-            { name: "Dr. Ashikha Raj, BAMS", role: "Physician / RMO", spec: "8+ Years Experience · Clinical Therapeutics", img: "/images/Dr.-Ashikha-Raj.webp" },
-            { name: "Dr. Rahul R", role: "Ayurvedic Physician", spec: "7+ Years Experience · Tridosha & Prakriti Expert", img: "/images/Dr.-Rahul-R.webp" },
-            { name: "Dr. Akhila Oommen, BAMS", role: "Ayurvedic Physician", spec: "9+ Years Experience · Arthritis & Stress Expert", img: "/images/Dr.-Akhila-Oommen.webp" }
-          ].map((phys, idx) => (
-            <div key={idx} className="bg-sand/35 border border-copper/10 rounded-2xl overflow-hidden text-start group flex flex-col justify-between">
-              <div className="aspect-[3/4] bg-sand-2/20 relative overflow-hidden">
-                <img
-                  src={phys.img}
-                  alt={phys.name}
-                  className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h4 className="font-display font-bold text-palm text-lg">{phys.name}</h4>
-                <span className="text-xs text-laterite font-semibold block mt-0.5">{phys.role}</span>
-                <span className="text-[10px] text-taupe block mt-2 uppercase tracking-wider font-mono font-bold">{phys.spec}</span>
+            {
+              name: "Dr. Deepu John",
+              role: "Chief Physician & HOD",
+              spec: "12+ Years Experience · Tridosha & Prakriti Diagnosis",
+              image: "/images/Dr.-Deepu-John.webp",
+              desc: "Expertise in diagnosis of Tridosha balance (Vata, Pitta, Kapha) and Prakriti (Unique body constitution)."
+            },
+            {
+              name: "Dr. Ashikha Raj",
+              role: "Physician / RMO",
+              spec: "8+ Years Experience · Traditional & Modern Therapeutics",
+              image: "/images/Dr.-Ashikha-Raj.webp",
+              desc: "Dr. Ashikha Raj exemplifies the integration of traditional Ayurvedic principles with modern therapeutic techniques."
+            },
+            {
+              name: "Dr. Rahul R",
+              role: "Ayurvedic Physician",
+              spec: "7+ Years Experience · Tridosha & Prakriti Diagnosis",
+              image: "/images/Dr.-Rahul-R.webp",
+              desc: "Expertise in diagnosis of Tridosha balance (Vata, Pitta, Kapha) and Prakriti (Unique body constitution)."
+            },
+            {
+              name: "Dr. Akhila Oommen",
+              role: "Ayurvedic Physician",
+              spec: "9+ Years Experience · Arthritis & Women's Health",
+              image: "/images/Dr.-Akhila-Oommen.webp",
+              desc: "Expertise in treating various arthritis conditions, gynecological issues, stress, and sleep disorders."
+            }
+          ].map((doc, idx) => (
+            <div key={idx} className="group [perspective:1000px] h-[450px] w-full cursor-pointer">
+              <div className="relative w-full h-full rounded-3xl transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-sm hover:shadow-md">
+
+                {/* Front Face (Seated Photo & Title) */}
+                <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden bg-sand border border-sand-2 [backface-visibility:hidden] flex flex-col justify-between">
+                  <div className="aspect-[4/5] bg-sand-2/20 relative overflow-hidden">
+                    <img src={doc.image} alt={doc.name} className="w-full h-full object-cover object-top" />
+                  </div>
+                  <div className="p-5 text-start">
+                    <h3 className="font-display font-bold text-base text-palm leading-snug">{doc.name}</h3>
+                    <span className="text-[11px] text-laterite font-semibold block mt-0.5">{doc.role}</span>
+                    <span className="text-[9px] text-taupe block font-mono uppercase tracking-wider mt-1">{doc.spec}</span>
+                  </div>
+                </div>
+
+                {/* Back Face (Info & Description) */}
+                <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden bg-palm text-sand p-6 [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-between text-start border border-palm/20">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-display font-bold text-base text-white leading-snug">{doc.name}</h3>
+                      <span className="text-xs text-turmeric font-semibold block mt-0.5">{doc.role}</span>
+                      <span className="text-[9px] text-sand/60 block font-mono uppercase tracking-wider mt-1 border-b border-white/10 pb-3">{doc.spec}</span>
+                    </div>
+                    <p className="text-xs text-sand/85 leading-relaxed font-serif">
+                      {doc.desc}
+                    </p>
+                  </div>
+                  <span className="text-[9px] font-mono text-turmeric/80 uppercase tracking-widest border-t border-white/10 pt-3">
+                    Kairali Academic Faculty
+                  </span>
+                </div>
+
               </div>
             </div>
           ))}
@@ -440,7 +493,7 @@ export default async function Home({ params }: PageProps) {
             ALUMNI VOICES
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-light text-palm mt-2">
-            Student Reviews & <span className="font-serif italic">Success Stories</span>
+            Student Reviews & Success Stories
           </h2>
         </div>
 
@@ -453,7 +506,11 @@ export default async function Home({ params }: PageProps) {
               <div className="space-y-4">
                 <div className="flex gap-1 text-turmeric">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} weight="fill" />
+                    <Star 
+                      key={i} 
+                      size={14} 
+                      weight={i < (rev.rating ?? 5) ? "fill" : "regular"} 
+                    />
                   ))}
                 </div>
                 <p className="text-xs sm:text-sm text-bark/90 leading-relaxed font-serif italic">
@@ -484,7 +541,7 @@ export default async function Home({ params }: PageProps) {
             OUR LOCATIONS
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-light text-palm mt-2">
-            Where Ayurveda is Taught <span className="font-serif italic">& Practised</span>
+            Where Ayurveda is Taught & Practised
           </h2>
         </div>
 
@@ -539,7 +596,7 @@ export default async function Home({ params }: PageProps) {
               EDITORIAL PUBLICATION
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-light text-palm tracking-tight">
-              From the <span className="font-serif italic text-palm">Learning Hub</span>
+              From the Learning Hub
             </h2>
           </div>
           <Link
@@ -601,7 +658,7 @@ export default async function Home({ params }: PageProps) {
             ACCORDION SUPPORT
           </span>
           <h2 className="text-3xl font-display font-light text-palm tracking-tight">
-            Frequently Asked <span className="font-serif italic">Questions</span>
+            Frequently Asked Questions
           </h2>
           <p className="text-xs text-taupe leading-relaxed font-serif">
             Everything you need to know about our courses, BAMS doctors, visa clearance, and Palakkad campus.
@@ -617,7 +674,7 @@ export default async function Home({ params }: PageProps) {
         <div className="bg-palm text-paper-on-dark rounded-[2.5rem] py-20 px-8 sm:px-16 text-center border border-palm-2 relative overflow-hidden shadow-md">
           <div className="max-w-xl mx-auto space-y-6 relative z-10">
             <h2 className="font-display text-3xl sm:text-5xl font-light leading-tight">
-              Begin Your <span className="font-serif italic text-turmeric font-normal">Ayurveda Learning</span> Journey
+              Begin Your <span className="text-turmeric">Ayurveda Learning</span> Journey
             </h2>
             <p className="text-xs sm:text-sm text-paper-on-dark/70 leading-relaxed font-serif">
               Ready to learn from practicing doctors? Fill out our enquiry form and a physician-advisor will contact you to answer any questions.
