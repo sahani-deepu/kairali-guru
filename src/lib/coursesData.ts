@@ -73,7 +73,7 @@ export const courses: CourseData[] = [
     },
     priceINR: "₹15,500",
     priceUSD: "$258",
-    image: "kerala-garden-1.jpg",
+    image: "Forehead Therapy.jpg",
     desc: {
       en: "‘Ayur’ meaning ‘life’ and ‘Veda’ meaning ‘science’ thus unites together to form the ‘Science of Life’. This discipline is practiced from the past 5000 years and hence, Kairali Ayurvedic Group comes up with the Ayurveda Training Programs of varied levels.\n\nOut of the five Ayurvedic Training Programs, the One Day Ayurveda Workshop Program (OAP) is an attempt to create general awareness about the discipline of Ayurveda and to educate people for a healthy standard of life.",
       de: "Eintägiger Ayurveda-Workshop mit Zertifikat – eine authentische Einführung in die Tridoshas und erste Anwendungen.",
@@ -137,7 +137,7 @@ export const courses: CourseData[] = [
     },
     priceINR: "₹42,500",
     priceUSD: "$708",
-    image: "kerala-yoga-1.jpg",
+    image: "_R6_3502.jpg",
     desc: {
       en: "The discipline of Ayurveda in Kerala has been passed on from generations that has never for a moment lost its originality which is often the case, with the passage of time. Armed with an innate vision, knowledge and expertise of their forefathers, Kairali Ayurvedic Group took the initiative to infuse a training program whereby its authenticity and educational category can be maintained.\n\nOut of the five programs, the Three Days Short Term Ayurveda Certification Program (TAP) is an attempt to provide a wider spectrum to the knowledge of Ayurveda, where everything from basics to practical of specific therapies would be taught.",
       de: "Dreitägiges Kurzzeit-Zertifikat – Grundlagen des Ayurveda und erste Therapien, ideal für Wellness-Fachkräfte.",

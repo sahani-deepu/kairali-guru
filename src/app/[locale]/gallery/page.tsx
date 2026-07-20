@@ -42,8 +42,7 @@ export default async function GalleryPage({ params }: PageProps) {
         "Cultural  (1).jpg",
         "Cultural  (2).jpg",
         "Happy Client.jpg",
-        "yoga-1.jpg",
-        "palakkad-campus-yoga.png"
+        "yoga-1.jpg"
       ]
     },
     {
@@ -204,17 +203,17 @@ export default async function GalleryPage({ params }: PageProps) {
       img: "Therapy Process.jpg",
       images: [
         "ayurveda-treatment-table.jpg",
-        "Bati.jpg",
+        "Basti.jpg",
         "Body Therapy.jpg",
         "Oil Therapy.jpg",
-        "Forehead Therapy.jpg ",
+        "Forehead Therapy.jpg",
         "Head Therapy.jpg",
         "Kati & Greeva Basti.jpg",
         "Kizhi Therapy.jpg",
         "Kizhi Therapy1.jpg",
         "Therapy Process.jpg",
-        "Therapy,Droni Table.jpg",
-        "Shirodhata.jpg",
+        "Therapy, Droni Table.jpg",
+        "Shirodata.jpg",
         "Thalapothichil.jpg",
         "Udwarthanam Dry Powder.jpg",
         "Udwarthanam Dry Powder (2).jpg",
@@ -222,7 +221,7 @@ export default async function GalleryPage({ params }: PageProps) {
         "Traditional Therapy (1).jpg",
         "Traditional Therapy (2).jpg",
         "Traditional Therapy (3).jpg",
-        "Traditional Therapy (4).jpg",
+        "Traditional Therapy (4).jpg"
       ]
     }
   ];

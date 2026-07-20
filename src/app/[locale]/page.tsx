@@ -3,11 +3,11 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import FAQAccordion from "@/components/FAQAccordion";
 import TrustBar from "@/components/TrustBar";
-import { 
-  ArrowRight, 
-  Star, 
-  FlowerLotus, 
-  Calendar, 
+import {
+  ArrowRight,
+  Star,
+  FlowerLotus,
+  Calendar,
   MapPin
 } from "@phosphor-icons/react/dist/ssr";
 
@@ -90,47 +90,50 @@ export default async function Home({ params }: PageProps) {
 
   return (
     <div className="flex flex-col w-full text-start bg-sand/20 gap-32 md:gap-48 pb-32">
-      
+
       {/* SECTION 1: HERO */}
       <section className="relative w-full min-h-[calc(100dvh-80px)] md:min-h-[calc(100dvh-116px)] overflow-hidden flex items-end justify-center bg-sand">
         <div className="absolute inset-0 w-full h-full">
           <img
             alt="Kairali Guru Ayurvedic Sanctuary"
-            className="w-full h-full object-cover opacity-35"
+            className="w-full h-full object-cover opacity-75 contrast-[1.05]"
             src="/images/HEALING VILLAGE FRONT IMAGE.jpg"
           />
-          {/* Natural dark chocolate overlay */}
-          <div className="absolute inset-0 bg-[#1E120C]/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1E120C] via-transparent to-[#1E120C]/50" />
+          {/* Soft natural dark chocolate overlay */}
+          <div className="absolute inset-0 bg-[#1E120C]/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1E120C] via-[#1E120C]/20 to-[#1E120C]/30" />
         </div>
 
-        <div className="relative z-10 pt-20 md:pt-32 pb-12 md:pb-20 px-6 flex flex-col items-center justify-end text-center text-sand w-full">
-            <h1 className="text-4xl md:text-6xl font-serif text-palm leading-tight font-light tracking-tight max-w-4xl">
-              Learn the timeless science of <span className="text-turmeric font-serif italic">Ayurveda</span>
-            </h1>
-
-            <p className="text-sm md:text-base text-taupe leading-relaxed max-w-xl font-serif">
-              Kairali Guru brings the wisdom of traditional Ayurvedic teachers to your home. Study at your own pace with guided video lessons, live sessions, and a supportive community of wellness seekers.
-            </p>
-
-            <div className="flex flex-wrap gap-4 justify-center mt-4">
-              <Link
-                href="/courses"
-                className="inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta/90 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-xs shadow-md"
-              >
-                <span>Explore Courses</span>
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 bg-[#261810] border border-[#3E271B] text-palm hover:bg-[#362217] py-3 px-6 rounded-lg font-semibold transition-all text-xs"
-              >
-                <span>Meet Your Teacher</span>
-              </Link>
-            </div>
-            <span className="text-[9px] text-taupe/70 tracking-[0.2em] font-semibold uppercase mt-6 border-t border-copper/15 pt-4 w-64">
-              Welcoming learners from around the world
+        <div className="relative z-10 pt-20 md:pt-32 pb-12 md:pb-20 px-6 flex flex-col items-center justify-end text-center text-sand w-full gap-4">
+          <h1 className="text-4xl md:text-6xl font-serif text-[#FAF6F0] leading-tight font-normal tracking-tight max-w-4xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]">
+            Learn Ayurveda <br className="hidden sm:inline" />
+            <span className="text-turmeric font-serif italic drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              Where Its Living Tradition Continues
             </span>
+          </h1>
+
+          <p className="text-sm md:text-base text-[#EFE7D6] leading-relaxed max-w-2xl font-serif font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+            Study authentic Ayurveda through structured courses, experienced faculty, and practical learning within Kairali’s established wellness ecosystem.
+          </p>
+
+          <div className="flex flex-wrap gap-4 justify-center mt-4">
+            <Link
+              href="/courses"
+              className="inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta/90 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-xs shadow-md"
+            >
+              <span>Explore Courses</span>
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 bg-[#261810] border border-[#3E271B] text-palm hover:bg-[#362217] py-3 px-6 rounded-lg font-semibold transition-all text-xs"
+            >
+              <span>Meet Your Teacher</span>
+            </Link>
           </div>
+          <span className="text-[10px] text-turmeric font-semibold uppercase tracking-[0.2em] mt-6 border-t border-copper/15 pt-4 max-w-md drop-shadow-md">
+            EST. 1908 · NABH-ACCREDITED TEACHING HOSPITAL
+          </span>
+        </div>
       </section>
 
       {/* SECTION 2: TRUST STRIP */}
@@ -208,10 +211,10 @@ export default async function Home({ params }: PageProps) {
               className="border border-copper/10 rounded-2xl overflow-hidden bg-sand/35 flex flex-col justify-between hover:shadow-sm transition-all text-start"
             >
               <div className="aspect-[16/9] overflow-hidden border-b border-copper/10">
-                <img 
-                  src={`/images/${path.img}`} 
-                  alt={path.title} 
-                  className="w-full h-full object-cover" 
+                <img
+                  src={`/images/${path.img}`}
+                  alt={path.title}
+                  className="w-full h-full object-cover"
                   style={{ objectPosition: path.position || 'center' }}
                 />
               </div>
@@ -500,10 +503,10 @@ export default async function Home({ params }: PageProps) {
               <div className="space-y-4">
                 <div className="flex gap-1 text-turmeric">
                   {[...Array(5)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      size={14} 
-                      weight={i < (rev.rating ?? 5) ? "fill" : "regular"} 
+                    <Star
+                      key={i}
+                      size={14}
+                      weight={i < (rev.rating ?? 5) ? "fill" : "regular"}
                     />
                   ))}
                 </div>
