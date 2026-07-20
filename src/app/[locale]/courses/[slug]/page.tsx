@@ -162,7 +162,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
                     { title: "3. Classical Practical Therapies", desc: "Supervised hands-on training in therapies like Abhyanga, Shirodhara, Nasya, and Panchakarma detoxification protocols." }
                   ]).map((step, idx) => (
                     <li key={idx} className="flex gap-4">
-                      <div className="w-8 h-8 rounded-full bg-palm text-paper-on-dark flex items-center justify-center shrink-0 font-mono text-xs font-bold mt-0.5">
+                      <div className="w-8 h-8 rounded-full bg-terracotta text-white flex items-center justify-center shrink-0 font-mono text-xs font-bold mt-0.5 shadow-sm">
                         {idx + 1}
                       </div>
                       <div>
@@ -213,7 +213,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
 
                 <Link
                   href="/enquiry"
-                  className="w-full text-center bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold py-3 rounded-xl text-xs transition-all shadow-sm block"
+                  className="w-full text-center bg-terracotta hover:bg-terracotta/90 text-white font-semibold py-3 rounded-xl text-xs transition-all shadow-md block"
                 >
                   Request Registration prospectus
                 </Link>

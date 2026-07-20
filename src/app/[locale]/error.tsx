@@ -37,7 +37,7 @@ export default function ErrorPage({ error, reset }: ErrorProps) {
         <div className="flex gap-4 justify-center items-center pt-4">
           <button
             onClick={() => reset()}
-            className="bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold px-6 py-3 rounded-full text-xs transition-all shadow-md"
+            className="bg-terracotta hover:bg-terracotta/90 text-white font-semibold px-6 py-3 rounded-full text-xs transition-all shadow-md"
           >
             Retry Connection
           </button>

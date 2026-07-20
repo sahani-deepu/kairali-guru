@@ -92,51 +92,45 @@ export default async function Home({ params }: PageProps) {
     <div className="flex flex-col w-full text-start bg-sand/20 gap-32 md:gap-48 pb-32">
       
       {/* SECTION 1: HERO */}
-      <section className="relative w-full min-h-[calc(100dvh-80px)] md:min-h-[calc(100dvh-116px)] overflow-hidden flex items-end justify-center bg-palm">
+      <section className="relative w-full min-h-[calc(100dvh-80px)] md:min-h-[calc(100dvh-116px)] overflow-hidden flex items-end justify-center bg-sand">
         <div className="absolute inset-0 w-full h-full">
           <img
             alt="Kairali Guru Ayurvedic Sanctuary"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-35"
             src="/images/HEALING VILLAGE FRONT IMAGE.jpg"
           />
-          {/* Natural organic overlay */}
-          <div className="absolute inset-0 bg-palm/40 mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-t from-palm via-transparent to-black/30" />
+          {/* Natural dark chocolate overlay */}
+          <div className="absolute inset-0 bg-[#1E120C]/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1E120C] via-transparent to-[#1E120C]/50" />
         </div>
 
         <div className="relative z-10 pt-20 md:pt-32 pb-12 md:pb-20 px-6 flex flex-col items-center justify-end text-center text-sand w-full">
-          <div className="max-w-4xl flex flex-col items-center gap-6">
-            <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-turmeric font-bold flex items-center gap-2">
-              <FlowerLotus size={14} className="text-turmeric" />
-              <span>EST. 1908 · NABH-ACCREDITED TEACHING HOSPITAL</span>
-            </span>
-            <h1 className="text-4xl md:text-7xl font-display text-white leading-tight font-light tracking-tight max-w-3xl">
-              Learn Ayurveda <br className="hidden md:inline" />
-              <span className="text-turmeric">Where Its Living Tradition</span> Continues
+            <h1 className="text-4xl md:text-6xl font-serif text-palm leading-tight font-light tracking-tight max-w-4xl">
+              Learn the timeless science of <span className="text-turmeric font-serif italic">Ayurveda</span>
             </h1>
-            <p className="text-sm md:text-base text-sand/85 leading-relaxed max-w-xl font-serif">
-              Study authentic Ayurveda through structured courses, experienced faculty, and practical learning within Kairali’s established wellness ecosystem.
+
+            <p className="text-sm md:text-base text-taupe leading-relaxed max-w-xl font-serif">
+              Kairali Guru brings the wisdom of traditional Ayurvedic teachers to your home. Study at your own pace with guided video lessons, live sessions, and a supportive community of wellness seekers.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center mt-6">
+
+            <div className="flex flex-wrap gap-4 justify-center mt-4">
               <Link
                 href="/courses"
-                className="inline-flex items-center gap-4 bg-turmeric text-palm hover:bg-turmeric/90 py-3.5 px-8 rounded-md font-semibold transition-all duration-300 text-xs tracking-wider uppercase"
+                className="inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta/90 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-xs shadow-md"
               >
-                <span>{cta("explore")}</span>
-                <ArrowRight size={14} />
+                <span>Explore Courses</span>
               </Link>
               <Link
-                href="/enquiry"
-                className="inline-flex items-center gap-4 bg-transparent py-3.5 px-8 rounded-md font-semibold border border-sand/30 text-sand hover:bg-sand/15 transition-all text-xs tracking-wider uppercase"
+                href="/about"
+                className="inline-flex items-center gap-2 bg-[#261810] border border-[#3E271B] text-palm hover:bg-[#362217] py-3 px-6 rounded-lg font-semibold transition-all text-xs"
               >
-                <span>{cta("speak")}</span>
+                <span>Meet Your Teacher</span>
               </Link>
             </div>
-            <span className="text-[9px] text-sand/65 tracking-[0.2em] font-semibold uppercase mt-6 border-t border-sand/15 pt-4 w-64">
+            <span className="text-[9px] text-taupe/70 tracking-[0.2em] font-semibold uppercase mt-6 border-t border-copper/15 pt-4 w-64">
               Welcoming learners from around the world
             </span>
           </div>
-        </div>
       </section>
 
       {/* SECTION 2: TRUST STRIP */}
@@ -269,7 +263,7 @@ export default async function Home({ params }: PageProps) {
                   alt={course.name}
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                 />
-                <span className="absolute top-4 start-4 font-mono text-[9px] text-paper-on-dark font-bold bg-palm px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                <span className="absolute top-4 start-4 font-mono text-[9px] text-white font-bold bg-terracotta px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
                   {course.category}
                 </span>
               </div>
@@ -284,7 +278,7 @@ export default async function Home({ params }: PageProps) {
                   </p>
                 </div>
 
-                <div className="border-t border-sand-2 pt-4 mt-6 flex justify-between items-center text-[10px] font-semibold text-palm">
+                <div className="border-t border-copper/15 pt-4 mt-6 flex justify-between items-center text-[10px] font-semibold text-palm">
                   <span className="flex items-center gap-1.5 text-taupe">
                     <Calendar size={12} />
                     <span>{course.duration}</span>
@@ -297,7 +291,7 @@ export default async function Home({ params }: PageProps) {
 
                 <Link
                   href={`/courses/${course.slug}`}
-                  className="w-full text-center mt-6 bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold py-3 rounded-lg text-xs transition-all tracking-wider uppercase"
+                  className="w-full text-center mt-6 bg-terracotta hover:bg-terracotta/90 text-white font-semibold py-3 rounded-lg text-xs transition-all tracking-wider uppercase shadow-md block"
                 >
                   View Details
                 </Link>
@@ -308,36 +302,36 @@ export default async function Home({ params }: PageProps) {
       </section>
 
       {/* SECTION 6: HERITAGE TIMELINE */}
-      <section className="bg-palm text-paper-on-dark py-24 border-y border-palm-2">
+      <section className="bg-sand-2 text-palm py-24 border-y border-copper/15">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-6 space-y-8 text-start">
             <div className="space-y-3">
               <span className="text-xs font-semibold tracking-widest uppercase text-turmeric block">
                 OUR LINEAGE HERITAGE
               </span>
-              <h2 className="font-display text-4xl sm:text-5xl font-light text-paper-on-dark tracking-tight leading-tight">
+              <h2 className="font-display text-4xl sm:text-5xl font-light text-palm tracking-tight leading-tight">
                 118 Years of unbroken <span className="text-turmeric">family practice</span>
               </h2>
             </div>
-            <p className="text-sm text-paper-on-dark/75 leading-relaxed font-serif">
+            <p className="text-sm text-taupe leading-relaxed font-serif">
               {ab("desc2")}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-paper-on-dark/10 text-start">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-copper/15 text-start">
               <div>
                 <span className="text-2xl sm:text-3xl font-display font-bold text-turmeric block">1908</span>
-                <span className="text-[9px] text-paper-on-dark/60 uppercase tracking-widest font-mono">Est. Date</span>
+                <span className="text-[9px] text-taupe uppercase tracking-widest font-mono">Est. Date</span>
               </div>
               <div>
                 <span className="text-2xl sm:text-3xl font-display font-bold text-turmeric block">Palakkad</span>
-                <span className="text-[9px] text-paper-on-dark/60 uppercase tracking-widest font-mono">Kerala Center</span>
+                <span className="text-[9px] text-taupe uppercase tracking-widest font-mono">Kerala Center</span>
               </div>
               <div>
                 <span className="text-2xl sm:text-3xl font-display font-bold text-turmeric block">NABH</span>
-                <span className="text-[9px] text-paper-on-dark/60 uppercase tracking-widest font-mono">Accredited</span>
+                <span className="text-[9px] text-taupe uppercase tracking-widest font-mono">Accredited</span>
               </div>
             </div>
           </div>
-          <div className="lg:col-span-6 rounded-lg overflow-hidden border border-paper-on-dark/10 aspect-[16/10] shadow-md">
+          <div className="lg:col-span-6 rounded-lg overflow-hidden border border-copper/15 aspect-[16/10] shadow-md">
             <img
               src="/images/kAIRALI PALAK KAD_DEPICTIONS BY PRACHI KHASGIWALA-96.jpg"
               alt="Palakkad Kerala teaching campus"
@@ -464,18 +458,18 @@ export default async function Home({ params }: PageProps) {
                 </div>
 
                 {/* Back Face (Info & Description) */}
-                <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden bg-palm text-sand p-6 [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-between text-start border border-palm/20">
+                <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden bg-sand-2 text-palm p-6 [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-between text-start border border-copper/20">
                   <div className="space-y-4">
                     <div>
-                      <h3 className="font-display font-bold text-base text-white leading-snug">{doc.name}</h3>
+                      <h3 className="font-display font-bold text-base text-palm leading-snug">{doc.name}</h3>
                       <span className="text-xs text-turmeric font-semibold block mt-0.5">{doc.role}</span>
-                      <span className="text-[9px] text-sand/60 block font-mono uppercase tracking-wider mt-1 border-b border-white/10 pb-3">{doc.spec}</span>
+                      <span className="text-[9px] text-taupe block font-mono uppercase tracking-wider mt-1 border-b border-copper/15 pb-3">{doc.spec}</span>
                     </div>
-                    <p className="text-xs text-sand/85 leading-relaxed font-serif">
+                    <p className="text-xs text-taupe leading-relaxed font-serif">
                       {doc.desc}
                     </p>
                   </div>
-                  <span className="text-[9px] font-mono text-turmeric/80 uppercase tracking-widest border-t border-white/10 pt-3">
+                  <span className="text-[9px] font-mono text-turmeric/80 uppercase tracking-widest border-t border-copper/15 pt-3">
                     Kairali Academic Faculty
                   </span>
                 </div>
@@ -671,24 +665,24 @@ export default async function Home({ params }: PageProps) {
 
       {/* SECTION 14: IMMERSIVE CALL-TO-ACTION */}
       <section className="max-w-5xl mx-auto w-full px-6">
-        <div className="bg-palm text-paper-on-dark rounded-[2.5rem] py-20 px-8 sm:px-16 text-center border border-palm-2 relative overflow-hidden shadow-md">
+        <div className="bg-sand-2 text-palm rounded-[2.5rem] py-20 px-8 sm:px-16 text-center border border-copper/20 relative overflow-hidden shadow-2xl">
           <div className="max-w-xl mx-auto space-y-6 relative z-10">
             <h2 className="font-display text-3xl sm:text-5xl font-light leading-tight">
               Begin Your <span className="text-turmeric">Ayurveda Learning</span> Journey
             </h2>
-            <p className="text-xs sm:text-sm text-paper-on-dark/70 leading-relaxed font-serif">
+            <p className="text-xs sm:text-sm text-taupe leading-relaxed font-serif">
               Ready to learn from practicing doctors? Fill out our enquiry form and a physician-advisor will contact you to answer any questions.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Link
                 href="/enquiry"
-                className="bg-turmeric text-bark hover:opacity-95 font-semibold px-8 py-3.5 rounded-md text-xs transition-all shadow-md tracking-wider uppercase"
+                className="bg-terracotta text-white hover:bg-terracotta/90 font-semibold px-8 py-3.5 rounded-lg text-xs transition-all shadow-md tracking-wider uppercase"
               >
                 Explore Programmes
               </Link>
               <Link
                 href="/enquiry"
-                className="bg-transparent py-3.5 px-8 rounded-md font-semibold border border-sand/30 text-sand hover:bg-sand/15 transition-all text-xs tracking-wider uppercase"
+                className="bg-transparent py-3.5 px-8 rounded-lg font-semibold border border-copper/40 text-palm hover:bg-[#362217] transition-all text-xs tracking-wider uppercase"
               >
                 Speak to an Advisor
               </Link>

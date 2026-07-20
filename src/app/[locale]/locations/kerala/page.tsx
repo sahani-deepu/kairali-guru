@@ -145,7 +145,7 @@ export default async function KeralaLocationPage({ params }: PageProps) {
                 </p>
                 <Link
                   href="/enquiry"
-                  className="w-full bg-palm hover:bg-palm-2 text-paper-on-dark text-center font-semibold py-3.5 rounded-full text-xs transition-all shadow-md block"
+                  className="w-full bg-terracotta hover:bg-terracotta/90 text-white text-center font-semibold py-3.5 rounded-full text-xs transition-all shadow-md block"
                 >
                   {l("kerala.cta")}
                 </Link>

@@ -12,7 +12,7 @@ export default async function Header() {
   return (
     <div className="w-full flex flex-col">
       {/* 1. Top Utility Bar */}
-      <div className="w-full bg-palm text-paper-on-dark border-b border-palm-2/45 py-2 px-6 sm:px-8 text-xs font-medium font-sans">
+      <div className="w-full bg-[#140C08] text-paper-on-dark border-b border-copper/15 py-2 px-6 sm:px-8 text-xs font-medium font-sans">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           {/* Support Brief */}
           <div className="flex items-center gap-6 text-paper-on-dark/80">
@@ -43,7 +43,7 @@ export default async function Header() {
       </div>
 
       {/* 2. Main Navigation Bar */}
-      <header className="sticky top-0 z-30 w-full bg-white border-b border-sand-2">
+      <header className="sticky top-0 z-30 w-full bg-sand border-b border-copper/15 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 h-16 flex justify-between items-center">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group text-start">
@@ -52,7 +52,7 @@ export default async function Header() {
               alt="Kairali Ayurveda logo"
               width={60}
               height={60}
-              className="object-contain h-[60px] w-auto"
+              className="object-contain h-[60px] w-auto brightness-0 invert opacity-90 transition-opacity hover:opacity-100"
               priority
             />
             <div className="flex flex-col">
@@ -75,9 +75,9 @@ export default async function Header() {
               </button>
 
               {/* Pure CSS Megamenu container */}
-              <div className="absolute top-full start-0 mt-1 w-[680px] bg-white border border-sand-2 rounded-3xl p-6 shadow-xl opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 z-50 grid grid-cols-12 gap-6 text-start">
+              <div className="absolute top-full start-0 mt-1 w-[680px] bg-sand-2 border border-copper/20 rounded-3xl p-6 shadow-2xl opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 z-50 grid grid-cols-12 gap-6 text-start">
                 {/* Course sections */}
-                <div className="col-span-8 grid grid-cols-2 gap-6 border-e border-sand-2 pe-6">
+                <div className="col-span-8 grid grid-cols-2 gap-6 border-e border-copper/15 pe-6">
                   <div>
                     <h5 className="text-[10px] font-bold text-laterite uppercase tracking-widest mb-3">Foundations</h5>
                     <ul className="space-y-3">
@@ -116,21 +116,21 @@ export default async function Header() {
                 </div>
 
                 {/* Mega-menu Featured slot */}
-                <div className="col-span-4 bg-palm text-paper-on-dark rounded-2xl p-4 flex flex-col justify-between shadow-sm">
+                <div className="col-span-4 bg-sand-2 border border-copper/15 text-palm rounded-2xl p-4 flex flex-col justify-between shadow-sm">
                   <div className="space-y-2">
-                    <span className="inline-block bg-turmeric text-bark text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                    <span className="inline-block bg-terracotta text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
                       Featured Course
                     </span>
-                    <h4 className="font-display font-bold text-sm text-paper-on-dark leading-snug">
+                    <h4 className="font-display font-bold text-sm text-palm leading-snug">
                       Intensive Ayurveda Training
                     </h4>
-                    <p className="text-[10px] text-paper-on-dark/70 font-serif leading-relaxed">
+                    <p className="text-[10px] text-taupe font-serif leading-relaxed">
                       NABH accredited hospital practice in Palakkad, Kerala.
                     </p>
                   </div>
                   <Link
                     href="/courses/intensive-ayurveda-training"
-                    className="mt-4 flex items-center gap-1 text-[10px] font-bold text-turmeric hover:text-paper-on-dark transition-colors"
+                    className="mt-4 flex items-center gap-1 text-[10px] font-bold text-turmeric hover:text-palm transition-colors"
                   >
                     <span>Admission details</span>
                     <span>→</span>
@@ -160,7 +160,7 @@ export default async function Header() {
           <div className="flex items-center gap-2 sm:gap-4">
             <Link
               href="/enquiry"
-              className="bg-palm hover:bg-palm-2 text-paper-on-dark px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide shadow-sm hover:shadow transition-all whitespace-nowrap"
+              className="bg-terracotta hover:bg-terracotta/90 text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-xs font-semibold tracking-wide shadow-md transition-all whitespace-nowrap"
             >
               {t("enquire")}
             </Link>

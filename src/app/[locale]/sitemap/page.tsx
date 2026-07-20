@@ -44,13 +44,13 @@ export default async function SitemapPage({ params }: PageProps) {
           
           {/* Root Level: Home */}
           <div className="flex flex-col items-center mb-8 relative">
-            <div className="bg-palm text-paper-on-dark px-8 py-4 rounded-2xl shadow-lg border border-palm-2 text-center group hover:scale-[1.02] transition-all duration-300">
+            <div className="bg-sand-2 text-palm px-8 py-4 rounded-2xl shadow-lg border border-copper/20 text-center group hover:scale-[1.02] transition-all duration-300">
               <span className="text-[9px] uppercase tracking-widest text-turmeric font-bold block mb-1">Root Entry</span>
-              <Link href="/" className="font-display font-extrabold text-base sm:text-lg hover:underline flex items-center gap-2 justify-center">
+              <Link href="/" className="font-display font-extrabold text-base sm:text-lg hover:underline flex items-center gap-2 justify-center text-palm">
                 <span>Kairali Guru Homepage</span>
                 <ArrowRight size={14} className="text-turmeric" />
               </Link>
-              <span className="text-[10px] text-paper-on-dark/65 block mt-1">kairali.guru /</span>
+              <span className="text-[10px] text-taupe block mt-1">kairali.guru /</span>
             </div>
             
             {/* Trunk Line */}

@@ -9,7 +9,7 @@ export default async function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-palm text-paper-on-dark/85 border-t border-palm-2/50 py-16 px-6 sm:px-8 mt-auto font-sans text-start">
+    <footer className="bg-[#140C08] text-paper-on-dark/85 border-t border-copper/15 py-16 px-6 sm:px-8 mt-auto font-sans text-start">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-16">
         
         {/* Column 1: Brand & Socials */}

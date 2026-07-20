@@ -142,7 +142,7 @@ export default function StudentHubClient({ initialIsLoggedIn = false, initialUse
                         setResetEmail("");
                         setError("");
                       }}
-                      className="w-full bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all shadow-md text-center block cursor-pointer"
+                      className="w-full bg-terracotta hover:bg-terracotta/90 text-white font-semibold py-3 rounded-full text-xs transition-all shadow-md text-center block cursor-pointer"
                     >
                       Back to Sign In
                     </button>
@@ -172,9 +172,9 @@ export default function StudentHubClient({ initialIsLoggedIn = false, initialUse
                     <button
                       type="submit"
                       disabled={isResetting || !isOnline}
-                      className="bg-palm hover:bg-palm-2 disabled:bg-palm/70 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all shadow-md mt-2 flex items-center justify-center gap-2 cursor-pointer"
+                      className="bg-terracotta hover:bg-terracotta/90 disabled:bg-terracotta/70 text-white font-semibold py-3 rounded-full text-xs transition-all shadow-md mt-2 flex items-center justify-center gap-2 cursor-pointer"
                     >
-                      {isResetting && <span className="w-3.5 h-3.5 border-2 border-paper-on-dark border-t-transparent rounded-full animate-spin" />}
+                      {isResetting && <span className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />}
                       <span>Send Reset Link</span>
                     </button>
 
@@ -246,9 +246,9 @@ export default function StudentHubClient({ initialIsLoggedIn = false, initialUse
                   <button
                     type="submit"
                     disabled={isLoggingIn || !isOnline}
-                    className="bg-palm hover:bg-palm-2 disabled:bg-palm/70 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all shadow-md mt-2 flex items-center justify-center gap-2 cursor-pointer"
+                    className="bg-terracotta hover:bg-terracotta/90 disabled:bg-terracotta/70 text-white font-semibold py-3 rounded-full text-xs transition-all shadow-md mt-2 flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    {isLoggingIn && <span className="w-3.5 h-3.5 border-2 border-paper-on-dark border-t-transparent rounded-full animate-spin" />}
+                    {isLoggingIn && <span className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />}
                     <span>Sign In to Portal</span>
                   </button>
                 </form>

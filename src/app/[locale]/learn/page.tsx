@@ -81,7 +81,7 @@ export default async function LearnHubPage({ params }: PageProps) {
                 alt={articles[0].title}
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
               />
-              <span className="absolute top-4 start-4 font-mono text-[9px] text-paper-on-dark font-bold bg-palm px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+              <span className="absolute top-4 start-4 font-mono text-[9px] text-white font-bold bg-terracotta px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                 {articles[0].category}
               </span>
             </div>
@@ -92,7 +92,7 @@ export default async function LearnHubPage({ params }: PageProps) {
               <p className="text-xs sm:text-sm text-taupe leading-relaxed font-serif">
                 {articles[0].excerpt}
               </p>
-              <div className="border-t border-sand-2 pt-4 flex justify-between items-center text-[10px] text-taupe font-semibold">
+              <div className="border-t border-copper/15 pt-4 flex justify-between items-center text-[10px] text-taupe font-semibold">
                 <span className="flex items-center gap-1">
                   <User size={12} />
                   <span>{articles[0].author}</span>
@@ -104,7 +104,7 @@ export default async function LearnHubPage({ params }: PageProps) {
               </div>
               <Link
                 href={`/learn/${articles[0].slug}`}
-                className="inline-flex items-center gap-2 bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold py-2.5 px-6 rounded-xl text-xs transition-all shadow-sm"
+                className="inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta/90 text-white font-semibold py-2.5 px-6 rounded-xl text-xs transition-all shadow-md"
               >
                 <span>Read Full Article</span>
                 <ArrowRight size={12} />

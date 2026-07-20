@@ -26,7 +26,7 @@ export default function NotFound() {
         <div className="pt-4">
           <Link
             href="/"
-            className="inline-block bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold px-6 py-3 rounded-full text-xs transition-all shadow-md"
+            className="inline-block bg-terracotta hover:bg-terracotta/90 text-white font-semibold px-6 py-3 rounded-full text-xs transition-all shadow-md"
           >
             Return to Academy Home
           </Link>

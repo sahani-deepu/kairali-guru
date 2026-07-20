@@ -10,41 +10,41 @@ export default function ConsentBanner() {
 
   return (
     <div
-      className="consent-banner consent-banner-container fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100vw-2rem)] max-w-[340px] rounded-xl border border-laterite/20 bg-sand p-3 shadow-[0_12px_36px_rgba(14,28,18,0.1)] text-bark opacity-100"
+      className="consent-banner consent-banner-container fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100vw-2rem)] max-w-[420px] rounded-2xl border border-copper/20 bg-[#281A12] p-4 sm:p-5 shadow-2xl text-palm opacity-100"
       role="dialog"
       aria-label="Cookie consent banner"
     >
-      <div className="flex items-start gap-2.5">
-        <ShieldCheck size={20} className="text-palm mt-0.5 flex-shrink-0" />
-        <div className="space-y-2.5 w-full">
+      <div className="flex items-start gap-3">
+        <ShieldCheck size={22} className="text-turmeric mt-0.5 flex-shrink-0" />
+        <div className="space-y-3 w-full min-w-0">
           <div>
-            <p className="consent-banner-title text-[10px] font-bold uppercase tracking-[0.15em] text-palm">Privacy & Cookies</p>
-            <p className="consent-banner-text mt-1 text-[10px] leading-4 text-taupe">
+            <p className="consent-banner-title text-[10px] font-bold uppercase tracking-[0.15em] text-turmeric">Privacy & Cookies</p>
+            <p className="consent-banner-text mt-1 text-[10px] leading-relaxed text-taupe font-serif">
               We use cookies for essential site functions, analytics, and marketing. Customize your choices via “Settings”.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-1.5">
+          <div className="flex items-center gap-2 w-full">
             <button
               onClick={rejectNonEssential}
-              className="consent-banner-button w-full rounded-full border border-bark/20 bg-white py-1.5 text-[9px] font-bold uppercase tracking-[0.05em] text-bark transition hover:bg-sand focus:outline-none focus:ring-1 focus:ring-palm"
+              className="flex-1 rounded-lg border border-copper/30 bg-[#362217] hover:bg-[#452c1e] py-2 px-2 text-[9px] font-bold uppercase tracking-tight text-palm transition whitespace-nowrap text-center focus:outline-none focus:ring-1 focus:ring-turmeric"
             >
               Reject
             </button>
             <button
               onClick={openPreferences}
-              className="consent-banner-button w-full rounded-full border border-bark/20 bg-white py-1.5 text-[9px] font-bold uppercase tracking-[0.05em] text-bark transition hover:bg-sand focus:outline-none focus:ring-1 focus:ring-palm"
+              className="flex-1 rounded-lg border border-copper/30 bg-[#362217] hover:bg-[#452c1e] py-2 px-2 text-[9px] font-bold uppercase tracking-tight text-palm transition whitespace-nowrap text-center focus:outline-none focus:ring-1 focus:ring-turmeric"
             >
               Settings
             </button>
             <button
               onClick={acceptAll}
-              className="consent-banner-button w-full rounded-full border border-bark/20 bg-white py-1.5 text-[9px] font-bold uppercase tracking-[0.05em] text-bark transition hover:bg-sand focus:outline-none focus:ring-1 focus:ring-palm"
+              className="flex-1 rounded-lg bg-terracotta hover:bg-terracotta/90 py-2 px-2 text-[9px] font-bold uppercase tracking-tight text-white shadow-md transition whitespace-nowrap text-center focus:outline-none focus:ring-1 focus:ring-terracotta"
             >
               Accept All
             </button>
           </div>
-          <div className="consent-banner-footer flex items-center gap-1.5 text-[9px] text-taupe">
-            <Gear size={11} className="text-taupe" />
+          <div className="consent-banner-footer flex items-center gap-1.5 text-[9px] text-taupe/80 font-serif">
+            <Gear size={11} className="text-turmeric" />
             <span>Strictly necessary cookies are always active.</span>
           </div>
         </div>

@@ -20,20 +20,20 @@ export default function TrustBar() {
   ];
 
   return (
-    <div className="w-full bg-palm border border-palm-2/45 py-10 px-6 rounded-3xl shadow-sm">
+    <div className="w-full bg-sand-2 border border-copper/20 py-10 px-6 rounded-3xl shadow-sm">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-around gap-12 text-center md:text-start">
         {credentials.map((cred, index) => {
           const IconComponent = cred.icon;
           return (
             <div key={index} className="flex flex-col md:flex-row items-center gap-5 max-w-md">
-              <div className="w-14 h-14 shrink-0 rounded-full bg-white/10 flex items-center justify-center text-sand border border-white/20">
+              <div className="w-14 h-14 shrink-0 rounded-full bg-terracotta/15 flex items-center justify-center text-turmeric border border-copper/30 shadow-sm">
                 <IconComponent size={28} weight="light" />
               </div>
               <div>
-                <h4 className="font-display font-bold text-sand text-lg leading-snug">
+                <h4 className="font-display font-bold text-palm text-lg leading-snug">
                   {cred.title}
                 </h4>
-                <p className="text-sm font-semibold text-sand-2 mt-1.5 font-sans leading-relaxed">
+                <p className="text-sm font-medium text-taupe mt-1.5 font-sans leading-relaxed">
                   {cred.desc}
                 </p>
               </div>

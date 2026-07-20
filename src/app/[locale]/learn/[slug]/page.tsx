@@ -198,15 +198,15 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
           </article>
 
           {/* Direct CTA */}
-          <div className="bg-palm text-paper-on-dark rounded-3xl p-8 sm:p-12 text-center shadow-xl">
+          <div className="bg-sand-2 text-palm border border-copper/20 rounded-3xl p-8 sm:p-12 text-center shadow-2xl">
             <GraduationCap size={44} className="text-turmeric mx-auto mb-4" />
-            <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3">{c("heading")}</h2>
-            <p className="text-xs sm:text-sm text-paper-on-dark/70 mb-8 max-w-md mx-auto leading-relaxed">
+            <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3 text-palm">{c("heading")}</h2>
+            <p className="text-xs sm:text-sm text-taupe mb-8 max-w-md mx-auto leading-relaxed font-serif">
               Ready to learn Ayurveda inside a clinical lineage? Enquire now to speak with a physician-advisor.
             </p>
             <Link
               href="/enquiry"
-              className="inline-block bg-turmeric text-bark hover:opacity-95 font-semibold px-8 py-3.5 rounded-full text-xs transition-all shadow-md"
+              className="inline-block bg-terracotta text-white hover:bg-terracotta/90 font-semibold px-8 py-3.5 rounded-full text-xs transition-all shadow-md"
             >
               Contact Advisor
             </Link>

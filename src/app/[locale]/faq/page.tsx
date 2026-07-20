@@ -66,7 +66,7 @@ export default async function FAQPage({ params }: PageProps) {
           </p>
           <Link
             href="/enquiry"
-            className="inline-block bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold px-6 py-2.5 rounded-full text-xs transition-all shadow-sm"
+            className="inline-block bg-terracotta hover:bg-terracotta/90 text-white font-semibold px-6 py-2.5 rounded-full text-xs transition-all shadow-md"
           >
             Contact Advisor
           </Link>

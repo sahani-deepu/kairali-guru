@@ -72,7 +72,7 @@ export default async function PanchakarmaPage({ params }: PageProps) {
             </p>
             <Link
               href="/courses"
-              className="inline-flex items-center justify-center gap-2 bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold px-8 py-4 rounded-full transition-all shadow-md"
+              className="inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta/90 text-white font-semibold px-8 py-4 rounded-full transition-all shadow-md"
             >
               <span>Explore Panchakarma programmes</span>
               <ArrowRight size={16} />

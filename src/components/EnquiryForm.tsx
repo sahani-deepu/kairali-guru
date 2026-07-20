@@ -147,7 +147,7 @@ export default function EnquiryForm() {
           </h4>
           <ol className="flex flex-col gap-5">
             <li className="flex gap-4">
-              <div className="w-6 h-6 rounded-full bg-palm text-paper-on-dark flex items-center justify-center shrink-0 font-mono text-[10px] font-bold">
+              <div className="w-6 h-6 rounded-full bg-terracotta text-white flex items-center justify-center shrink-0 font-mono text-[10px] font-bold shadow-sm">
                 1
               </div>
               <div>
@@ -156,7 +156,7 @@ export default function EnquiryForm() {
               </div>
             </li>
             <li className="flex gap-4">
-              <div className="w-6 h-6 rounded-full bg-palm text-paper-on-dark flex items-center justify-center shrink-0 font-mono text-[10px] font-bold">
+              <div className="w-6 h-6 rounded-full bg-terracotta text-white flex items-center justify-center shrink-0 font-mono text-[10px] font-bold shadow-sm">
                 2
               </div>
               <div>
@@ -252,7 +252,7 @@ export default function EnquiryForm() {
             <button
               type="button"
               onClick={goNext}
-              className="mt-4 w-full bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all flex items-center justify-center gap-2"
+              className="mt-4 w-full bg-terracotta hover:bg-terracotta/90 text-white font-semibold py-3 rounded-full text-xs transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
             >
               <span>Continue to Step 2</span>
               <ArrowRight size={14} />
@@ -305,7 +305,7 @@ export default function EnquiryForm() {
                 {["kerala", "delhi", "either"].map((loc) => (
                   <label
                     key={loc}
-                    className="flex items-center justify-center py-2.5 border border-sand-2 rounded-xl cursor-pointer text-[10px] font-bold text-palm hover:bg-sand-2/30 select-none has-[:checked]:bg-palm has-[:checked]:text-paper-on-dark has-[:checked]:border-palm transition-all"
+                    className="flex items-center justify-center py-2.5 border border-sand-2 rounded-xl cursor-pointer text-[10px] font-bold text-palm hover:bg-sand-2/30 select-none has-[:checked]:bg-terracotta has-[:checked]:text-white has-[:checked]:border-terracotta transition-all shadow-xs"
                   >
                     <input
                       type="radio"
@@ -378,7 +378,7 @@ export default function EnquiryForm() {
               <button
                 type="submit"
                 disabled={isSubmitting || !isOnline}
-                className="bg-palm hover:bg-palm-2 disabled:bg-palm/70 text-paper-on-dark font-semibold py-3 rounded-full text-xs transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                className="bg-terracotta hover:bg-terracotta/90 disabled:bg-terracotta/50 text-white font-semibold py-3 rounded-full text-xs transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
               >
                 {isSubmitting && <span className="inline-block w-3.5 h-3.5 border-2 border-paper-on-dark border-t-transparent rounded-full animate-spin" />}
                 <span>Submit Form</span>

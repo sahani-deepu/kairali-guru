@@ -233,18 +233,18 @@ export default async function AboutPage({ params }: PageProps) {
                   </div>
 
                   {/* Back Face (Info & Description) */}
-                  <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden bg-palm text-sand p-6 [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-between text-start border border-palm/20">
+                  <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden bg-sand-2 text-palm p-6 [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col justify-between text-start border border-copper/20">
                     <div className="space-y-4">
                       <div>
-                        <h3 className="font-display font-bold text-base text-white leading-snug">{doc.name}</h3>
+                        <h3 className="font-display font-bold text-base text-palm leading-snug">{doc.name}</h3>
                         <span className="text-xs text-turmeric font-semibold block mt-0.5">{doc.role}</span>
-                        <span className="text-[9px] text-sand/60 block font-mono uppercase tracking-wider mt-1 border-b border-white/10 pb-3">{doc.spec}</span>
+                        <span className="text-[9px] text-taupe block font-mono uppercase tracking-wider mt-1 border-b border-copper/15 pb-3">{doc.spec}</span>
                       </div>
-                      <p className="text-xs text-sand/85 leading-relaxed font-serif">
+                      <p className="text-xs text-taupe leading-relaxed font-serif">
                         {doc.desc}
                       </p>
                     </div>
-                    <span className="text-[9px] font-mono text-turmeric/80 uppercase tracking-widest border-t border-white/10 pt-3">
+                    <span className="text-[9px] font-mono text-turmeric/80 uppercase tracking-widest border-t border-copper/15 pt-3">
                       Kairali Academic Faculty
                     </span>
                   </div>

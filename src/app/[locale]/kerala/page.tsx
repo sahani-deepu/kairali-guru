@@ -45,7 +45,7 @@ export default async function KeralaTopicPage({ params }: PageProps) {
             <div className="flex gap-4">
               <Link
                 href="/locations/kerala"
-                className="inline-flex items-center justify-center gap-2 bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold px-8 py-4 rounded-full transition-all shadow-md"
+                className="inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta/90 text-white font-semibold px-8 py-4 rounded-full transition-all shadow-md"
               >
                 <span>Palakkad campus details</span>
                 <ArrowRight size={16} />

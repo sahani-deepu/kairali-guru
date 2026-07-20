@@ -62,10 +62,10 @@ export default async function CoursesPage({ params }: PageProps) {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 start-4 flex items-center gap-2">
-                    <span className="font-mono text-[9px] text-paper-on-dark font-bold bg-palm px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                    <span className="font-mono text-[9px] text-white font-bold bg-terracotta px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                       {course.code}
                     </span>
-                    <span className="font-mono text-[9px] text-palm font-bold bg-turmeric px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                    <span className="font-mono text-[9px] text-[#1E120C] font-bold bg-turmeric px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                       {courseLevel}
                     </span>
                   </div>
@@ -83,7 +83,7 @@ export default async function CoursesPage({ params }: PageProps) {
                   </div>
 
                   <div>
-                    <div className="grid grid-cols-2 gap-4 border-y border-sand-2 py-4 mb-6 text-start text-xs font-semibold text-palm">
+                    <div className="grid grid-cols-2 gap-4 border-y border-copper/15 py-4 mb-6 text-start text-xs font-semibold text-palm">
                       <div className="flex items-center gap-2">
                         <Calendar size={14} className="text-laterite shrink-0" />
                         <span>{course.duration}</span>
@@ -94,11 +94,9 @@ export default async function CoursesPage({ params }: PageProps) {
                       </div>
                     </div>
 
-
-
                     <Link
                       href={`/courses/${course.slug}`}
-                      className="w-full flex items-center justify-center gap-2 bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold py-3 rounded-xl text-xs transition-all shadow-sm group-hover:shadow"
+                      className="w-full flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta/90 text-white font-semibold py-3 rounded-xl text-xs transition-all shadow-md group-hover:shadow-lg"
                     >
                       <span>Explore Syllabus</span>
                       <ArrowRight size={14} />
@@ -132,15 +130,15 @@ export default async function CoursesPage({ params }: PageProps) {
         </div>
 
         {/* Dynamic CTA */}
-        <div className="bg-palm text-paper-on-dark rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-xl">
+        <div className="bg-sand-2 text-palm border border-copper/20 rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-2xl">
           <GraduationCap size={44} className="text-turmeric mx-auto mb-4" />
-          <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3">{c("heading")}</h2>
-          <p className="text-xs sm:text-sm text-paper-on-dark/70 mb-8 max-w-md mx-auto leading-relaxed font-serif">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3 text-palm">{c("heading")}</h2>
+          <p className="text-xs sm:text-sm text-taupe mb-8 max-w-md mx-auto leading-relaxed font-serif">
             {c("subhead")}
           </p>
           <Link
             href="/enquiry"
-            className="inline-block bg-turmeric text-bark hover:opacity-95 font-semibold px-8 py-3.5 rounded-full text-xs transition-all shadow-md"
+            className="inline-block bg-terracotta text-white hover:bg-terracotta/90 font-semibold px-8 py-3.5 rounded-full text-xs transition-all shadow-md"
           >
             {cta("explore")}
           </Link>

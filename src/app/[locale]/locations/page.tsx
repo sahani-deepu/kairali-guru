@@ -85,7 +85,7 @@ export default async function LocationsPage({ params }: PageProps) {
             </div>
             <Link
               href="/locations/kerala"
-              className="w-full flex items-center justify-center gap-2 bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold py-3.5 rounded-full text-xs transition-all shadow-sm"
+              className="w-full flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta/90 text-white font-semibold py-3.5 rounded-full text-xs transition-all shadow-md"
             >
               <span>Explore Kerala campus</span>
               <ArrowRight size={14} />
@@ -134,7 +134,7 @@ export default async function LocationsPage({ params }: PageProps) {
             </div>
             <Link
               href="/locations/delhi"
-              className="w-full flex items-center justify-center gap-2 bg-palm hover:bg-palm-2 text-paper-on-dark font-semibold py-3.5 rounded-full text-xs transition-all shadow-sm"
+              className="w-full flex items-center justify-center gap-2 bg-terracotta hover:bg-terracotta/90 text-white font-semibold py-3.5 rounded-full text-xs transition-all shadow-md"
             >
               <span>Explore Delhi centre</span>
               <ArrowRight size={14} />
