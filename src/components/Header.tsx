@@ -65,50 +65,59 @@ export default async function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation with Mega-Menu */}
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
-            {/* Courses Mega-menu Trigger */}
+            {/* Courses Link with Megamenu */}
             <div className="relative group/menu py-4">
-              <button className="flex items-center gap-1.5 text-bark hover:text-laterite transition-colors font-semibold cursor-pointer">
+              <Link
+                href="/courses"
+                className="flex items-center gap-1.5 text-bark hover:text-laterite transition-colors font-semibold"
+              >
                 <span>{t("courses")}</span>
-                <CaretDown size={14} className="text-taupe" />
-              </button>
+                <CaretDown size={14} className="text-taupe transition-transform group-hover/menu:rotate-180" />
+              </Link>
 
-              {/* Pure CSS Megamenu container */}
-              <div className="absolute top-full start-0 mt-1 w-[680px] bg-sand-2 border border-copper/20 rounded-3xl p-6 shadow-2xl opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 z-50 grid grid-cols-12 gap-6 text-start">
-                {/* Course sections */}
+              {/* Mega-menu Dropdown */}
+              <div className="absolute top-full start-0 mt-1 w-[700px] bg-sand-2 border border-copper/20 rounded-3xl p-6 shadow-2xl opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 z-50 grid grid-cols-12 gap-6 text-start">
+                {/* Course Sections */}
                 <div className="col-span-8 grid grid-cols-2 gap-6 border-e border-copper/15 pe-6">
                   <div>
-                    <h5 className="text-[10px] font-bold text-laterite uppercase tracking-widest mb-3">Foundations</h5>
+                    <h5 className="text-[10px] font-bold text-laterite uppercase tracking-widest mb-3">Foundational Courses</h5>
                     <ul className="space-y-3">
                       <li>
                         <Link href="/courses/one-day-ayurveda-workshop" className="block group/link">
-                          <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">One-Day Workshop</span>
-                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">Introductory Ayurveda & herbs.</span>
+                          <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">One-Day Ayurveda Workshop (OAP)</span>
+                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">Introductory 3-hour orientation & therapy.</span>
                         </Link>
                       </li>
                       <li>
                         <Link href="/courses/three-day-ayurveda-certificate" className="block group/link">
-                          <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">Three-Day Certificate</span>
-                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">Syllabus overview and basic detox.</span>
+                          <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">Three-Day Certificate (TAP)</span>
+                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">Tridosha theory & basic detox practices.</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/courses/intensive-ayurveda-training" className="block group/link">
+                          <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">One-Week Ayurveda Program (WAP)</span>
+                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">5-day structured hands-on curriculum.</span>
                         </Link>
                       </li>
                     </ul>
                   </div>
 
                   <div>
-                    <h5 className="text-[10px] font-bold text-laterite uppercase tracking-widest mb-3">Professional</h5>
+                    <h5 className="text-[10px] font-bold text-laterite uppercase tracking-widest mb-3">Advanced Programs</h5>
                     <ul className="space-y-3">
                       <li>
-                        <Link href="/courses/intensive-ayurveda-training" className="block group/link">
-                          <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">Intensive Ayurveda (WAP)</span>
-                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">Hands-on residential certificate.</span>
+                        <Link href="/courses/advanced-ayurveda-training-level-1" className="block group/link">
+                          <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">Advanced Ayurveda Level 1 (AATP‑1)</span>
+                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">2-week structured 40-hour module.</span>
                         </Link>
                       </li>
                       <li>
                         <Link href="/courses/advanced-lifestyle-consultant-therapist" className="block group/link">
-                          <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">Advanced Consultant (AALCT)</span>
-                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">Clinical practice, 20 Days.</span>
+                          <span className="text-xs text-palm font-bold hover:text-laterite transition-colors block">Advanced Lifestyle Consultant (AALC‑2)</span>
+                          <span className="text-[10px] text-taupe block font-serif mt-0.5 leading-snug">4-week structured 80-hour practitioner module.</span>
                         </Link>
                       </li>
                     </ul>
@@ -116,23 +125,23 @@ export default async function Header() {
                 </div>
 
                 {/* Mega-menu Featured slot */}
-                <div className="col-span-4 bg-sand-2 border border-copper/15 text-palm rounded-2xl p-4 flex flex-col justify-between shadow-sm">
+                <div className="col-span-4 bg-sand border border-copper/15 text-palm rounded-2xl p-4 flex flex-col justify-between shadow-sm">
                   <div className="space-y-2">
                     <span className="inline-block bg-terracotta text-white text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
-                      Featured Course
+                      Explore All
                     </span>
                     <h4 className="font-display font-bold text-sm text-palm leading-snug">
-                      Intensive Ayurveda Training
+                      Courses Directory
                     </h4>
                     <p className="text-[10px] text-taupe font-serif leading-relaxed">
-                      NABH accredited hospital practice in Palakkad, Kerala.
+                      Compare program durations, pricing, locations, and full schedules.
                     </p>
                   </div>
                   <Link
-                    href="/courses/intensive-ayurveda-training"
+                    href="/courses"
                     className="mt-4 flex items-center gap-1 text-[10px] font-bold text-turmeric hover:text-palm transition-colors"
                   >
-                    <span>Admission details</span>
+                    <span>View All Courses Directory</span>
                     <span>→</span>
                   </Link>
                 </div>

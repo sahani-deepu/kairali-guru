@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FAQAccordion from "@/components/FAQAccordion";
 import SchemaRenderer from "@/components/SchemaRenderer";
+import ScheduleViewer from "@/components/ScheduleViewer";
 import { Course, WithContext } from "schema-dts";
 import { Calendar, Clock, GraduationCap, ShieldCheck, ArrowLeft, Hourglass, CheckCircle, SealCheck, Sparkle } from "@phosphor-icons/react/dist/ssr";
 
@@ -72,7 +73,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
     { time: "14:00", activity: "Practical therapy training sessions" }
   ];
 
-  const faqs = [
+  const faqs = course.faqs || [
     { question: f("q1"), answer: f("a1") },
     { question: f("q3"), answer: f("a3") },
     { question: f("q6"), answer: f("a6") }
@@ -150,6 +151,78 @@ export default async function CourseDetailPage({ params }: PageProps) {
                 </div>
               )}
 
+              {/* Why Participants Choose This Program */}
+              {course.whyChoose && (
+                <div className="pt-6 space-y-3 text-start">
+                  <h2 className="font-display text-2xl font-bold text-palm border-b border-sand-2 pb-2">
+                    Why Participants Choose This Program
+                  </h2>
+                  <p className="whitespace-pre-line text-xs sm:text-sm text-taupe leading-relaxed font-serif">
+                    {course.whyChoose}
+                  </p>
+                </div>
+              )}
+
+              {/* What You Will Learn */}
+              {course.whatYouWillLearn && (
+                <div className="pt-6 space-y-3 text-start">
+                  <h2 className="font-display text-2xl font-bold text-palm border-b border-sand-2 pb-2">
+                    What You Will Learn
+                  </h2>
+                  <p className="whitespace-pre-line text-xs sm:text-sm text-taupe leading-relaxed font-serif">
+                    {course.whatYouWillLearn}
+                  </p>
+                </div>
+              )}
+
+              {/* Learning Environment and Expectations */}
+              {course.learningExpectations && (
+                <div className="pt-6 space-y-3 text-start">
+                  <h2 className="font-display text-2xl font-bold text-palm border-b border-sand-2 pb-2">
+                    Learning Environment and Expectations
+                  </h2>
+                  <p className="whitespace-pre-line text-xs sm:text-sm text-taupe leading-relaxed font-serif">
+                    {course.learningExpectations}
+                  </p>
+                </div>
+              )}
+
+              {/* Certificate and Progression */}
+              {course.certificateProgression && (
+                <div className="pt-6 space-y-3 text-start">
+                  <h2 className="font-display text-2xl font-bold text-palm border-b border-sand-2 pb-2">
+                    Certificate and Progression
+                  </h2>
+                  <p className="whitespace-pre-line text-xs sm:text-sm text-taupe leading-relaxed font-serif">
+                    {course.certificateProgression}
+                  </p>
+                </div>
+              )}
+
+              {/* Enquiry and Admissions */}
+              {course.enquiryAdmissions && (
+                <div className="pt-6 space-y-3 text-start">
+                  <h2 className="font-display text-2xl font-bold text-palm border-b border-sand-2 pb-2">
+                    Enquiry and Admissions
+                  </h2>
+                  <p className="whitespace-pre-line text-xs sm:text-sm text-taupe leading-relaxed font-serif">
+                    {course.enquiryAdmissions}
+                  </p>
+                </div>
+              )}
+
+              {/* Important Guidance */}
+              {course.importantGuidance && (
+                <div className="pt-6 space-y-3 text-start">
+                  <h2 className="font-display text-2xl font-bold text-palm border-b border-sand-2 pb-2">
+                    Important Guidance
+                  </h2>
+                  <p className="whitespace-pre-line text-xs sm:text-sm text-taupe leading-relaxed font-serif">
+                    {course.importantGuidance}
+                  </p>
+                </div>
+              )}
+
               {/* Interactive syllabus preview */}
               <div className="pt-6 space-y-6">
                 <h2 className="font-display text-2xl font-bold text-palm border-b border-sand-2 pb-2">
@@ -197,7 +270,16 @@ export default async function CourseDetailPage({ params }: PageProps) {
                       <span className="text-xs text-taupe block mt-1.5">{course.priceUSD} ( indicative USD equivalent) *</span>
                     </div>
                   )}
+                {/* KAC Non-Residential Tariff & Weekly Off Notice */}
+                <div className="bg-sand-2/40 border border-sand-2 rounded-2xl p-3.5 text-[11px] text-taupe space-y-2 font-sans mt-3">
+                  <p className="leading-snug">
+                    <strong>KAC Non-Residential Tariff Note:</strong> Accommodation and food facilities are not included in the Kairali Ayurvedic Centre package. Any KAC fee applies only to the training component and its associated inclusions as per approved schedule.
+                  </p>
+                  <span className="font-bold text-palm block text-xs border-t border-sand-2 pt-2 mt-1">Weekly Off Schedule (KAC Centres):</span>
+                  <p className="leading-snug">• <strong>Tuesday:</strong> Weekly off for Mehrauli, New Delhi and Gurugram, Haryana. No classes will be conducted.</p>
+                  <p className="leading-snug">• <strong>Monday:</strong> Weekly off for Siri Fort Sports Complex Centre. No classes will be conducted.</p>
                 </div>
+              </div>
 
                 <div className="border-t border-sand-2 pt-4 space-y-3.5 text-xs text-taupe">
                   {(course.highlights || [
@@ -219,21 +301,13 @@ export default async function CourseDetailPage({ params }: PageProps) {
                 </Link>
               </div>
 
-              {/* Day schedule snapshot */}
+              {/* Day schedule snapshot with interactive Read More expansion */}
               <div className="bg-sand-2/20 border border-sand-2 rounded-3xl p-6 text-start">
                 <h3 className="font-display text-base font-bold text-palm mb-4 flex items-center gap-2">
                   <Hourglass size={18} className="text-laterite" />
                   <span>{course.schedule ? "Course Schedule" : "A Day on Campus"}</span>
                 </h3>
-                <div className={`relative border-s border-copper/30 pl-4 ml-2 space-y-3.5 ${schedule.length > 5 ? "max-h-96 overflow-y-auto pr-2" : ""}`}>
-                  {schedule.map((sched, idx) => (
-                    <div key={idx} className="relative">
-                      <div className="absolute -start-[21px] top-1.5 w-2 h-2 rounded-full bg-copper" />
-                      <span className="font-mono text-[10px] text-laterite font-bold block">{sched.time}</span>
-                      <span className="text-xs text-taupe leading-relaxed block font-serif mt-0.5">{sched.activity}</span>
-                    </div>
-                  ))}
-                </div>
+                <ScheduleViewer schedule={schedule} />
               </div>
             </div>
           </div>
@@ -248,6 +322,130 @@ export default async function CourseDetailPage({ params }: PageProps) {
                   Certificates are issued by the <strong>Kairali Institute of Panchakarma Therapies / Kairali Ayurvedic Centre Pvt Ltd</strong>. All course modules are delivered under clinical BAMS / MD guidelines at our NABH-accredited healing village in Kerala or Delhi. Learnings are completely compliant with international training certifications.
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Palakkad Residential Tariff & Program Inclusions */}
+          <div className="bg-sand border border-sand-2 rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto mb-12 text-start font-sans shadow-sm space-y-6">
+            <div>
+              <span className="text-[10px] uppercase tracking-wider font-mono font-bold text-laterite block mb-1">
+                KTAHV Kerala Residential Tariff Model
+              </span>
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-palm">
+                Palakkad, Kerala Residential Format & Villa Per-Night Tariff
+              </h3>
+              <p className="text-xs sm:text-sm text-taupe leading-relaxed font-serif mt-2">
+                At Kairali – The Ayurvedic Healing Village, Kerala, training programs may be integrated within a stay-linked, per-night all-inclusive tariff framework. In this model, any payable amount is based on the applicable per-night rate and the confirmed program duration.
+              </p>
+            </div>
+
+            {/* Per-Night Rate Table */}
+            <div className="overflow-x-auto rounded-2xl border border-sand-2 bg-sand-2/30 shadow-sm">
+              <table className="w-full text-xs text-start font-sans">
+                <thead className="bg-sand-2/60 text-palm uppercase font-mono text-[10px]">
+                  <tr>
+                    <th className="p-3">Villa Type</th>
+                    <th className="p-3">INR Single</th>
+                    <th className="p-3">INR Double</th>
+                    <th className="p-3">USD Single</th>
+                    <th className="p-3">USD Double</th>
+                    <th className="p-3">EURO Single</th>
+                    <th className="p-3">EURO Double</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-sand-2 text-bark">
+                  <tr className="hover:bg-sand-2/20">
+                    <td className="p-3 font-bold text-palm">Deluxe Villa</td>
+                    <td className="p-3 font-semibold text-laterite">₹18,410</td>
+                    <td className="p-3">₹30,530</td>
+                    <td className="p-3 font-semibold">$263</td>
+                    <td className="p-3">$436</td>
+                    <td className="p-3 font-semibold">€230</td>
+                    <td className="p-3">€382</td>
+                  </tr>
+                  <tr className="hover:bg-sand-2/20">
+                    <td className="p-3 font-bold text-palm">Classic Villa</td>
+                    <td className="p-3 font-semibold text-laterite">₹20,855</td>
+                    <td className="p-3">₹32,735</td>
+                    <td className="p-3 font-semibold">$298</td>
+                    <td className="p-3">$468</td>
+                    <td className="p-3 font-semibold">€261</td>
+                    <td className="p-3">€409</td>
+                  </tr>
+                  <tr className="hover:bg-sand-2/20">
+                    <td className="p-3 font-bold text-palm">Royal Villa</td>
+                    <td className="p-3 font-semibold text-laterite">₹25,160</td>
+                    <td className="p-3">₹36,620</td>
+                    <td className="p-3 font-semibold">$359</td>
+                    <td className="p-3">$523</td>
+                    <td className="p-3 font-semibold">€315</td>
+                    <td className="p-3">€458</td>
+                  </tr>
+                  <tr className="hover:bg-sand-2/20">
+                    <td className="p-3 font-bold text-palm">Suite / Maharaja Suite</td>
+                    <td className="p-3 font-semibold text-laterite">₹45,110</td>
+                    <td className="p-3">₹55,520</td>
+                    <td className="p-3 font-semibold">$644</td>
+                    <td className="p-3">$793</td>
+                    <td className="p-3 font-semibold">€564</td>
+                    <td className="p-3">€694</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Residential Total Calculation Logic Notice */}
+            <div className="bg-sand-2/40 border border-sand-2 p-4 rounded-2xl text-xs font-serif text-taupe leading-relaxed space-y-1">
+              <span className="font-sans font-bold text-palm text-xs block">
+                Residential Total Calculation Logic:
+              </span>
+              <p className="font-mono text-laterite text-xs font-semibold">
+                Total {course.code ? `${course.code} ` : ''}residential fee = Per-night rate for the chosen villa category × Number of nights for the confirmed stay
+              </p>
+              <p className="text-[11px] text-taupe/80 italic mt-1">
+                Note: No outdated Delhi/Mumbai bundled fees, group-discount notes, or old rate-validity lines apply to this package.
+              </p>
+            </div>
+
+            {/* Ayurveda Training Program Inclusions */}
+            <div className="pt-2 border-t border-sand-2 space-y-4">
+              <h4 className="font-display font-bold text-palm text-base">
+                Ayurveda Training Program Inclusions (KTAHV Residential Format)
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-taupe font-serif">
+                <div className="bg-sand-2/20 p-4 rounded-2xl border border-sand-2 space-y-2">
+                  <span className="font-bold text-palm block font-sans text-xs">1. Professional Training</span>
+                  <ul className="space-y-1.5 list-disc pl-4 leading-relaxed">
+                    <li>Daily theory classes conducted by expert Ayurvedic doctors</li>
+                    <li>Hands-on practical training led by senior Ayurvedic trainers and Ayurvedic doctors</li>
+                    <li>Structured training in authentic Ayurvedic therapies and techniques</li>
+                  </ul>
+                </div>
+                <div className="bg-sand-2/20 p-4 rounded-2xl border border-sand-2 space-y-2">
+                  <span className="font-bold text-palm block font-sans text-xs">2. Accommodation & Meals</span>
+                  <ul className="space-y-1.5 list-disc pl-4 leading-relaxed">
+                    <li>Villa accommodation, with category as per package selected</li>
+                    <li>Three wholesome vegetarian Ayurvedic meals daily (organic ingredients)</li>
+                    <li>Daily in-room mineral water and herbal detox water service</li>
+                  </ul>
+                </div>
+                <div className="bg-sand-2/20 p-4 rounded-2xl border border-sand-2 space-y-2">
+                  <span className="font-bold text-palm block font-sans text-xs">3. Additional Benefits</span>
+                  <ul className="space-y-1.5 list-disc pl-4 leading-relaxed">
+                    <li>Access to swimming pool, library, gym and outdoor facilities</li>
+                    <li>Organic farm tours and cultural immersion experiences</li>
+                    <li>All-inclusive pricing with no hidden costs (stay, meals, training, taxes)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Program Notes (Training Operations) */}
+            <div className="bg-sand-2/30 p-4 rounded-2xl border border-sand-2 text-xs text-taupe space-y-1.5 font-serif">
+              <span className="font-bold text-palm block font-sans text-xs">Program Notes (Training Operations):</span>
+              <p className="leading-relaxed">• <strong>Classes:</strong> Conducted Monday to Friday for training programs; schedules may vary by batch.</p>
+              <p className="leading-relaxed">• <strong>Payment:</strong> Full advance payment required for confirmed enrolment.</p>
+              <p className="leading-relaxed">• <strong>Sessions Policy:</strong> Photography and videography are not permitted during practical training sessions.</p>
             </div>
           </div>
 
